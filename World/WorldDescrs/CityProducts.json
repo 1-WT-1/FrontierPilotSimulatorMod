@@ -1,0 +1,5403 @@
+[
+	//bases_spaceport космопорт
+	{
+		"Name": "bases_spaceport",
+		"BuyingShip": "Ox",
+		"SellingShips": [
+			"Scarab",
+			"Ballena"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_bio_materials",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				],
+				"ConsumptionRate": 20 //default
+			},
+			{
+				"Name": "product_bio_micro_materials",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_expl_water1",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_tools_service_drone",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_ore1",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_fluere",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1_invert"
+					]
+				]
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_shellfish",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_components_food",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_food_1",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_food_2",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"CreateAtOnce": true,
+				"ProductionTime": 2400
+			},
+			//
+			{
+				"Name": "product_industrial_chemicals",
+				"CreateAtOnce": true,
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_household_chemicals",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"CreateAtOnce": true,
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_industrial_filters",
+				"CreateAtOnce": true,
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_medicines",
+				"CreateAtOnce": true,
+				"ProductionTime": 1200
+			},
+			{
+				"Name": "product_clothes",
+				"CreateAtOnce": true,
+				"ProductionTime": 2400
+			},
+			//
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 1200
+			},
+			{
+				"Name": "product_components_maintenance_kit",
+				"ProductionTime": 120,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Repair_Tool_Sell_Alias"
+					]
+				]
+			},
+			{
+				"Name": "product_tools_scientific",
+				"ProductionTime": 1800,
+				"CreateAtOnce": false,
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			}
+		],
+		"SellingSkins": [
+			{
+				"Name": "ScarabSkin1"
+			},
+			{
+				"Name": "ScarabSkin2"
+			},
+			{
+				"Name": "ScarabSkin3"
+			},
+			{
+				"Name": "ScarabSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "ScarabSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin1"
+			},
+			{
+				"Name": "OxSkin2"
+			},
+			{
+				"Name": "OxSkin3"
+			},
+			{
+				"Name": "OxSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin6",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin1"
+			},
+			{
+				"Name": "BallenaSkin2"
+			},
+			{
+				"Name": "BallenaSkin3",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin6",
+				"ConditionAliases": [
+					[
+						"SkinNY_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin7"
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "ScarabCargoWeight",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabEnginesPower1"
+			},
+			{
+				"UpgradeName": "ScarabWingsPlane",
+				"ConditionAliases": [
+					[
+						"Astlan_Wings_Tradeable"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxEnginePower2",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"UpgradeName": "UniversalAREconomizerLight",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabFuelTankConsumption"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers"
+			},
+			//CCS - Cargo Compression (Tier 1)
+			{
+				"UpgradeName": "CCS_Field_Compression_Scarab"
+			},
+			//AOS - Anti-Overload (Tier 1)
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
+			},
+			//Fuel Injectors (Tier 1)
+			{
+				"UpgradeName": "FuelInjectors_Standard_Scarab"
+			},
+			//Fuel Pumping (Tier 1)
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Scarab"
+			},
+			//Fuel System (Tier 1)
+			{
+				"UpgradeName": "FuelSystem_Extended_Scarab"
+			},
+			//Coating (Tier 1)
+			{
+				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"Name": "Passenger_Tourist", //spaceport
+				"ProductionTime": 24000,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	//bases_colony_spaceport 
+	{
+		"Name": "bases_colony_spaceport",
+		"BuyingProducts": [
+			//
+			{
+				"Name": "product_empty_battery",
+				"ConsumptionRate": 1
+			},
+			//
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			}
+			//
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_components_battery",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_battery_1",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_battery_2",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 1200
+			}
+			// {
+			// 	"Name": "product_crush_drone",
+			// 	"ProductionTime": 1
+			// },				
+			//			
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger_Astlan_Taxi",
+				"ProductionTime": 500
+			}
+		]
+	},
+	//bases_colony_center
+	{
+		"Name": "bases_colony_center",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			//
+			{
+				"Name": "product_empty_battery",
+				"CreateAtOnce": true,
+				"ProductionTime": 2800
+			},
+			//
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 2000
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	//bases_colony_nord
+	{
+		"Name": "bases_colony_nord",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_maintenance_kit",
+				"ConsumptionRate": 2,
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_bacillus_pumilus",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			//
+			{
+				"Name": "product_empty_battery",
+				"ProductionTime": 1800,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 1200
+			},
+			//
+			{
+				"Name": "product_bio_materials",
+				"ProductionTime": 1700,
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger_Astlan_Taxi",
+				"ProductionTime": 1800
+			}
+		]
+	},
+	//bases_colony_nordwest бора
+	{
+		"Name": "bases_colony_nordwest",
+		"BuyingProducts": [
+			{
+				"Name": "product_bio_materials",
+				"ConsumptionRate": 5,
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_egg",
+				"ConsumptionRate": 1,
+				"VolumeCostFactor": " 300:1; 3000:0"
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_Fungus_Sporeorgan",
+				"ConsumptionRate": 120
+			},
+			{
+				"Name": "product_Fungus_Mycelium",
+				"ConsumptionRate": 60
+			},
+			{
+				"Name": "product_bacillus_pumilus",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_bio_micro_materials",
+				"ProductionTime": 1500,
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 1200
+			},
+			{
+				"Name": "product_tools_service_drone",
+				"CreateAtOnce": true,
+				"ProductionTime": 1500,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger_Astlan_Taxi",
+				"ProductionTime": 1700,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "Passenger",
+				"ProductionTime": 1200,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	//bases_dock
+	{
+		"Name": "bases_dock",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_tools_scientific",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 1000:1; 10000:0"
+			},
+			{
+				"Name": "product_Fungus_Mycelium",
+				"ConsumptionRate": 60
+			},
+			{
+				"Name": "product_waste",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_components_water",
+				"CreateAtOnce": true,
+				"ProductionTime": 1500
+			},
+			{
+				"Name": "product_fluere",
+				"ProductionTime": 3600,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_Actinobacteria",
+				"ProductionTime": 3300,
+				"CreateAtOnce": true
+				// "ConditionAliases": [
+				// 	[
+				// 		"RaglorReachable"
+				// 	]
+				// ]
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger_Astlan_Taxi",
+				"ProductionTime": 1500,
+				"CreateAtOnce": true
+			}
+		]
+	},
+	//bases_astlan_southwest
+	{
+		"Name": "bases_astlan_southwest",
+		"BuyingProducts": [
+			{
+				"Name": "product_raw_composite1",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_Isoptera", //части насекомых
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 3900
+			},
+			{
+				"Name": "product_empty_battery",
+				"CreateAtOnce": true,
+				"ProductionTime": 3600
+			}
+			// {
+			// 	"Name": "product_archeology3", 
+			// 	"ProductionTime": 4500
+			// }
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 150
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "ScarabEnginesPower1"
+			},
+			{
+				"UpgradeName": "ScarabChassisAdvance"
+			},
+			{
+				"UpgradeName": "ScarabFuelTankAdditional"
+			},
+			{
+				"UpgradeName": "OxEnginePower3",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			//AFC - Active Flow Control (Tier 2)
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection"
+			},
+			//FCS - Fuel Cooling (Tier 1)
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling"
+			},
+			//CCS - Cargo Compression (Tier 2)
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Scarab"
+			},
+			//AOS - Anti-Overload (Tier 2)
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
+			},
+			//Fuel Injectors (Tier 2)
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
+			},
+			//Fuel Pumping (Tier 2)
+			{
+				"UpgradeName": "FuelPumping_Electric_Scarab"
+			},
+			//Fuel System (Tier 2)
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
+			},
+			//Coating (Tier 2)
+			{
+				"UpgradeName": "Coating_Ceramic_Scarab"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			}
+		],
+		"SellingSkins": [
+			{
+				"Name": "ScarabSkin1"
+			},
+			{
+				"Name": "ScarabSkin2"
+			},
+			{
+				"Name": "ScarabSkin3"
+			},
+			{
+				"Name": "ScarabSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "ScarabSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin1"
+			},
+			{
+				"Name": "OxSkin2"
+			},
+			{
+				"Name": "OxSkin3"
+			},
+			{
+				"Name": "OxSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin6",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin1"
+			},
+			{
+				"Name": "BallenaSkin2"
+			},
+			{
+				"Name": "BallenaSkin3",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin6",
+				"ConditionAliases": [
+					[
+						"SkinNY_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin7"
+			}
+		]
+	},
+	//----------bases_astlan_southwest_termit
+	{
+		"Name": "bases_astlan_southwest_termit",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "industrial_filters",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_Isoptera",
+				"ProductionTime": 4500
+			},
+			{
+				"Name": "product_waste",
+				"ProductionTime": 4500
+			},
+			{
+				"Name": "product_empty_battery",
+				"ProductionTime": 4800
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 150
+			}
+		]
+	},
+	//----------bases_astlan_north
+	{
+		"Name": "bases_astlan_north",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_bacillus_pumilus",
+				"ConsumptionRate": 2
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_Isoptera",
+				"CreateAtOnce": true,
+				"ProductionTime": 4500
+			},
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 3900
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 150
+			}
+		]
+	},
+	//----------bases_astlan_north_tank
+	{
+		"Name": "bases_astlan_north_tank",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_filters",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_bacillus_pumilus",
+				"CreateAtOnce": true,
+				"ProductionTime": 1500
+			},
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 3900
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 150
+			}
+		]
+	},
+	//bases_bridge транзит
+	{
+		"Name": "bases_bridge",
+		"SellingShips": [
+			"Scarab",
+			"Ox"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_water",
+				"ConsumptionRate": 2,
+				"VolumeCostFactor": " 0:1.5; 10000:0"
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_raw_composite1",
+				"ProductionTime": 3500,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_components_food",
+				"ProductionTime": 3500,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_composite2",
+				"ProductionTime": 4500
+			},
+			// {
+			// 	"Name": "product_BiggunCargo",
+			// 	"CreateAtOnce": true,
+			// 	"ProductionTime": 4500
+			// },			
+			{
+				"Name": "product_Canyon_Metal_Construct",
+				"ProductionTime": 1600,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_1_Stage_Buying"
+					]
+				]
+			}
+		],
+		"SellingSkins": [
+			{
+				"Name": "ScarabSkin1"
+			},
+			{
+				"Name": "ScarabSkin2"
+			},
+			{
+				"Name": "ScarabSkin3"
+			},
+			{
+				"Name": "ScarabSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "ScarabSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin1"
+			},
+			{
+				"Name": "OxSkin2"
+			},
+			{
+				"Name": "OxSkin3"
+			},
+			{
+				"Name": "OxSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin6",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin1"
+			},
+			{
+				"Name": "BallenaSkin2"
+			},
+			{
+				"Name": "BallenaSkin3",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin6",
+				"ConditionAliases": [
+					[
+						"SkinNY_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin7"
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "BallenaEngineBase"
+			},
+			{
+				"UpgradeName": "Ballena_ChassisGroup"
+			},
+			{
+				"UpgradeName": "BallenaWingsStandart"
+			},
+			{
+				"UpgradeName": "OxEnginePower1"
+			},
+			{
+				"UpgradeName": "ScarabLocatorBase"
+			},
+			{
+				"UpgradeName": "ScarabWingsBase"
+			},
+			{
+				"UpgradeName": "UniversalAREconomizer"
+			}
+			// ////////////////// тесты апгрейдов 
+			// // scarab locators
+			// {
+			// 	"UpgradeName": "ScarabLocatorBase"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabLocatorWaterProof"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabLocatorCargoRange"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabLocatorCargoRange2"
+			// },
+			// //ScarabWings
+			// {
+			// 	"UpgradeName": "ScarabWingsBase"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabWingsLight"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabWingsPlane"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabWingsShuttle"
+			// },
+			// //ScarabWings
+			// {
+			// 	"UpgradeName": "ScarabEnginesBase"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabEnginesWaterProof"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabEnginesPower1"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabEnginesPower2"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabEnginesEconomy"
+			// },
+			// //ScarabFuelTanks
+			// {
+			// 	"UpgradeName": "ScarabFuelTankAdditional"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabFuelTankAdditional1"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabFuelTankAdditional2"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabFuelTankAdditional3"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabFuelTankConsumption"
+			// },
+			// //ScarabChassis
+			// {
+			// 	"UpgradeName": "ScarabChassisBase"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabChassisAdvance"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabChassisWaterProof"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabChassisLight"
+			// },
+			// 	//ScarabCustomUpgrade
+			// {
+			// 	"UpgradeName": "Scarab_VIP_Cabine"
+			// },
+			// 	//ScarabCargo
+			// {
+			// 	"UpgradeName": "ScarabCargoWeight1"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabCargoCount"
+			// }			
+			,
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ballena"
+			}
+		]
+	},
+	//bases_biggun
+	{
+		"Name": "bases_biggun",
+		"SellingShips": [
+			"Scarab",
+			"Ballena"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_components_optic",
+				"ConsumptionRate": 5,
+				"ConditionAliases": [
+					[
+						"bases_biggun_trade_reputation_4"
+					]
+				]
+			},
+			// {
+			//     "Name": "product_topsecret",
+			//     "ConsumptionRate": 20
+			// },
+			{
+				"Name": "product_tools_car2",
+				"ConsumptionRate": 1,
+				"ConditionAliases": [
+					[
+						"bases_biggun_trade_reputation_3"
+					]
+				]
+			},
+			{
+				"Name": "product_tools_car1",
+				"ConsumptionRate": 5,
+				"ConditionAliases": [
+					[
+						"bases_biggun_trade_reputation_2"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_composite1",
+				"ConsumptionRate": 3,
+				"ConditionAliases": [
+					[
+						"bases_biggun_trade_reputation_4_invert"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_composite2",
+				"ConsumptionRate": 3,
+				"ConditionAliases": [
+					[
+						"bases_biggun_trade_reputation_4_invert"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_water1",
+				"ConsumptionRate": 10,
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase4"
+					]
+				]
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_tools_service_drone",
+				"CreateAtOnce": true,
+				"ProductionTime": 3600
+			},
+			{
+				"Name": "product_waste",
+				"CreateAtOnce": true,
+				"ProductionTime": 1800
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "OxEngineBase"
+			},
+			{
+				"UpgradeName": "OxCargoWeight2"
+			},
+			{
+				"UpgradeName": "BallenaEnginePower1"
+			},
+			{
+				"UpgradeName": "Ballena_ChassisGroupHard"
+			},
+			{
+				"UpgradeName": "BallenaWingsPower1"
+			},
+			{
+				"UpgradeName": "Custom_Upgrade_Test"
+			},
+			{
+				"UpgradeName": "Custom_Upgrade_Test_1"
+			},
+			{
+				"UpgradeName": "BallenaCargoWeight"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ballena"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 500
+			}
+		]
+	},
+	//bases_biggun_powerplant
+	{
+		"Name": "bases_biggun_powerplant",
+		"BuyingProducts": [
+			{
+				"Name": "product_livermorium_small",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_raw_ore1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_tools_car2",
+				"ConsumptionRate": 1
+			},
+			//
+			{
+				"Name": "product_empty_battery",
+				"ConsumptionRate": 10
+			},
+			//
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_components_battery",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_battery_1",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_battery_2",
+				"CreateAtOnce": true,
+				"ProductionTime": 600
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 500
+			}
+		]
+	},
+	//bases_livermoriummining_north
+	{
+		"Name": "bases_livermoriummining_north",
+		"SellingShips": [
+			"Scarab",
+			"Ox"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_car2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_water",
+				"ConsumptionRate": 2,
+				"VolumeCostFactor": " 0:1.5; 10000:0"
+			},
+			{
+				"Name": "product_raw_rock_ore1",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 10000:1; 30000:0"
+			},
+			{
+				"Name": "product_raw_rock_ore2",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 10000:1; 30000:0"
+			},
+			{
+				"Name": "product_mining_drill",
+				"ConsumptionRate": 1,
+				"VolumeCostFactor": " 20000:1; 30000:0"
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_livermorium_small",
+				"ProductionTime": 1300
+			},
+			{
+				"Name": "product_mining_zond",
+				"ProductionTime": 1600,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"LivermoriumMiningNorth_TradeLivermoriumminingReputation"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_ore2",
+				"ProductionTime": 1600,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_components_battery_livermory",
+				"ProductionTime": 2600
+			},
+			{
+				"Name": "product_Canyon_Start_Box",
+				"ProductionTime": 60,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Start_Box"
+					]
+				]
+			},
+			{
+				"Name": "product_Canyon_Hefesto_Scanner",
+				"ProductionTime": 360,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_1_Stage_Buying"
+					]
+				]
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "OxEnginePower1",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxChassisHard",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "BallenaEngineLight"
+			},
+			{
+				"UpgradeName": "BallenaWingsLight"
+			},
+			{
+				"UpgradeName": "BallenaFuelTankExt2"
+			},
+			{
+				"UpgradeName": "OxChassisWaterproof",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Waterproof_Chassis"
+					]
+				]
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ballena"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 1600
+			},
+			{
+				"Name": "Passenger_Tourist", //sever-1
+				"ProductionTime": 12000,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	//bases_livermoriummining_south
+	{
+		"Name": "bases_livermoriummining_south",
+		"SellingShips": [
+			"Scarab"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_car2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_water",
+				"ConsumptionRate": 2,
+				"VolumeCostFactor": " 0:1.5; 10000:0"
+			},
+			{
+				"Name": "product_raw_water1",
+				"ConsumptionRate": 10,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_water2",
+				"ConsumptionRate": 10,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_seafood",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_livermorium_small",
+				"ProductionTime": 1300,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_mining_zond",
+				"ProductionTime": 1600,
+				"ConditionAliases": [
+					[
+						"LivermoriumMiningNorth_TradeLivermoriumminingReputation"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_ore1",
+				"ProductionTime": 1600,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_tools_box2",
+				"ProductionTime": 300,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading"
+					]
+				]
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 600,
+				"CreateAtOnce": true
+			}
+		],
+		"SellingSkins": [
+			{
+				"Name": "ScarabSkin1"
+			},
+			{
+				"Name": "ScarabSkin2"
+			},
+			{
+				"Name": "ScarabSkin3"
+			},
+			{
+				"Name": "ScarabSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "ScarabSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin1"
+			},
+			{
+				"Name": "OxSkin2"
+			},
+			{
+				"Name": "OxSkin3"
+			},
+			{
+				"Name": "OxSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin6",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "OxSkinHalloween",
+				"ConditionAliases": [
+					[
+						"OxSkinHalloween_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin1"
+			},
+			{
+				"Name": "BallenaSkin2"
+			},
+			{
+				"Name": "BallenaSkin3",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin6",
+				"ConditionAliases": [
+					[
+						"SkinNY_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin7"
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "AFC_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ballena"
+			},
+			// ENGINES
+			{
+				"UpgradeName": "OxEnginePower1",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			//CHASSIS
+			{
+				"UpgradeName": "OxChassisDrive",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			//WINGS
+			{
+				"UpgradeName": "OxWingsPower",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			//FUEL
+			{
+				"UpgradeName": "OxFuelTankExt",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			//CARGO
+			{
+				"UpgradeName": "OxCargoSafe1",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "Ballena_ChassisGroupLight"
+			},
+			{
+				"UpgradeName": "BallenaFuelTankExt"
+			},
+			//ARCHEOLOGY
+			{
+				"UpgradeName": "ScarabWingsLight",
+				"ConditionAliases": [
+					[
+						"Arch_Several"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabCargoCount",
+				"ConditionAliases": [
+					[
+						"Arch_Several"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabFuelTankConsumption",
+				"ConditionAliases": [
+					[
+						"Arch_Several"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabLocatorCargoRange",
+				"ConditionAliases": [
+					[
+						"Arch_Several"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabLocatorCargoRange2",
+				"ConditionAliases": [
+					[
+						"Arch_Several"
+					]
+				]
+			},
+			// MISC
+			{
+				"UpgradeName": "UniversalTuner_Eco",
+				"ConditionAliases": [
+					[
+						"Corsair_Availability"
+					]
+				]
+			}
+		]
+	},
+	//bases_hardmaterialmining
+	{
+		"Name": "bases_hardmaterialmining",
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_car2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_canned_fish",
+				"VolumeCostFactor": "7000:2; 10000:1; 20000:0"
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_water",
+				"VolumeCostFactor": "7000:2; 10000:1; 20000:0"
+			},
+			{
+				"Name": "product_raw_rock_ore1",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 10000:1; 30000:0"
+			},
+			{
+				"Name": "product_raw_rock_ore3",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 10000:1; 30000:0"
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_raw_metal1",
+				"ProductionTime": 2300
+			},
+			{
+				"Name": "product_components_optic",
+				"ProductionTime": 2300
+				//"ConditionAliases": [ [ "LivermoriumMiningNorth_TradeReputation1" ] ]	//FIXME	второй уровень
+			},
+			{
+				"Name": "product_mining_zond",
+				"ProductionTime": 1600
+				//"ConditionAliases": [ [ "LivermoriumMiningNorth_TradeLivermoriumminingReputation" ] ]
+			},
+			{
+				"Name": "product_raw_metal2",
+				"ProductionTime": 1600
+				//"CreateAtOnce": true
+				//"ConditionAliases": [ [ "LivermoriumMiningNorth_TradeLivermoriumminingReputation" ] ]
+			},
+			{
+				"Name": "product_raw_ore2",
+				"ProductionTime": 4300
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
+				"UpgradeName": "OxEnginePower1"
+			},
+			// {
+			// 	"UpgradeName": "ScarabLightBase"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabLightAdditional"
+			// },
+			// {
+			// 	"UpgradeName": "ScarabLightAdditionalLanding"
+			// },			
+			{
+				"UpgradeName": "OxCargoWeight1",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase2"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxCargoSafe1",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase3"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxFuelTankIntExtendor",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase4"
+					]
+				]
+			},
+			{
+				"UpgradeName": "BallenaWingsLight"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 1600,
+				"CreateAtOnce": true
+			}
+		]
+	},
+	//bases_quarry_southeast
+	{
+		"Name": "bases_quarry_southeast",
+		"BuyingProducts": [
+			{
+				"Name": "product_raw_composite2",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_components_canned_fish",
+				"VolumeCostFactor": "7000:2; 10000:1; 20000:0"
+			},
+			{
+				"Name": "product_components_water",
+				"VolumeCostFactor": "7000:2; 10000:1; 20000:0"
+			},
+			{
+				"Name": "product_components_battery_livermory",
+				"VolumeCostFactor": "7000:2; 10000:1; 20000:0"
+			},
+			{
+				"Name": "product_raw_rock_ore2",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 10000:1; 30000:0"
+			},
+			{
+				"Name": "product_raw_rock_ore3",
+				"ConsumptionRate": 5,
+				"VolumeCostFactor": " 10000:1; 30000:0"
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_filters",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_raw_ore1",
+				"ProductionTime": 1300
+			},
+			{
+				"Name": "product_raw_ore2",
+				"ProductionTime": 2300
+			},
+			{
+				"Name": "product_raw_ore3",
+				"ProductionTime": 3600
+			},
+			{
+				"Name": "product_expl_water1",
+				"ProductionTime": 4600
+			},
+			{
+				"Name": "product_termodrill",
+				"ProductionTime": 2300,
+				"CreateAtOnce": true
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 1600,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "Passenger_Tourist", // quarry
+				"ProductionTime": 18000,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	//bases_geologicalstation_north
+	{
+		"Name": "bases_geologicalstation_north",
+		"BuyingProducts": [
+			{
+				"Name": "product_mining_zond",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase1"
+					]
+				]
+			},
+			{
+				"Name": "product_tools_car1",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase2"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_composite1",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase3"
+					]
+				]
+			},
+			{
+				"Name": "product_tools_box1",
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase4"
+					]
+				]
+			},
+			{
+				"Name": "product_seafood",
+				"ConsumptionRate": 1,
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase2"
+					]
+				]
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_raw_water1",
+				"ProductionTime": 2300,
+				"ConditionAliases": [
+					[
+						"bases_geologicalstation_north_phase4"
+					]
+				]
+			}
+		]
+	},
+	//bases_militarybase
+	{
+		"Name": "bases_militarybase",
+		"SellingShips": [
+			"Scarab"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 15
+			},
+			{
+				"Name": "product_components_canned_fish",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_raw_ore2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_tools_service_drone",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_Actinobacteria",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			// {
+			// 	"Name": "product_topsecret",
+			// 	"ProductionTime": 3100,
+			// 	"CreateAtOnce": true
+			// },
+			{
+				"Name": "product_tools_car1",
+				"ProductionTime": 6000,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_tools_car2",
+				"ProductionTime": 3600,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_mining_drill",
+				"ProductionTime": 6000,
+				"CreateAtOnce": true
+			}
+		],
+		"SellingUpgrades": [
+			// ENGINES
+			{
+				"UpgradeName": "OxEngineConsum"
+			},
+			{
+				"UpgradeName": "OxEnginePower1"
+			},
+			//CHASSIS
+			{
+				"UpgradeName": "OxChassisHard"
+			},
+			//WINGS
+			{
+				"UpgradeName": "OxWingsDrag"
+			},
+			{
+				"UpgradeName": "OxWingsPower"
+			},
+			//FUEL
+			{
+				"UpgradeName": "OxFuelTankExt"
+			},
+			{
+				"UpgradeName": "OxFuelTankProtector"
+			},
+			{
+				"UpgradeName": "ScarabFuelTankAdditional2"
+			},
+			//CARGO
+			{
+				"UpgradeName": "OxCargoSafe1"
+			},
+			//ARCHEOLOGY
+			{
+				"UpgradeName": "ScarabEnginesEconomy",
+				"ConditionAliases": [
+					[
+						"Arch_Several"
+					]
+				]
+			},
+			//AFC - Active Flow Control (Tier 3)
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
+			},
+			//FCS - Fuel Cooling (Tier 3)
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
+			},
+			//CCS - Cargo Compression (Tier 3)
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			//AOS - Anti-Overload (Tier 3)
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
+			},
+			//Fuel Injectors (Tier 3)
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			//Fuel Pumping (Tier 3)
+			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
+			},
+			//Fuel System (Tier 3)
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
+			//Coating (Tier 3)
+			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 600
+			}
+		]
+	},
+	//bases_researchlaboratory_east
+	{
+		"Name": "bases_researchlaboratory_east",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_protein",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_tools_scientific",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_raw_composite2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_Canyon_Crystal_Ore",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_1_Stage_Buying"
+					]
+				]
+			},
+			{
+				"Name": "product_archeology_endproduct",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_stat_1",
+				"ConditionAliases": [
+					[
+						"Stat_Cargo_Buying"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_stat_2",
+				"ConditionAliases": [
+					[
+						"Stat_Cargo_Buying"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_stat_3",
+				"ConditionAliases": [
+					[
+						"Stat_Cargo_Buying"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_bio_materials",
+				"ProductionTime": 2300
+			},
+			{
+				"Name": "product_aqua_zond",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				],
+				"ProductionTime": 1300
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 600
+			}
+		]
+	},
+	//bases_researchlaboratory_north
+	{
+		"Name": "bases_researchlaboratory_north",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_protein",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_tools_scientific",
+				"ConsumptionRate": 20
+			},
+			{
+				"Name": "product_archeology3",
+				"ConsumptionRate": 1,
+				"VolumeCostFactor": " 0:1; 2000:0.25"
+			},
+			//
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 10
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_bio_materials",
+				"ProductionTime": 2300
+			}
+		],
+		// "SellingUpgrades": [
+		// 	{
+		// 		"UpgradeName": "OxCargoScan",
+		// 		"ConditionAliases": [
+		// 			[
+		// 				"PlayerHas_Ox"
+		// 			]
+		// 		]
+		// 	}
+		// ],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 700
+			}
+		]
+	},
+	//bases_cargoship
+	{
+		"Name": "bases_cargoship",
+		"SellingShips": [
+			"Scarab",
+			"Ox",
+			"Ballena"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_raw_metal1"
+			},
+			{
+				"Name": "product_raw_metal2"
+			},
+			{
+				"Name": "product_bio_materials",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			// {
+			// 	"Name": "product_bio_micro_materials"
+			// },
+			// {
+			// 	"Name": "product_empty_battery",
+			// 	"ConditionAliases": [
+			// 		[
+			// 			"RaglorReachable"
+			// 		]
+			// 	]
+			// },
+			{
+				"Name": "product_fluere",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_tools_scientific",
+				"ProductionTime": 2325
+			},
+			{
+				"Name": "product_tools_car2",
+				"ProductionTime": 3210
+			},
+			{
+				"Name": "product_tools_car1",
+				"ProductionTime": 4210
+			},
+			//
+			{
+				"Name": "product_components_food",
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_food_1",
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_components_food_2",
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ProductionTime": 2400
+			},
+			//
+			{
+				"Name": "product_industrial_chemicals",
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ProductionTime": 600
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_industrial_filters",
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_medicines",
+				"ProductionTime": 1200
+			},
+			{
+				"Name": "product_clothes",
+				"ProductionTime": 2400
+			}
+			//
+		],
+		"SellingSkins": [
+			{
+				"Name": "ScarabSkin1"
+			},
+			{
+				"Name": "ScarabSkin2"
+			},
+			{
+				"Name": "ScarabSkin3"
+			},
+			{
+				"Name": "ScarabSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "ScarabSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin1"
+			},
+			{
+				"Name": "OxSkin2"
+			},
+			{
+				"Name": "OxSkin3"
+			},
+			{
+				"Name": "OxSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin6",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin1"
+			},
+			{
+				"Name": "BallenaSkin2"
+			},
+			{
+				"Name": "BallenaSkin3",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin6",
+				"ConditionAliases": [
+					[
+						"SkinNY_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin7"
+			}
+		],
+		"SellingUpgrades": [
+			// ENGINES
+			{
+				"UpgradeName": "OxEnginePower3",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			//CHASSIS
+			{
+				"UpgradeName": "OxChassisHard",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxChassisDrive",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxChassisLight",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			//WINGS
+			{
+				"UpgradeName": "OxWingsStandart"
+			},
+			{
+				"UpgradeName": "OxWingsPower2"
+			},
+			//FUEL
+			{
+				"UpgradeName": "OxFuelTankExt2"
+			},
+			{
+				"UpgradeName": "OxFuelTankProtector"
+			},
+			//CARGO
+			{
+				"UpgradeName": "OxCargoSafe2",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxCargoWeight2",
+				"ConditionAliases": [
+					[
+						"PlayerHas_Ox"
+					]
+				]
+			},
+			{
+				"UpgradeName": "Ballena_ChassisGroupHard"
+			},
+			{
+				"UpgradeName": "BallenaEnginePower1"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 600
+			}
+		]
+	},
+	//bases_vessel_-6_0
+	{
+		"Name": "bases_vessel_-6_0",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			}
+		],
+		"SellingProducts": [
+			//
+			{
+				"Name": "product_empty_battery",
+				"ProductionTime": 5500
+			},
+			//
+			{
+				"Name": "product_components_protein",
+				"ProductionTime": 2200
+			},
+			{
+				"Name": "product_whale_steaks",
+				"ProductionTime": 3200
+			}
+		]
+	},
+	//bases_vessel_-4_3
+	{
+		"Name": "bases_vessel_-4_3",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			}
+		],
+		"SellingProducts": [
+			//
+			{
+				"Name": "product_empty_battery",
+				"ProductionTime": 4200
+			},
+			//
+			{
+				"Name": "product_components_protein",
+				"ProductionTime": 3200
+			},
+			{
+				"Name": "product_components_canned_fish",
+				"ProductionTime": 3100
+			}
+		]
+	},
+	//bases_vessel_6_2
+	{
+		"Name": "bases_vessel_6_2",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_battery",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_battery_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_maintenance_kit",
+				"ConsumptionRate": 1,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"SellingProducts": [
+			//
+			{
+				"Name": "product_empty_battery",
+				"ProductionTime": 8500
+			},
+			//
+			{
+				"Name": "product_components_protein",
+				"ProductionTime": 3400
+			},
+			{
+				"Name": "product_whale_steaks",
+				"ProductionTime": 3500
+			},
+			{
+				"Name": "product_seafood",
+				"ProductionTime": 1800
+			}
+		]
+	},
+	//bases_archeology_researchlaboratory_S
+	{
+		"Name": "bases_archeology_researchlaboratory_S",
+		"BuyingProducts": [
+			{
+				"Name": "product_archeology1",
+				"ConsumptionRate": 1,
+				"VolumeCostFactor": " 0:1; 1500:0.25"
+			},
+			{
+				"Name": "product_archeology2",
+				"ConsumptionRate": 1,
+				"VolumeCostFactor": " 0:1; 1500:0.25"
+			},
+			{
+				"Name": "product_archeology3",
+				"ConsumptionRate": 1,
+				"VolumeCostFactor": " 0:1; 1500:0.25"
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_archeology_endproduct",
+				"ProductionTime": 3400
+				//"CreateAtOnce": true
+			}
+		]
+	},
+	{
+		"Name": "bases_canyon_center",
+		"BuyingShip": "Ox",
+		"SellingShips": [
+			"Scarab"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_Canyon_Hefesto_Scanner",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_1_Stage_Buying"
+					]
+				]
+			},
+			{
+				"Name": "product_Canyon_Metal_Construct",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_1_Stage_Buying"
+					]
+				]
+			},
+			{
+				"Name": "product_tools_box2",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_composite1",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_aqua_zond",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_components_canned_fish",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_composite2",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_pumpkin",
+				"ConditionAliases": [
+					[
+						"Halloween_Pumpkin_Buying_Alias"
+					]
+				],
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			//городские
+			{
+				"Name": "product_Canyon_Crystal_Ore",
+				"ProductionTime": 3200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_1_Stage_Buying"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_rock_ore1",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_water1",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_bio_materials",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_rock_ore2",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_water2",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_components_protein",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading"
+					]
+				]
+			},
+			{
+				"Name": "product_raw_rock_ore3",
+				"ProductionTime": 200,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading"
+					]
+				]
+			},
+			//квестовые
+			{
+				"Name": "product_Canyon_Soil_Analyzer",
+				"ProductionTime": 30,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Soil_Analyzers"
+					]
+				]
+			},
+			{
+				"Name": "product_Canyon_Cartographer_Device",
+				"ProductionTime": 30,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Cartographer_Devices"
+					]
+				]
+			},
+			{
+				"Name": "product_Canyon_Ore_Analyzer",
+				"ProductionTime": 30,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Ore_Analzyers"
+					]
+				]
+			},
+			{
+				"Name": "product_Canyon_Bio_Analyzer",
+				"ProductionTime": 30,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Placeable_Field_Analyzers"
+					]
+				]
+			},
+			{
+				"Name": "product_Canyon_Water_Filter_New",
+				"ProductionTime": 30,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"Canyon_Base_New_Filter"
+					]
+				]
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ballena"
+			},
+			{
+				"UpgradeName": "UniversalTuner_EcoPower",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_JP_UniversalTuner_EcoPower_Trade_Alias"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabLocatorWaterProof",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabEnginesBase",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_2_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabFuelTankAdditional1",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabChassisLight",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabEnginesPower2",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabFuelTankAdditional3",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabCargoWeight1",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabEnginesWaterProof",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabChassisWaterProof",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "Scarab_VIP_Cabine",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_VIP_Cabine"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabWingsShuttle",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_Wings"
+					]
+				]
+			},
+			//AFC - Active Flow Control (Tier 4)
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			//FCS - Fuel Cooling (Tier 4+5)
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_3_Stage_Trading_upgrades"
+					]
+				]
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			},
+			//AOS - Anti-Overload (Tier 4)
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Scarab",
+				"ConditionAliases": [
+					[
+						"Canyon_Base_4_Stage_Trading_upgrades"
+					]
+				]
+			}
+		],
+		"NPCs": [
+			// {
+			//     "Name": "Passenger",
+			//     "ProductionTime": 900,
+			//     "ConditionAliases": [ [ "RaglorReachable" ] ]                     
+			// }, 
+		]
+	},
+	////////////////// Северный порт
+	{
+		"Name": "bases_raglor_dock_north",
+		"SellingShips": [
+			"Scarab",
+			"Ox",
+			"Ballena"
+		],
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_box1",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_shellfish",
+				"ProductionTime": 2600,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"SellingSkins": [
+			{
+				"Name": "ScarabSkin1"
+			},
+			{
+				"Name": "ScarabSkin2"
+			},
+			{
+				"Name": "ScarabSkin3"
+			},
+			{
+				"Name": "ScarabSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "ScarabSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin1"
+			},
+			{
+				"Name": "OxSkin2"
+			},
+			{
+				"Name": "OxSkin3"
+			},
+			{
+				"Name": "OxSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "OxSkin6",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin1"
+			},
+			{
+				"Name": "BallenaSkin2"
+			},
+			{
+				"Name": "BallenaSkin3",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_2_Smugglers"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin4",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_3_North_Gorge"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin5",
+				"ConditionAliases": [
+					[
+						"Paint_Trade_Alias_4_Canyon"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin6",
+				"ConditionAliases": [
+					[
+						"SkinNY_Available"
+					]
+				]
+			},
+			{
+				"Name": "BallenaSkin7"
+			}
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "ScarabEnginesPower1"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	////////////////// Южный порт
+	{
+		"Name": "bases_raglor_dock_south",
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_box1",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_shellfish",
+				"ProductionTime": 2600,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"Name": "product_underwater_drone",
+				"ProductionTime": 6600
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	////////////////// bases_researchlaboratory_north - Исследовательская платформа Hel
+	{
+		"Name": "bases_researchlaboratory_Hel",
+		"BuyingProducts": [
+			{
+				"Name": "product_underwater_drone",
+				"ConsumptionRate": 5
+			},
+			{
+				"Name": "product_raw_ore3",
+				"ConsumptionRate": 5
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 10
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_shellfish",
+				"ProductionTime": 2600
+			},
+			{
+				"Name": "product_whale_steaks",
+				"ProductionTime": 3600
+			},
+			{
+				"Name": "product_waste",
+				"ProductionTime": 2400
+			},
+			{
+				"Name": "product_empty_battery",
+				"ProductionTime": 3900
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	////////////////// плато
+	{
+		"Name": "bases_Hel_south",
+		"BuyingProducts": [
+			{
+				"Name": "product_termodrill"
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_laboratory_chemicals",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 10
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 10
+			}
+		],
+		"SellingProducts": [
+			// // {
+			// // 	"Name": "product_archeology3",
+			// // 	"ProductionTime": 2600
+			// // },
+			// // {
+			// // 	"Name": "product_archeology2",
+			// // 	"ProductionTime": 3600
+			// // },
+			// // {
+			// // 	"Name": "product_archeology1",
+			// // 	"ProductionTime": 4600
+			// // },
+			// // {
+			// // 	"Name": "product_archeology_endproduct",
+			// // 	"ProductionTime": 5600
+			// // }
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 1900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	////////////////// самый северный порт
+	{
+		"Name": "bases_Hel_north",
+		"BuyingProducts": [
+			{
+				"Name": "product_tools_box1",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_shellfish",
+				"ProductionTime": 2600,
+				"CreateAtOnce": true,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 2000,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	////////////////// восточная долина
+	{
+		"Name": "bases_Hel_east",
+		"BuyingProducts": [
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_1",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_components_food_2",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_household_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_medicines",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_clothes",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_tools_filtr_module",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_industrial_chemicals",
+				"ConsumptionRate": 1
+			},
+			{
+				"Name": "product_raw_composite2",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"Name": "product_mining_drill",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"SellingProducts": [],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 900,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		]
+	},
+	////////////////// морская база
+	{
+		"Name": "bases_sea_north",
+		"BuyingProducts": [
+			{
+				"Name": "product_whale_steaks",
+				"ConsumptionRate": 5
+			},
+			// {
+			// 	"Name": "product_crush_drone",
+			// 	"ConsumptionRate": 5
+			// },
+			{
+				"Name": "product_seafood",
+				"ConsumptionRate": 5,
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			}
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_underwater_drone",
+				"ProductionTime": 6600,
+				"CreateAtOnce": true
+			},
+			{
+				"Name": "product_crush_drone",
+				"ProductionTime": 1,
+				"CreateAtOnce": true
+			}
+		],
+		"NPCs": [
+			{
+				"Name": "Passenger",
+				"ProductionTime": 3900
+			}
+		]
+	},
+	{
+		"Name": "bases_test_base",
+		"BuyingProducts": [
+			//
+			{
+				"Name": "product_components_food",
+				"ConsumptionRate": 1
+			}
+			//			
+		],
+		"SellingProducts": [
+			{
+				"Name": "product_waste",
+				"ProductionTime": 4800
+			}
+			// {
+			// 	"Name": "product_crush_drone",
+			// 	"ProductionTime": 1
+			// },				
+			//			
+		],
+		"SellingUpgrades": [
+			{
+				"UpgradeName": "ScarabCargoWeight",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"UpgradeName": "ScarabEnginesPower1"
+			},
+			{
+				"UpgradeName": "ScarabWingsPlane",
+				"ConditionAliases": [
+					[
+						"Astlan_Wings_Tradeable"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxEnginePower2",
+				"ConditionAliases": [
+					[
+						"RaglorReachable"
+					]
+				]
+			},
+			{
+				"UpgradeName": "UniversalAREconomizerLight",
+				"ConditionAliases": [
+					[
+						"bases_spaceport_phase1"
+					]
+				]
+			},
+			{
+				"UpgradeName": "OxEngineBase"
+			},
+			{
+				"UpgradeName": "BallenaEngineBase"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ballena"
+			}
+		],
+		"SellingShips": [
+			"Scarab",
+			"Ox",
+			"Ballena"
+		]
+	}
+]

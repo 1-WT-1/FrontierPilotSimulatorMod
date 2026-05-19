@@ -1,0 +1,157 @@
+	[
+		{
+			"TargetType": "PlayerShip"
+		},
+		{
+			"TargetType": "Self"
+		},
+		{
+			"Name": "BirthPlace",
+			"TargetType": "SelfPlace",
+			"SelectOnce": true
+		},
+		{
+			"Name": "NearestCityDoor",
+			"TargetType": "WorldEntity",
+			"LocalCityCollection": true,
+			"WithDoor": true,
+			"EntitySelectType": "Nearest",
+			"MinMaxDistance": [
+				0,
+				3000
+			]
+		},
+		{
+			"Name": "AllRandomCityExceptBiggun",
+			"TargetType": "WorldEntity",
+			"EntityType": "City",
+			"WithDoor": true,
+			"EntitySelectType": "Random",
+			"ExceptTargetNames": [
+				"bases_biggun_test",
+				"bases_biggun",
+				"bases_biggun_powerplant",
+				"bases_skeleton_discovery_A",
+				"bases_skeleton_discovery_B",
+				"bases_skeleton_discovery_C"
+			],
+			"MinMaxDistance": [
+				1000,
+				100000
+			],
+			"SelectOnce": true
+		},
+		{
+			"Name": "AllRandomCity",
+			"TargetType": "WorldEntity",
+			"EntityType": "City",
+			//"WithDoor": true,
+			"EntitySelectType": "Random",
+			"ExceptTargetNames": [
+				"bases_POI_2_1",
+				"bases_POI_1_-6",
+				"bases_POI_5_-1",
+				"bases_POI_0_-2",
+				"bases_POI_-2_-2",
+				"bases_biggun",
+				"bases_biggun_powerplant",
+				"bases_biggun_observer",
+				"bases_skeleton_discovery_A",
+				"bases_skeleton_discovery_B",
+				"bases_skeleton_discovery_C",
+				"bases_Hel_MountainCrash",
+				"bases_geologicalstation_north",
+				"bases_canyon_racer"
+			],
+			"MinMaxDistance": [
+				1000,
+				100000
+			],
+			"SelectOnce": true
+		},
+		{
+			"Name": "RandomCityIn10Km",
+			"TargetType": "WorldEntity",
+			"EntityType": "City",
+			"WithDoor": true,
+			"EntitySelectType": "Random",
+			"MinMaxDistance": [
+				1000,
+				10000
+			],
+			"SelectOnce": true
+		},
+		{
+			"Name": "NordColony",
+			"TargetType": "WorldEntity",
+			"TargetNames": [
+				"bases_colony_nord"
+			],
+			"EntityType": "City",
+			"SelectOnce": true
+		},
+		{
+			"Name": "NorthResearchLaboratory",
+			"TargetType": "WorldEntity",
+			"TargetNames": [
+				"bases_researchlaboratory_north"
+			],
+			"EntityType": "City"
+		},
+		{
+			"Name": "BigGun",
+			"TargetType": "WorldEntity",
+			"TargetNames": [
+				"bases_biggun"
+			],
+			"EntityType": "City",
+			"SelectOnce": true
+		},
+		{
+			"Name": "Target_North_1",
+			"TargetType": "WorldEntity",
+			"TargetNames": [
+				"bases_livermoriummining_north"
+			],
+			"EntityType": "City",
+			"SelectOnce": true
+		},
+		{
+			"Name": "Random_Tourist_Platform",
+			"TargetType": "WorldEntity",
+			"EntityType": "City",
+			"EntitySelectType": "Random",
+			"TargetNames": [
+				"bases_POI_5_-1",
+				"bases_POI_1_-6",
+				"bases_POI_2_1"
+			],
+			"MinMaxDistance": [
+				20000,
+				150000
+			],
+			"SelectOnce": true
+		},
+		{
+			"Name": "Nord_Colony_Passenger_Zone",
+			"TargetType": "WorldEntity",
+			"EntityCollection": "bases_colony_nord",
+			"EntityType": "PassangerLandingZone",
+			"Coordinates": [
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"Name": "Biggun_Passenger_Zone",
+			"TargetType": "WorldEntity",
+			"EntityCollection": "bases_biggun",
+			"EntityType": "PassangerLandingZone",
+			"Coordinates": [
+				0,
+				0,
+				0
+			]
+		}
+	]

@@ -1,0 +1,373 @@
+﻿[
+	{
+		"Name": "Raglor",
+		"Cities": [
+			//bases_spaceport - Космопорт Астлан-1
+			{
+				"Id": 10,
+				"Name": "bases_spaceport",
+				"CityRadius": 500,
+				"Open": true,
+				"Description": "bases_spaceport_new_descr"
+				//"ConditionalDescriptions": [
+				//    {
+				//        "Text": "MeteoCenter_Message_RainWeather_warning",
+				//        "ConditionAliases": [ [ "TestTrue" ] ]
+				//    }
+				//]
+			},
+			//bases_colony_spaceport - Бриджпоинт
+			{
+				"Id": 20,
+				"Name": "bases_colony_spaceport",
+				"Open": true,
+				"Description": "bases_colony_spaceport_new_descr"
+			},
+			//bases_colony_center - Центральная
+			{
+				"Id": 30,
+				"Name": "bases_colony_center",
+				"Open": true,
+				"Description": "bases_colony_center_descr"
+			},
+			//bases_colony_nord - Норд
+			{
+				"Id": 40,
+				"Name": "bases_colony_nord",
+				"Open": true,
+				"Description": "bases_colony_nord_descr"
+			},
+			//bases_colony_nordwest - Бора
+			{
+				"Id": 50,
+				"Name": "bases_colony_nordwest",
+				"Open": true,
+				"Description": "bases_colony_nordwest_descr"
+			},
+			//bases_dock - Порт
+			{
+				"Id": 60,
+				"Name": "bases_dock",
+				"Open": true,
+				"Description": "bases_dock_descr"
+			},
+
+				// ВНЕ АСТЛАНА
+
+			//bases_astlan_north
+			{
+				"Id": 440,
+				"Name": "bases_astlan_north",
+				"CityRadius": 440,
+				"Open": false,
+				"Description": "bases_astlan_north_descr"
+			},
+			//bases_astlan_north_tank
+			{
+				"Id": 470,
+				"Name": "bases_astlan_north_tank",
+				"CityRadius": 300,
+				"Open": false,
+				"Description": "bases_astlan_north_tank_descr"
+			},
+			//bases_astlan_southwest
+			{
+				"Id": 450,
+				"Name": "bases_astlan_southwest",
+				"CityRadius": 450,
+				"Open": false,
+				"Description": "bases_astlan_southwest_descr"
+			},
+			//bases_astlan_southwest_termit
+			{
+				"Id": 460,
+				"Name": "bases_astlan_southwest_termit",
+				"CityRadius": 150,
+				"Open": false,
+				"Description": "bases_astlan_southwest_termit_descr"
+			},
+			//bases_bridge - Раглор-Транзит
+			{
+				"Id": 70,
+				"Name": "bases_bridge",
+				"Open": false,
+				"Description": "bases_bridge_descr"
+			},
+			//bases_biggun - Шахта Большой Кратер
+			{
+				"Id": 80,
+				"Name": "bases_biggun",
+				"Open": false,
+				"Description": "bases_biggun_descr"
+			},
+			//bases_biggun_powerplant - Электростанция
+			{
+				"Id": 90,
+				"Name": "bases_biggun_powerplant",
+				"Open": false,
+				"Description": "bases_biggun_powerplant_descr"
+			},
+			//bases_livermoriummining_north - Буровая Север 1
+			{
+				"Id": 100,
+				"Name": "bases_livermoriummining_north",
+				"Open": false,
+				"Description": "bases_livermoriummining_north_descr"
+			},
+			//bases_livermoriummining_south - Буровая Ливерморий
+			{
+				"Id": 110,
+				"Name": "bases_livermoriummining_south",
+				"CityRadius": 750,
+				"Open": false,
+				"Description": "bases_livermoriummining_south_descr"
+			},
+			//bases_hardmaterialmining - Шахта Хардмайнинг
+			{
+				"Id": 120,
+				"Name": "bases_hardmaterialmining",
+				"CityRadius": 500,
+				"Open": false,
+				"Description": "bases_hardmaterialmining_descr"
+			},
+			//bases_quarry_southeast - Карьер M&T corp
+			{
+				"Id": 130,
+				"Name": "bases_quarry_southeast",
+				"CityRadius": 800,
+				"Open": false,
+				"Description": "bases_quarry_southeast_descr"
+			},
+			//bases_geologicalstation_north - Северное Ущелье
+			{
+				"Id": 140,
+				"Name": "bases_geologicalstation_north",
+				"CityRadius": 300,
+				"Open": false,
+				"Description": "bases_geologicalstation_north_descr"
+			},
+			//bases_geologicalstation_southwest - Саусвест
+			{
+				"Id": 150,
+				"Name": "bases_geologicalstation_southwest",
+				"CityRadius": 300,
+				"Open": false
+			},
+			//bases_geologicalstation_south - Южная гряда
+			{
+				"Id": 160,
+				"Name": "bases_geologicalstation_south",
+				"CityRadius": 300,
+				"Open": false
+			},
+			//bases_militarybase - База СБ
+			{
+				"Id": 170,
+				"Name": "bases_militarybase",
+				"Open": false,
+				"Description": "bases_militarybase_descr"
+			},
+			//bases_researchlaboratory_east - Исследовательская платформа E
+			{
+				"Id": 180,
+				"Name": "bases_researchlaboratory_east",
+				"CityRadius": 300,
+				"Open": false,
+				"Description": "bases_researchlaboratory_east_descr"
+			},
+			//bases_researchlaboratory_north - Исследовательская платформа N
+			{
+				"Id": 190,
+				"Name": "bases_researchlaboratory_north",
+				"CityRadius": 300,
+				"Open": false,
+				"Description": "bases_researchlaboratory_north_descr"
+			},
+			//bases_cargoship - Карголайнер
+			{
+				"Id": 200,
+				"Name": "bases_cargoship",
+				"CityRadius": 800,
+				"Open": false,
+				"Description": "bases_cargoship_descr"
+			},
+			//bases_vessel_-6_0 - Траулер -6 0
+			{
+				"Id": 210,
+				"Name": "bases_vessel_-6_0",
+				"Open": false,
+				"Description": "bases_vessel_-6_0_descr"
+			},
+			//bases_vessel_-4_3 - Траулер -4 3
+			{
+				"Id": 220,
+				"Name": "bases_vessel_-4_3",
+				"Open": false,
+				"Description": "bases_vessel_-4_3_descr"
+			},
+			//bases_vessel_6_2 - Траулер 6 2
+			{
+				"Id": 230,
+				"Name": "bases_vessel_6_2",
+				"Open": false,
+				"Description": "bases_vessel_6_2_descr"
+			},
+			//платформа наблюдения бигган 
+			{
+				"Id": 240,
+				"Name": "bases_biggun_observer",
+				"CityRadius": 300,
+				"Open": false
+			},
+			//Точка интереса -2_-2 Горы
+			{
+				"Id": 250,
+				"Name": "bases_POI_-2_-2",
+				"CityRadius": 100,
+				"Open": false
+			},
+			//Точка интереса 0_-2 Море
+			{
+				"Id": 260,
+				"Name": "bases_POI_0_-2",
+				"CityRadius": 100,
+				"Open": false
+			},
+			//Точка интереса 5_-1 Вулкан
+			{
+				"Id": 270,
+				"Name": "bases_POI_5_-1",
+				"CityRadius": 100,
+				"Open": false
+			},
+			//Точка интереса 1_-6 Гейзеры
+			{
+				"Id": 280,
+				"Name": "bases_POI_1_-6",
+				"CityRadius": 100,
+				"Open": false
+			},
+			//Точка интереса 2_1 Каньон
+			{
+				"Id": 290,
+				"Name": "bases_POI_2_1",
+				"CityRadius": 100,
+				"Open": false
+			},
+			//bases_canyon_center
+			{
+				"Id": 300,
+				"Name": "bases_canyon_center",
+				"CityRadius": 1000,
+				"Open": false
+			},
+			//bases_canyon_racer
+			{
+				"Id": 310,
+				"Name": "bases_canyon_racer",
+				"CityRadius": 300,
+				"Open": false,
+				"Description": "bases_canyon_racer_descr"
+			},
+			//bases_bases_skeleton_discovery_A
+			{
+				"Id": 320,
+				"Name": "bases_skeleton_discovery_A",
+				"CityRadius": 100,
+				"Open": false,
+				"Description": "bases_skeleton_discovery_A_descr"
+			},
+			//bases_bases_skeleton_discovery_B
+			{
+				"Id": 330,
+				"Name": "bases_skeleton_discovery_B",
+				"CityRadius": 100,
+				"Open": false,
+				"Description": "bases_skeleton_discovery_B_descr"
+			},
+			//bases_bases_skeleton_discovery_C
+			{
+				"Id": 350,
+				"Name": "bases_skeleton_discovery_C",
+				"CityRadius": 100,
+				"Open": false,
+				"Description": "bases_skeleton_discovery_C_descr"
+			},
+			//bases_archeology_researchlaboratory_S
+			{
+				"Id": 340,
+				"Name": "bases_archeology_researchlaboratory_S",
+				"CityRadius": 750,
+				"Open": false,
+				"Description": "bases_archeology_researchlaboratory_S_descr"
+			},
+			 //bases_researchlaboratory_north - Исследовательская платформа Hel
+			 {
+			 	"Id": 360,
+			 	"Name": "bases_researchlaboratory_Hel",
+			 	"CityRadius": 300,
+			 	"Open": false,
+			 	"Description": "bases_researchlaboratory_Hel_descr"
+			 },
+			 {
+			 	"Id": 370,
+			 	"Name": "bases_Hel_south",
+			 	"CityRadius": 700,
+			 	"Open": false,
+			 	"Description": "bases_Hel_south_descr"
+			 },
+			 {
+			 	"Id": 380,
+			 	"Name": "bases_Hel_north",
+			 	"CityRadius": 700,
+			 	"Open": false,
+			 	"Description": "bases_Hel_north_descr"
+			 },
+			 {
+			 	"Id": 390,
+			 	"Name": "bases_Hel_MountainCrash",
+			 	"CityRadius": 700,
+			 	"Open": false,
+			 	"Description": "bases_Hel_MountainCrash_descr"
+			 },
+			 {
+			 	"Id": 400,
+			 	"Name": "bases_Hel_east",
+			 	"CityRadius": 700,
+			 	"Open": false,
+			 	"Description": "bases_Hel_east_descr"
+			 },
+			//bases_raglor_dock_north
+			{
+				"Id": 410,
+				"Name": "bases_raglor_dock_north",
+				"CityRadius": 1000,
+				"Description": "bases_raglor_dock_north_descr",
+				"Open": false
+			},
+			//bases_raglor_dock_south
+			{
+				"Id": 420,
+				"Name": "bases_raglor_dock_south",
+				"CityRadius": 1000,
+				"Description": "bases_raglor_dock_south_descr",
+				"Open": false
+			},
+			//bases_sea_north
+			{
+				"id": 430,
+				"name": "bases_sea_north",
+				"cityradius": 300,
+				"description": "bases_sea_north_descr",
+				"Open": false
+			},
+			{
+				"id": 500,
+				"name": "bases_test_base",
+				"cityradius": 300,
+				"description": "bases_sea_north_descr",
+				"Open": true
+			}
+		]
+	}
+]

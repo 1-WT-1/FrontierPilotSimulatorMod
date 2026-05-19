@@ -1,0 +1,992 @@
+[
+    {
+        "Name": "Scarab",
+        "ModelName": "Scarab",
+        "IconName":"GUI/HUD/Avatars/Ship_Scarab",
+        "SavingCapsuleName": "CapsuleOx",
+        "AssistantName": "Ship_Assistant_Scarab",
+        "Description": "Scarab_Descr",
+        "DefaultSkin": "ScarabSkin1",
+        "Price": 30000,
+        "Mass": 500,
+        "WindInterpolationTime": 1.85,
+        "WindChangeThreshold": 55,
+        "CreateShiftUp": 5.5,
+        "HookForHangarArm": "HookForHangarArm",
+        "CatapultingSpeed": 10,
+		"IsSafeCapsula": false,
+		"OpenMapParams": {
+            "Speed": 1,
+            "Accell": 0.5,
+            "AngularSpeed": 0.25,
+            "WaitingTime": 1
+        },
+        "DragPointsPlane": [
+            { 
+                "LocalPos": [ 0, 0, 0 ],
+                "Squares": [ 8, 5, 2, 3.5 ] //площадь кубика по Х, Y, Z, W - при открытом тормозе< z-front, y - vert
+            }
+        ],
+        "DragPointsJetpack": [ 
+            { 
+                "LocalPos": [ 0, 0, 0 ],
+                "Squares": [ 6, 8, 10, 3.5 ] 
+            }
+		],
+		"ArchimedForceSpheres":
+		{
+			"Debug": false,
+			"WaveResponse": 3, //Width dimension of boat. The larger this value, the more filtered/smooth the wave response will be.
+			"Chips":
+			[
+				{
+					"CenterMassShift": [ 0, 1, -1 ],
+					"Radius": 1.4
+				},				
+				{
+					"CenterMassShift": [ 0, 0, 4 ],
+					"Radius": 1.4
+				},
+				{
+					"CenterMassShift": [ 6, 1, 0 ],
+					"Radius": 0.5
+				},
+				{
+					"CenterMassShift": [ -6, 1, 0 ],
+					"Radius": 0.5
+				},
+				{
+					"CenterMassShift": [ 0, 2, -13 ],
+					"Radius": 1
+				}
+			]
+		},
+        "TestExplosion": {
+            "Position": [ 0, 0, 0 ],
+            "Damages": [
+                {
+                    "DamageType": "Kinetic",
+                    "DamageRange": [ 10000000, 10000000 ],
+                    "ReductionType": "Quadratic",
+                    "Radius": 100
+                },
+                {
+                    "DamageType": "Physical",
+                    "DamageRange": [ 10000000, 10000000 ],
+                    "ReductionType": "Equals",
+                    "Radius": 100
+                }
+            ]
+		},
+		"VisibleGeometryStates": [
+			{
+				"Name": "ThirdPersonView",
+				"DisableHooks": ["CockpitVisHook","CockpitInvisHook","CapsuleHatchVis","CapsuleHatchInvis","ChairVisHook"],
+				"EnableHooks": ["HullCabineExtVisHook"],
+				"SetLayers": 
+				[
+					{
+						"Name" : "Ship",
+						"Hook": "HullCabineExtVisHook",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Ship",
+						"Hook": "HookCraneRailPointer",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Ship",
+						"Hook": "WheelSteerRF",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Ship",
+						"Hook": "WheelSteerlF",
+						"SetLayerToChildren": true
+					}
+				]
+			},
+			{
+				"Name": "CabinViewClose",
+				"EnableHooks": ["CockpitVisHook","CapsuleHatchVis","ChairVisHook","HullCabineExtVisHook"]
+			},			
+			{
+				"Name": "CabinView",
+				"SetLayers": 
+				[
+					{
+						"Name" : "Offscreen",
+						"Hook": "HullCabineExtVisHook",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Offscreen",
+						"Hook": "HookCraneRailPointer",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Offscreen",
+						"Hook": "WheelSteerRF",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Offscreen",
+						"Hook": "WheelSteerlF",
+						"SetLayerToChildren": true
+					}	
+				],
+				"EnableHooks": ["CockpitVisHook","CapsuleHatchInvis","ChairVisHook"]
+			},
+			{
+				"Name": "ChairView",
+				"EnableHooks": ["CockpitInvisHook","CapsuleHatchInvis","ChairVisHook"],
+				"SetLayers": 
+				[
+					{
+						"Name" : "Offscreen",
+						"Hook": "HullCabineExtVisHook",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Offscreen",
+						"Hook": "HookCraneRailPointer",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Offscreen",
+						"Hook": "WheelSteerRF",
+						"SetLayerToChildren": true
+					},
+					{
+						"Name" : "Offscreen",
+						"Hook": "WheelSteerlF",
+						"SetLayerToChildren": true
+					}	
+				]
+			}
+        ],
+		"DefaultUpgrades": [
+			"ScarabHullBase",
+			"ScarabWingsBase",	//0
+			"ScarabLocatorBase",	//0
+			"ScarabChassisBase",	//0
+			"ScarabEnginesBase",	//0
+			"ScarabLightBase"		//0
+			//"ScarabWingsPlane",
+			//"ScarabEnginesPower2",
+			//"ScarabChassisAdvance"
+
+			// "ScarabWingsLight",
+			// "ScarabLocatorRange",
+			// "ScarabEnginesEconomy",
+			// "ScarabChassisLight"
+		],
+		"Hull": {
+			"EntityPlaces": [ "Undefined" ],
+			"Resistance": {
+				"SkyRadiationResistance": 1000
+			},
+			"SoulDescr": {
+				"Params": {
+					"MaxHp": 1500,
+					"DegradationValue": 0,
+					"DegradationPeriod": 15
+				}
+			},
+			"RepairHooks": [
+				{
+					"Place": "Undefined",
+					"HookNames": [ "RepairLeftUp", "RepairRightUp" ]
+				}
+			]
+		},
+		"Engine": {
+			"EntityPlaces": [ "Left", "Right" ],
+			"Resistance": {
+				"SkyRadiationResistance": 1000
+			},
+			"SoulDescr": {
+				"Params": {
+					"DegradationValue": 0,
+					"DegradationPeriod": 10
+				},
+				"WorkingTable": "0:0.5; 0.8:1; 1:1"
+			},
+			"RepairHooks": [
+				{
+					"Place": "Left",
+					"HookNames": [ "EngineRepairL" ]
+				},
+				{
+					"Place": "Right",
+					"HookNames": [ "EngineRepairR" ]
+				}
+			],
+
+			"VTOLPower": 120000,
+			"PlanePower": 120000, //38000
+			"VelocityPowerFactorTables": "0:1",
+			"PowerAccell": 130000,
+			"PowerBrake": 120000,
+			"VTOLFuelConsume": 1,
+			"PlaneFuelConsume": 1,
+
+			"AfterburnFactors": "120000:2; 200000:1.5",
+			"AfterburnFuelFactor" : 3,
+			"AfterburnDamageVelProc": 0.02,
+			"AfterburnDamageThreshold": 0.7,
+
+			"DriftFuelCoef": 0.5,
+			"DriftPowerFactor": 0.35,
+			"CruiseEngineCoef": 1,
+			"YawXRotateFactor": 0.3,
+			"YawZRotateFactor": 0.2,
+
+			"JetHookNames": {
+				"Left": "HookEngineCoreLF",
+				"Right": "HookEngineCoreRF"
+			},
+			"GroundFactorTables": "0.5:0; 0.6:0.25; 10:0.2; 15:0",
+			"StartPower": 0.1,
+			"StartTime": 0.75, //1
+			"StopHeight": 3,
+			"StopTime": 0 //1
+		},
+        "Airplane": {
+            "EntityPlaces": [ "Left", "Right" ],
+			"RepairHooks":
+			[
+				{ "Place":"Left", "HookNames": ["WingRepairL"] },
+				{ "Place":"Right", "HookNames": ["WingRepairR"] }
+			],
+            "SoulDescr": {
+                "Params": {
+                    "MaxHp": 100,
+                    "DegradationValue": 0,
+                    "DegradationPeriod": 15
+                },
+                "WorkingTable": "0:0; 0.5:1"
+            },
+
+			"InputRollTable": "-0.95:-1; 0:0; 0.95:1",
+			
+			"TrimmerParams":
+			[
+				{
+					"TrimmingChannel": "Pitch",
+                    "TrimmerBtnValueMax": 14
+				},
+				{
+					"TrimmingChannel": "Yaw",
+                    "TrimmerBtnValueMax": 5
+				},
+				{
+					"TrimmingChannel": "Roll",
+                    "TrimmerBtnValueMax": 5
+				},
+				{
+					"TrimmingChannel": "AirBrake",
+                    "TrimmerBtnValueMax": 1
+				}
+			],
+
+			"AirDensityFactorByHeight": "1.5:1; 25:0",
+			"AirDensityFactorByVelocity": "20:0; 25:0.25; 85:0.75",
+            "AirplaneParam":
+            [
+                {
+                    "Name": "ForwardBody",
+					"WingType": "Cylinder",
+                    "Modes":
+                    [
+                        {
+							"Mode": "Base",
+							"Position": [ 0, 0, 2 ],
+							"AlphaFactorX": "0:0.3; 40:0.4; 70:0.5; 90:0.7; 110:0.5; 140:0.4; 180:0.3",
+							"Square": 5
+						},
+                        {
+							"Mode": "Flaps",
+							"SwitchFlags": "Flaps",
+							"Position": [ 0, 0, 2 ],
+							"AlphaFactorX": "0:0.3; 40:0.4; 70:0.5; 90:0.7; 110:0.5; 140:0.4; 180:0.3",
+							"Square": 12
+						}
+						
+					]
+                },
+                {
+                    "Name": "RearBody",
+					"WingType": "Cylinder",
+					"Modes":
+                    [
+                        {
+							"Mode": "Base",
+							"Position": [ 0, 0, -2 ],
+							"AlphaFactorX": "0:0.3; 40:0.4; 70:0.5; 90:0.7; 110:0.5; 140:0.4; 180:0.3",
+							"Square": 5
+						},
+                        {
+							"Mode": "Flaps",
+							"SwitchFlags": "Flaps",
+							"Position": [ 0, 0, -2 ],
+							"AlphaFactorX": "0:0.3; 40:0.4; 70:0.5; 90:0.7; 110:0.5; 140:0.4; 180:0.3",
+							"Square": 12
+						}						
+					]
+                },
+                {
+                    "Name": "LeftWing",
+					"WingType": "HorizontalLeft",
+					"Length": 8,
+					"Modes":
+					[
+						{
+							"Mode": "Base",
+							"SwitchTime": 3,
+							"Position": [ -7,0, 0 ],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:-0.05; -155:-0.3; -120:0; -60:0; -45:-0.8; 0:0; 35:1.3; 50:1.04; 65:0; 120:0; 155:0.5; 180:-0.05",
+							"BetaFactorX": "-180:1; -178:0.996; -175:0.95; -110:0.4; -70:0.4; -5:0.95; -2:0.996; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -178:0.996; -175:0.95; -110:0; -70:0; -5:0.95; -2:0.996; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 155:0.91; 165:0.97; 175:0.995; 180:1",
+							"Square": 15,
+							"ControlRollAlpha": [5, -0.2],
+							"ControlAlphaAngleSpeed": [2, 3],
+							"ControlRollCx": [0, 0],
+							"ControlCxSpeed": [0.01, 0.01],
+                            "StallVelocity": 60
+						},						
+						{
+							"Mode": "Flaps",
+							"SwitchFlags": "Flaps",
+							"SwitchTime": 1.5,
+							"Position": [ -7, 0, 0 ],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:-0.05; -155:-0.3; -120:0; -60:0; -45:-0.8; 0:0.25; 35:1.3; 50:1.04; 65:0; 120:0; 155:0.5; 180:-0.05",
+							"BetaFactorX": "-180:1; -178:0.996; -175:0.95; -110:0.4; -70:0.4; -5:0.95; -2:0.996; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -178:0.996; -175:0.95; -110:0; -70:0; -5:0.95; -2:0.996; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 155:0.91; 165:0.97; 175:0.995; 180:1",
+							"Square": 20,
+							"ControlRollAlpha": [5, -3],
+							"ControlAlphaAngleSpeed": [2, 2],
+							"ControlRollCx": [0, 0.001],
+							"ControlCxSpeed": [0.05, 0.01],
+                            "StallVelocity": 28
+						},
+						{
+                            "Mode": "VTOL",
+                            "SwitchFlags": "VTOL",
+                            "SwitchTime": 1.5,
+							"Position": [ -7, 0, 0 ],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:-0.05; -155:-0.3; -120:0; -60:0; -45:-0.8; 0:0; 35:1.3; 50:1.04; 65:0; 120:0; 155:0.5; 180:-0.05",
+							"BetaFactorX": "-180:1; -178:0.996; -175:0.95; -110:0.4; -70:0.4; -5:0.95; -2:0.996; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -178:0.996; -175:0.95; -110:0; -70:0; -5:0.95; -2:0.996; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 155:0.91; 165:0.97; 175:0.995; 180:1",
+							"Square": 0.1,
+							"ControlRollAlpha": [5, -0.2],
+							"ControlAlphaAngleSpeed": [2, 2],
+							"ControlRollCx": [0, 0.001],
+							"ControlCxSpeed": [0.05, 0.01],
+                            "StallVelocity": 60
+						}
+					]
+                },
+                {
+                    "Name": "RightWing",
+					"WingType": "HorizontalRight",
+					"Length": 8,
+					"Modes":
+					[
+						{
+							"Mode": "Base",
+							"SwitchTime": 3,
+							"Position": [ 7, 0, 0 ],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:-0.05; -155:-0.3; -120:0; -60:0; -45:-0.8; 0:0; 35:1.3; 50:1.04; 65:0; 120:0; 155:0.5; 180:-0.05",
+							"BetaFactorX": "-180:1; -178:0.996; -175:0.95; -110:0.4; -70:0.4; -5:0.95; -2:0.996; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -178:0.996; -175:0.95; -110:0; -70:0; -5:0.95; -2:0.996; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 155:0.91; 165:0.97; 175:0.995; 180:1",
+							"Square": 15,
+							"ControlRollAlpha": [0.2, -5],
+							"ControlAlphaAngleSpeed": [2, 3],
+							"ControlRollCx": [0.000, 0],
+							"ControlCxSpeed": [0.05, 0.01],
+							"StallVelocity": 60
+						},
+						{
+							"Mode": "Flaps",
+							"SwitchFlags": "Flaps",
+							"SwitchTime": 1.5,
+							"Position": [ 7, 0, -0],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:-0.05; -155:-0.3; -120:0; -60:0; -45:-0.8; 0:0.25; 35:1.3; 50:1.04; 65:0; 120:0; 155:0.5; 180:-0.05",
+							"BetaFactorX": "-180:1; -178:0.996; -175:0.95; -110:0.4; -70:0.4; -5:0.95; -2:0.996; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -178:0.996; -175:0.95; -110:0; -70:0; -5:0.95; -2:0.996; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 155:0.91; 165:0.97; 175:0.995; 180:1",
+							"Square": 20,
+							"ControlRollAlpha": [4, -4],
+							"ControlAlphaAngleSpeed": [2, 2],
+							"ControlRollCx": [0.001, 0],
+							"ControlCxSpeed": [0.05, 0.01],
+							"StallVelocity": 28
+						},
+						{
+                            "Mode": "VTOL",
+                            "SwitchFlags": "VTOL",
+							"SwitchTime": 1.5,
+							"Position": [ 7, 0, 0],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:-0.05; -155:-0.3; -120:0; -60:0; -45:-0.8; 0:0; 35:1.3; 50:1.04; 65:0; 120:0; 155:0.5; 180:-0.05",
+							"BetaFactorX": "-180:1; -178:0.996; -175:0.95; -110:0.4; -70:0.4; -5:0.95; -2:0.996; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -178:0.996; -175:0.95; -110:0; -70:0; -5:0.95; -2:0.996; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 155:0.91; 165:0.97; 175:0.995; 180:1",
+							"Square": 0.1,
+							"ControlRollAlpha": [0.2, -5],
+							"ControlAlphaAngleSpeed": [2, 2],
+							"ControlRollCx": [0.001, 0],
+							"ControlCxSpeed": [0.05, 0.01],
+							"StallVelocity": 60
+						}
+					]
+                },
+                {
+                    "Name": "Elevator",
+					"WingType": "HorizontalRight",
+					"TrimmingChannel": "Pitch",
+					"Length": 2,
+					"Modes":
+					[
+						{
+							"Mode": "Base",
+							"SwitchTime": 5,
+							"Position": [ 0, 0, -20 ], //0 0 -13
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:0; -155:-0.5; -120:0; -60:0; -45:-1.04; -33:-1.3; 0:0; 33:1.3; 45:1.04; 60:0; 120:0; 155:0.5; 180:0",
+							"BetaFactorX": "-180:1; -140:1.25; -40:1.25; -90:1.4; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -175:0.995; -165:0.97; -120:0.5; -90:0; -60:0.5; -25:0.91; -15:0.97; -5:0.995; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 165:0.97; 175:0.995; 180:1",
+							"Square": 1,  //6
+							"ControlPitchAlpha": [13, -13],
+							"ControlAlphaAngleSpeed": [5, 2],
+							"TrimmerBound": [-7, 7],
+							"TrimmerBase": 0
+						},
+						{
+							"Mode": "Flaps",
+							"SwitchFlags": "Flaps",
+							"Position": [ 0, 0, -13 ],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:0; -155:-0.5; -120:0; -60:0; -45:-1.04; -33:-1.3; 0:0; 33:1.3; 45:1.04; 60:0; 120:0; 155:0.5; 180:0",
+							"BetaFactorX": "-180:1; -140:1.25; -40:1.25; -90:1.4; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -175:0.995; -165:0.97; -120:0.5; -90:0; -60:0.5; -25:0.91; -15:0.97; -5:0.995; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 165:0.97; 175:0.995; 180:1",
+							"Square": 7,
+							"ControlPitchAlpha": [15, -15],
+							"ControlAlphaAngleSpeed": [7, 3],
+							"TrimmerBound": [-9, 9],
+							"TrimmerBase": 0
+						},
+						{
+                            "Mode": "VTOL",
+                            "SwitchFlags": "VTOL",
+                            "SwitchTime": 1.5,
+							"Position": [ 0, 0, -13 ],
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.2; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:0; -155:-0.5; -120:0; -60:0; -45:-1.04; -33:-1.3; 0:0; 33:1.3; 45:1.04; 60:0; 120:0; 155:0.5; 180:0",
+							"BetaFactorX": "-180:1; -140:1.25; -40:1.25; -90:1.4; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -175:0.995; -165:0.97; -120:0.5; -90:0; -60:0.5; -25:0.91; -15:0.97; -5:0.995; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 165:0.97; 175:0.995; 180:1",
+							"Square": 0.01,
+							"ControlPitchAlpha": [7, -7],
+							"ControlAlphaAngleSpeed": [5, 2],
+							"TrimmerBound": [-5, 5],
+							"TrimmerBase": 0
+						}
+					]
+                },
+                {
+                    "Name": "Tail",
+					"WingType": "Vertical",
+					"Length": 1,
+					"Modes":
+					[
+						{
+							"Mode": "Base",
+							"SwitchTime": 5,
+							"Position": [ 0, 0, -40 ], // 0 0 -13
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.0; 120:0.42; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:0; -155:-0.5; -120:0; -60:0; -45:-1.04; -33:-1.3; 0:0; 33:1.3; 45:1.04; 60:0; 120:0; 155:0.5; 180:0",
+							"BetaFactorX": "-180:1; -140:1.25; -40:1.25; -90:1.4; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -175:0.995; -165:0.97; -120:0.5; -90:0; -60:0.5; -25:0.91; -15:0.97; -5:0.995; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 165:0.97; 175:0.995; 180:1",
+							"Square": 1, //5  1-болтает по yaw
+							"ControlYawAlpha": [-10, 10],
+							"ControlAlphaAngleSpeed": [0.5, 1]  // 05, 1 
+						},
+						{
+                            "Mode": "VTOL",
+                            "SwitchFlags": "VTOL",
+                            "SwitchTime": 1.5,
+							"Position": [ 0, 0, -13 ],  
+							"AlphaFactorX": "-180:0.05; -160:0.10; -120:0.42; -90:1.0; -60:0.42; -30:0.1; -10:0.02; 0:0.01; 10:0.02; 30:0.1; 60:0.42; 90:1.0; 120:0.42; 160:0.10; 180:0.05",
+							"AlphaFactorY": "-180:0; -155:-0.5; -120:0; -60:0; -45:-1.04; -33:-1.3; 0:0; 33:1.3; 45:1.04; 60:0; 120:0; 155:0.5; 180:0",
+							"BetaFactorX": "-180:1; -140:1.25; -40:1.25; -90:1.4; 0:1; 40:1.25; 90:1.4; 140:1.25; 180:1",
+							"BetaFactorY": "-180:1; -175:0.995; -165:0.97; -120:0.5; -90:0; -60:0.5; -25:0.91; -15:0.97; -5:0.995; 0:1; 5:0.995; 15:0.97; 25:0.91; 60:0.5; 90:0; 120:0.5; 165:0.97; 175:0.995; 180:1",
+							"Square": 0.1,
+							"ControlYawAlpha": [-10, 10],
+							"ControlAlphaAngleSpeed": [0.5, 1]
+						}
+					]
+				},
+				{
+                    "Name": "AirBrakeTop",
+                    "WingType": "HorizontalRight",
+					"TrimmingChannel": "AirBrake",
+					"Length": 2,
+                    "Modes":
+                    [
+                        {
+                            "Mode": "Base",
+                            "Position": [ 0, 1, -0 ],
+                            "AlphaFactorX": "-180:0; -90:1; 0:0; 90:1; 180:0",
+                            "AlphaFactorY": "0:0",
+                            "BetaFactorX": "-180:1; 0:1; 180:1",
+                            "BetaFactorY": "0:0",
+                            "Square": 6,
+                            "ControlAlphaAngleSpeed": [30, 30],
+							"TrimmerBound": [-90, 90],
+							"TrimmerBase": 0
+						}
+                    ]
+				},
+				{
+                    "Name": "Chassis",
+                    "WingType": "HorizontalLeft",
+                    "TrimmingChannel": "Chassis",
+                    "Length": 2,
+                    "Modes":
+                    [
+                        {
+                            "Mode": "Base",
+                            "Position": [ 0, -2, 0 ],
+                            "AlphaFactorX": "-180:0; -90:1; 0:0; 90:1; 180:0",
+                            "AlphaFactorY": "0:0",
+                            "BetaFactorX": "-180:1; -90:1.5; 0:1; 90:1.5 180:1",
+                            "BetaFactorY": "0:0",
+                            "Square": 2,
+                            "ControlAlphaAngleSpeed": [30, 30],
+							"TrimmerBound": [-90, 90],
+							"TrimmerBase": 0
+						}
+                    ]
+                }
+            ]
+        },
+        "Wing": {
+			"EntityPlaces": [ "Left", "Right" ],
+			"RepairHooks":
+			[
+				{ "Place":"Left", "HookNames": ["WingRepairL"] },
+				{ "Place":"Right", "HookNames": ["WingRepairR"] }
+			],
+            "SoulDescr": {
+                "Params": {
+                    "MaxHp": 100,
+                    "DegradationValue": 0,
+                    "DegradationPeriod": 10
+                },
+                "WorkingTable": "0:0; 0.5:1"
+            },
+            "SquareJetpack": 1,
+            "SquarePlane": 12,
+			"SquarePlaneFlaps": 3,
+			"DragSquareFlaps": [ 0, 2, 2 ],
+            "MinSpeed": 35,
+            "MinSpeedWithFlaps": 20,
+            "ThrottleTable": "-1:-1; -0.5:-1; 0:0; 0.5:1; 1:1",
+			"GroundFactorTables": "0:0.3; 10:0",
+			"PlaneAeroFactorDescr":
+			{
+				"DefaultAttackAngle": 15,
+				"DefaultAttackAngleFlaps": 25,
+				"VerticalFactors": "-90:0.25; -50:1.2; -30:1.5; -20:1.2; -15:1; 0:0; 30:-0.75; 90:0.25",
+				"HorizontalFactors": "0:1; 60:0.25"
+			},
+			"JetpackAeroFactorDescr":
+			{
+				"DefaultAttackAngle": 0,
+				"VerticalFactors": "-30:0; -20:1; 0:0; 20:-0.5; 30:0",
+				"HorizontalFactors": "0:1; 60:0"
+			}
+        },
+        "Steerer": {
+			"EntityPlaces": [ "Left, Down, Front", "Right, Down, Front", "Left, Down, Back", "Right, Down, Back", "Left, Up", "Right, Up" ],
+			"RepairHooks":
+			[
+				{ "Place":"Left, Down, Front", "HookNames": ["SteererRepair"] },
+				{ "Place":"Right, Down, Front", "HookNames": ["SteererRepair"] },
+				{ "Place":"Left, Down, Back", "HookNames": ["SteererRepair"] },
+				{ "Place":"Right, Down, Back", "HookNames": ["SteererRepair"] },
+				{ "Place":"Left, Up", "HookNames": ["SteererRepair"] },
+				{ "Place":"Right, Up", "HookNames": ["SteererRepair"] }
+			],
+            "SoulDescr": {
+                "Params": {
+                    "MaxHp": 900,
+                    "DegradationValue": 0,
+                    "DegradationPeriod": 10
+                },
+                "WorkingTable": "0:0; 0.5:1"
+            },
+            "JetpackParams": {
+                "MaxAngles": [ 20, 0, 25 ],
+				"AngleVelocity": [35, 45, 40],
+                "Accell": [ 35, 35, 55 ],
+                "Brake": [ 35, 60, 35 ],
+                "AccellMaxWeight": [ 15, 10, 20 ],
+                "BrakeMaxWeight": [ 5, 5, 5 ],
+                "InputToAngle": "0:0; 0,45:0; 0.5:0.1; 0.90:1"
+            },
+            "PlaneParams": {
+				"AutoLevelingFactor": 0.45,
+				"InputRollTable": "-0.95:-1; -0.25:0; 0.25:0; 0.95:1",
+				"TailSquare": [1, 1.5, 3], //  //x yaw y -pith  z roll элероны на каждый площади для руления плоскостями хвоста
+				"TailShift": 4, // реальное смещение у модели 15
+                "EleronShift": 5, 
+                
+                "RotateVelocity": [ 15, 15, 15 ], //угловая скорость в градусах поворота хвоста(y), рулей высоты(x), элеронов(z)
+				"RotateVelocityToFreeZero": [ 40, 40, 40 ], //угловая скорость, если цель 0 (бросили управление)
+
+				
+				"OverloadToHorTailAngle": "0.55:20; 0.85:0", // pitch перегруз от 0 до 1 где 1 максимальная, в норме 90: октлониние флепсов
+				"OverloadToVertTailAngle": "0.55:20; 0.85:0", //yaw
+				"OverloadToEleronAngle": "0.55:20; 0.85:0", //roll
+
+				"ForceToHorTailAngle": 	"10000:15; 85000:5; 150000:1", // pich. сила проевеятся всей площаюдью и всегда под углом 90
+				"ForceToVertTailAngle": "10000:12; 50000:3", //yaw
+				"ForceToEleronAngle":	"25000:12; 60000:8; 150000:3", //roll 100000 -150ms 
+
+				"ForceToPitchBrake": "0:0.5; 100000:1", //5
+				"ForceToYawBrake": "0:0.5; 100000:1", //3
+				"ForceToRollBrake": "0:3; 100000:6", //6,
+
+				"ForceToPitchBrakeAL": "0:5; 100000:10",
+				"ForceToYawBrakeAL": "0:1; 100000:0.1",
+				"ForceToRollBrakeAL": "0:10; 150000:20"
+				
+
+            },
+            "EnginePowerPartForYaw": 0.2
+        },
+        "Fuel": {
+			"EntityPlaces": [ "Undefined" ],
+			"RepairHooks":
+			[
+				{ "Place":"Undefined", "HookNames": ["HookFXTunkBaseL", "HookFXTunkBaseR"]  }
+			],
+            "SoulDescr": {
+                "Params": {
+                    "MaxHp": 1000,
+                    "DegradationValue": 0,
+                    "DegradationPeriod": 10
+                },
+                "WorkingTable": "0:10; 0.5:5; 0.51:0; 1:0"
+            },
+            "Capacity": 850,
+            "StartValue": 5000,
+            "MaxRefuelPerformance": 100
+        },
+		"Locator": {
+			"EntityPlaces": [ "Left", "Right" ],
+			"RepairHooks": [
+				// { "Place":"Undefined", "HookNames": ["scarab_locatorHook_L", "scarab_locatorHook_R"]  }
+				{
+					"Place": "Left",
+					"HookNames": [ "scarab_locatorHook_L" ]
+				},
+				{
+					"Place": "Right",
+					"HookNames": [ "scarab_locatorHook_R" ]
+				}
+			],
+			"Resistance": {
+				"SkyRadiationResistance": 1000
+			},
+			"ARFuelConsume": 3,
+			"SoulDescr": {
+				"Params": {
+					"MaxHp": 150
+				}
+			}
+		},
+        "Cargo": {
+			"EntityPlaces": [ "Undefined" ],
+			"RepairHooks":
+			[
+				{ "Place":"Undefined", "HookNames": ["CargoRepair"]  }
+			],
+            "SoulDescr": {
+                "Params": {
+                    "MaxHp": 500
+                }
+            },
+            "Opentime": 1,
+            "HookContainerPosition": "HookContainerPosition",
+            "HookContainerEndPosition": "HookContainerEndPosition",
+            "Capacity": 3250,
+            "MaxCargoCount": 2,
+            //"StartCargo": [ "product_topsecret" ],
+            "TakeDistance": 5,
+            "IdleToCloseTime": 0,
+            "CargoOffset": [ 0, 0, 0 ],
+            "RailsOffset": [ 0, 0, 0 ],
+            "RailLength": -5,
+            //"MoveSound": "crane_move_ship_cargo_Scarab",
+            "TakeCargoSound": "crane_take_cargo_ship_cargo_Scarab",
+            "SetCargoSound": "crane_set_cargo_ship_cargo_Scarab"
+        },
+        "Chassis": {
+			"EntityPlaces": [ "Left, Front", "Right, Front", "Left, Back", "Right, Back" ],
+			"RepairHooks":
+			[
+				{ "Place":"Left, Front", "HookNames": ["ChassisRepairLF"] },
+				{ "Place":"Right, Front", "HookNames": ["ChassisRepairRF"] },
+				{ "Place":"Left, Back", "HookNames": ["ChassisRepairLB"] },
+				{ "Place":"Right, Back", "HookNames": ["ChassisRepairRB"] }
+			],
+            "SoulDescr": {
+                "Params": {
+                    "MaxHp": 500,
+                    "DegradationValue": 0,
+                    "DegradationPeriod": 25,
+                    "CompressionDamageLevel01": 0.7,
+                    "CompressionDamagePerSecMin": 1,
+                    "CompressionDamagePerSecMax": 10000
+                },
+                "WorkingTable": "0:0; 0.25:1"
+			},
+			"Resistance": {
+				"WaterResistance": 1,
+				"DustParticleResistance": 0
+			},
+			"DragSquare": [ 5, 7, 5 ], //сильно заметно если сделать больше 35 по z
+            "MaxSpeed": 5.5,
+			"CrossZeroDelay": 0.5,
+			"MoveToForceBrakeSpeed": 1, //m/sec
+            "StopSpeed": 0.1,
+            "WheelSettings": {
+                "Mass": 20,
+                "Radius": 1,
+                "SuspensionTravel": {
+                    "Min": 0.5,
+                    "Max": 1.25
+                },
+                "SpringRate": 45000,
+                "SpringPreload": 0.1,
+                "Damping": 10000,
+                "ForwardFrictionCoef": 1.2,
+                "ForwardSlipCoef": 1,
+                "SidewayFrictionCoef": 2,
+                "SidewaySlipCoef": 1,
+                "AffectOtherRigidbodies": false
+            },
+            "MotorTorque": 10000,
+            "MotorTorqueSpeed": 12000,
+			"BrakeTorque": 7500,
+			"ForceBrakeTorque": 15000,
+			//"SteerAngle": 40,
+			"SpeedToSteerAngle": "-10: 15; 0:40; 10:15; 20:1; 100:0.1",
+            "SteerSpeed": 4,
+            "SteerReturnFactor": 5,
+            "CenterMassTravel": 0.5,
+            "LandingSpeed": 150,
+            "RotateAngleFactorByForwardSpeed": 0.6,
+            "OpenTime": 1,
+            "CloseTime": 1,
+            "SteerOnlyForwWheels": true,
+            "SwitchChassisAltitude": {
+                "Min": 25,
+                "Max": 35
+            }
+        },
+        "Colliders": {
+            "MaxOverload": 90,
+            "CollisionForceToDamageValue": 0.0005,
+            "CollisionEffects": [
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_HitGround_Sparks_XS",
+                    "Params": [
+                        {
+                            "Impulse": 500,
+                            "Rate": 0,
+                            "Size": 0,
+                            "Speed": 0,
+                            "CollisionSurface": "Terrain"
+                        },
+                        {
+                            "Impulse": 70000,
+                            "Rate": 1,
+                            "Size": 0,
+                            "Speed": 1,
+                            "CollisionSurface": "Terrain"
+                        }
+                    ]
+                },
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_HitGround_Sparks_B",
+                    "Params": [
+                        {
+                            "Impulse": 70000,
+                            "Rate": 0,
+                            "Size": 0,
+                            "Speed": 0.5,
+                            "CollisionSurface": "Terrain"
+                        },
+                        {
+                            "Impulse": 200000,
+                            "Rate": 1,
+                            "Size": 0,
+                            "Speed": 35,
+                            "CollisionSurface": "Terrain"
+                        }
+                    ]
+                },
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_HitGround_Sparks_XS",
+                    "Params": [
+                        {
+                            "Impulse": 500,
+                            "Rate": 0,
+                            "Size": 0,
+                            "Speed": 0,
+                            "CollisionSurface": "Building"
+                        },
+                        {
+                            "Impulse": 70000,
+                            "Rate": 1,
+                            "Size": 0,
+                            "Speed": 1,
+                            "CollisionSurface": "Building"
+                        }
+                    ]
+                },
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_HitGround_Sparks_B",
+                    "Params": [
+                        {
+                            "Impulse": 70000,
+                            "Rate": 0,
+                            "Size": 0,
+                            "Speed": 0.5,
+                            "CollisionSurface": "Building"
+                        },
+                        {
+                            "Impulse": 200000,
+                            "Rate": 1,
+                            "Size": 0,
+                            "Speed": 35,
+                            "CollisionSurface": "Building"
+                        }
+                    ]
+                },
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_Collision_Water_Hit_Foam",
+                    "Params": [
+                        {
+                            "Impulse": 1000,
+                            "CollisionSurface": "Water"
+                        },
+                        {
+                            "Impulse": 5000,
+                            "Rate": 1,
+                            "Speed": 1,
+                            "CollisionSurface": "Water"
+                        }
+                    ]
+                },
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_Collision_Water_Hit",
+                    "Params": [
+                        {
+                            "Impulse": 1000,
+                            "CollisionSurface": "Water"
+                        },
+                        {
+                            "Impulse": 30000,
+                            "Rate": 1,
+                            "Speed": 1,
+                            "CollisionSurface": "Water"
+                        }
+                    ]
+                },
+                {
+                    "EffectPrefab": "FX/ShipFX/Collision/FX_Collision_Water_Hit_Crush",
+                    "Params": [
+                        {
+                            "Impulse": 15000,
+                            "Speed": 0.5,
+                            "CollisionSurface": "Water"
+                        },
+                        {
+                            "Impulse": 200000,
+                            "Rate": 1,
+                            "Speed": 35,
+                            "CollisionSurface": "Water"
+                        }
+                    ]
+                }
+            ]
+		},
+		"UnderShipSurfaceEffects": 
+		[
+			{
+				"Hook": "HookEngineCoreLF",
+				"EntityPart": { "Part": "ShipEngine", "Place": "Left" },
+				"Effects": ["EngineTerrainDust", "EngineBuildingDustLow", "EngineBuildingDustHigh", "EngineWaterSplash", "EngineWaterSplashRing", "EnginesWaterFoam"] 
+			},
+			{
+				"Hook": "HookEngineCoreRF",
+				"EntityPart": { "Part": "ShipEngine", "Place": "Right" },
+				"Effects": ["EngineTerrainDust", "EngineBuildingDustLow", "EngineBuildingDustHigh", "EngineWaterSplash", "EngineWaterSplashRing", "EnginesWaterFoam"] 
+			},
+			{
+				"Hook": "HookHullMain",
+				"RayRotate": [90, 0, 0],
+				"EntityPart": { "Part": "ShipHull" },
+				"Effects": [ "HullWaterLow", "HullWaterHigh" ] 
+			}
+		],
+        "Explosion": {
+            "ExplosionOffset": [ 0, 0, 0 ],
+            "ExplosionImpuls": 1,
+            "ExplosionCoff": 2,
+            "DivideProbability": 50,
+            "MainExplosionFxPath": "FX/ShipFX/HullFX/FXHull_Explosion",
+            "PartExplosionFxPath": "FX/ShipFX/FXShipExplosion_PartsSmoke"
+        },
+        "CargoArm": {
+            "MoveBulkSpeedFree": 10,
+            "MoveBulkSpeedCargo": 3,
+            "RotateBulkSpeedFree": 10,
+            "RotateBulkSpeedCargo": 3,
+            "UpBoxHook": 1,
+            "ArmRadius": 7.5
+        },
+        "RepairCost": {
+            "Hull": 100,
+            "Engine": 50,
+            "Wing": 50,
+            "Chassis": 50,
+            "Fuel": 25,
+            "Steerer": 10,
+            "Locator": 50,
+            "Cargo": 10
+        },
+        "Cockpit": {
+            "Hook": "Cockpit"
+        },
+		"Navigator": {
+			"NavigatorTargetResetDistance": 200,
+			"SwitchCurrentTargetToLandingDistance": 500,
+			"SwitchCurrentTargetToCityDistance": 750
+		},
+		"ForceReceiver": {
+			"EffectPrefab": "FX/FXBaloonLagSmall",
+			"DestroyTime": 1
+		},
+		"AcasCollisionTime": 3
+    }
+]

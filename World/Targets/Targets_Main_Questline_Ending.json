@@ -1,0 +1,242 @@
+[
+    // --- Таргет игрока
+    {
+        "Name": "Target_Player",
+        "TargetType": "PlayerShip"
+    },
+    // --- Точки респа ГРУЗОВ
+    {
+        "Name": "Target_Main_Quest_Ending_Emmiter_spawn_spot",
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_biggun_powerplant",
+        "EntityType": "QuestLandingZone",
+        "Coordinates": [
+            10,
+            0,
+            10
+        ]
+        //"SetPositionToGround": true
+    },
+    {
+        "Name": "Target_Main_Quest_Ending_Strange_box_spawn_spot",
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_vessel_-4_3",
+        "EntityType": "LandingZone",
+        "Coordinates": [
+            16.5,
+            0,
+            15.5
+        ]
+        //"SetPositionToGround": true
+    },
+    {
+        "Name": "Target_Emitter_spawn_spot", // точка респа бухла
+        "TargetType": "Coords",
+        "Coordinates": [
+            19687,
+            109,
+            -29907
+        ],
+        "WorldPosition": true
+        //"SetPositionToGround": true
+    },
+    // --- Точки доставки ГРУЗОВ
+    {
+        "Name": "Target_Emitter_drop_spot", // точка доставки излучателя
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_biggun_powerplant",
+        "EntityType": "QuestLandingZone",
+        "Coordinates": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "Name": "Target_Armored_Cargo_drop_spot", // точка доставки излучателя
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_militarybase",
+        "EntityType": "QuestLandingZone",
+        "Coordinates": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "Name": "Target_Strange_box_drop_spot", // точка доставки излучателя
+        "TargetType": "Coords",
+        "Coordinates": [
+            20621,
+            502,
+            -29264
+        ],
+        "WorldPosition": true
+    },
+    {
+        "Name": "Target_Boom_lookout_spot", // точка доставки излучателя
+        "TargetType": "Coords",
+        "Coordinates": [
+            19423.58,
+            1028.97,
+            -31172.04
+        ],
+        "WorldPosition": true
+    },
+    // --- Точки респа ПЕРСОНАЖЕЙ
+    // {
+    //     "Name": "Target_Abyss_spawnpoint",
+    //     "TargetType": "Coords",
+    //     "Coordinates": [ 0, 0, 0 ],
+    //     "WorldPosition": true
+    // },
+    {
+        "Name": "Target_Head_Engineer_Baz_spawnpoint", // Появление Кэйбла на "База СБ"
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_biggun", //город
+        "EntityType": "PassangerLandingZone", //обьект в городе 
+        "Coordinates": [
+            5,
+            0,
+            -5
+        ] //координаты относительно обьекта
+    },
+    // --- Точки "Лети сюда"
+    // {
+    //     "Name": "Target_Boom_lookout_spot",  // точка респа бухла
+    //     "TargetType": "WorldEntity",
+    //     "EntityCollection": "bases_biggun_observer",    
+    //     "EntityType": "LandingZone",	 	 
+    //     "Coordinates": [ 0, 0, 0], 
+    // }, !!!
+    // --- Таргеты ПОДБОРА ПАССАЖИРОВ
+    {
+        "Name": "Target_Head_Engineer_Baz_Passenger",
+        "TargetType": "WorldEntity",
+        "EntityType": "Character",
+        "TargetNames": [
+            "Head_Engineer_Baz"
+        ],
+        "EntitySelectType": "Nearest",
+        "MinMaxDistance": [
+            0,
+            100000
+        ],
+        "EmptyTargetAccess": true
+    },
+    // --- Таргеты ДОСТАВКИ ПАССАЖИРОВ
+    {
+        "Name": "Target_Head_Engineer_radar_spot",
+        "TargetType": "Coords",
+        "Coordinates": [
+            17059,
+            109,
+            -28767
+        ],
+        "WorldPosition": true
+    },
+    // {
+    //     "Name": "Target_Head_Engineer_emitter_spot",
+    //     "TargetType": "Coords",
+    //     "Coordinates": [ 19687, 109, -29907 ],
+    //     "WorldPosition": true,
+    //     
+    // },
+    {
+        "Name": "Target_Head_Engineer_emitter_spot", // контейнер с излучателем
+        "TargetType": "WorldEntity",
+        "EntityType": "CargoBox",
+        "TargetNames": [
+            "Quest_Main_Ending_Emitter"
+        ],
+        "MinMaxDistance": [
+            1,
+            100000
+        ],
+        "EntitySelectType": "Nearest"
+    },
+    {
+        "Name": "Target_Head_Engineer_drop_spot_final",
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_biggun_powerplant",
+        "EntityType": "QuestLandingZone",
+        "Coordinates": [
+            0,
+            0,
+            0
+        ]
+    },
+    // --- Таргеты КОНТЕЙНЕРОВ    
+    {
+        "Name": "Target_Quest_Main_Ending_Emitter", // контейнер с излучателем
+        "TargetType": "WorldEntity",
+        "EntityType": "CargoBox",
+        "TargetNames": [
+            "Quest_Main_Ending_Emitter"
+        ],
+        "MinMaxDistance": [
+            40,
+            100000
+        ],
+        "EntitySelectType": "Nearest",
+        "EmptyTargetAccess": true
+    },
+    {
+        "Name": "Target_Quest_Main_Ending_Armored_Cargo", // контейнер с излучателем
+        "TargetType": "WorldEntity",
+        "EntityType": "CargoBox",
+        "TargetNames": [
+            "Quest_Main_Ending_Armored_Cargo"
+        ],
+        "MinMaxDistance": [
+            40,
+            100000
+        ],
+        "EntitySelectType": "Nearest",
+        "EmptyTargetAccess": true
+    },
+    {
+        "Name": "Target_Quest_Main_Ending_Strange_box", // контейнер с излучателем
+        "TargetType": "WorldEntity",
+        "EntityType": "CargoBox",
+        "TargetNames": [
+            "Quest_Main_Ending_Strange_box"
+        ],
+        "MinMaxDistance": [
+            40,
+            100000
+        ],
+        "EntitySelectType": "Nearest",
+        "EmptyTargetAccess": true
+    },
+    // --- Области ПОИСКА
+    // {
+    //     "Name": "Target_Smugglers_Toxic_Mineral_Search_Circle",    // точка респа
+    //     "TargetType": "Coords",
+    //     "Coordinates": [ 22670, 450, -57450 ],
+    //     "WorldPosition": true,
+    //     //"SetPositionToGround": true
+    // },
+    // --- Точки спавна ПРЕФАБОВ антуража
+    { // Выстрел из мега-пушки
+        "Name": "Target_Quest_Main_Ending_Death_Ray",
+        "TargetType": "Coords",
+        "Coordinates": [
+            20655,
+            1617.1,
+            -29240.5
+        ],
+        "WorldPosition": true
+    },
+    {
+        "Name": "Target_Boom_spawn_point",
+        "TargetType": "WorldEntity",
+        "EntityCollection": "bases_biggun",
+        "EntityType": "LandingZone",
+        "Coordinates": [
+            0,
+            0,
+            0
+        ]
+    }
+]

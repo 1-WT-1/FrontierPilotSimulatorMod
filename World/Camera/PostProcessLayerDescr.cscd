@@ -1,0 +1,9 @@
+--
+Name: CameraLayer
+AntialiasingMode: FastApproximateAntialiasing //None, FastApproximateAntialiasing, SubpixelMorphologicalAntialiasing, TemporalAntialiasing
+VolumeLayer: Default, TransparentFX, Water, BigObject, Terrain, Projectiles, Ship, Wind, ShipSFX, Clouds
+--
+Name: ARCameraLayer
+AntialiasingMode: FastApproximateAntialiasing //None, FastApproximateAntialiasing, SubpixelMorphologicalAntialiasing, TemporalAntialiasing
+VolumeLayer: Default, TransparentFX, Water, BigObject, Terrain, Projectiles, Ship, Wind, ShipSFX, ARView, MixView
+--

@@ -1,0 +1,299 @@
+﻿{
+  "Name": "bases_test_base",
+  "WorldPosition": [
+    -94170.0,
+    130.0,
+    90383.0
+  ],
+  "Buildings": [
+    {
+      "LocalId": 1,
+      "DescriptionName": "",
+      "UniqueName": "",
+      "LoadPath": "Prefabs/Vehicles/PR_Crane_Platform_Side_Static",
+      "LocalPosition": [
+        35.41,
+        -2.65000153,
+        8.76
+      ],
+      "LocalRotation": [
+        0.0,
+        271.917725,
+        0.0
+      ],
+      "LocalScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EntityType": "LandingZoneCrane",
+      "DisableNames": [],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 3,
+      "DescriptionName": "",
+      "UniqueName": "",
+      "LoadPath": "Prefabs/Buildings/PR_Platform",
+      "LocalPosition": [
+        -3.03125,
+        -5.0,
+        3.02539063
+      ],
+      "LocalRotation": [
+        0.0,
+        269.999939,
+        0.0
+      ],
+      "LocalScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EntityType": "LandingZone",
+      "DisableNames": [
+        "Glow",
+        "Landing_zone_support_detail_0",
+        "Landing_zone_support_detail_1",
+        "Landing_zone_support_detail_2",
+        "FX_Light",
+        "FX_PointLight_Orange_set",
+        "Lamp",
+        "Plane_AR"
+      ],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 4,
+      "DescriptionName": "",
+      "UniqueName": "",
+      "LoadPath": "Prefabs/Buildings/PR_ZoneCotainerPlace",
+      "LocalPosition": [
+        43.66,
+        -4.8,
+        -0.134765625
+      ],
+      "LocalRotation": [
+        0.0,
+        89.99984,
+        0.0
+      ],
+      "LocalScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EntityType": "ContainerPlace",
+      "DisableNames": [
+        "ParkingZone (0)",
+        "ParkingZone (1)"
+      ],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 5,
+      "DescriptionName": "",
+      "UniqueName": "$PathTarget1",
+      "LoadPath": "Prefabs/Vehicles/PR_PathTarget",
+      "LocalPosition": [
+        25.0,
+        -50.0,
+        -350.0
+      ],
+      "LocalRotation": [
+        0.0,
+        45.0000038,
+        0.0
+      ],
+      "LocalScale": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "EntityType": "PathTarget",
+      "DisableNames": [],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 6,
+      "DescriptionName": "",
+      "UniqueName": "$PathTarget2",
+      "LoadPath": "Prefabs/Vehicles/PR_PathTarget",
+      "LocalPosition": [
+        106.0,
+        -50.0,
+        -320.0
+      ],
+      "LocalRotation": [
+        0.0,
+        45.0000038,
+        0.0
+      ],
+      "LocalScale": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "EntityType": "PathTarget",
+      "DisableNames": [],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 7,
+      "DescriptionName": "",
+      "UniqueName": "$PathTarget3",
+      "LoadPath": "Prefabs/Vehicles/PR_PathTarget",
+      "LocalPosition": [
+        116.0,
+        -50.0,
+        270.0
+      ],
+      "LocalRotation": [
+        0.0,
+        45.0000038,
+        0.0
+      ],
+      "LocalScale": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "EntityType": "PathTarget",
+      "DisableNames": [],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 8,
+      "DescriptionName": "",
+      "UniqueName": "$PathTarget4",
+      "LoadPath": "Prefabs/Vehicles/PR_PathTarget",
+      "LocalPosition": [
+        -344.0,
+        -50.0,
+        -22.0
+      ],
+      "LocalRotation": [
+        0.0,
+        45.0000038,
+        0.0
+      ],
+      "LocalScale": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "EntityType": "PathTarget",
+      "DisableNames": [],
+      "CityStates": null,
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    },
+    {
+      "LocalId": 75,
+      "DescriptionName": "Hangar",
+      "UniqueName": "",
+      "LoadPath": "Prefabs/Buildings/PR_Hangar",
+      "LocalPosition": [
+        -225.5,
+        0,
+        0
+      ],
+      "LocalRotation": [
+        0.0,
+        0,
+        0.0
+      ],
+      "LocalScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EntityType": "Hangar",
+      "DisableNames": [
+        "DebugRailMove",
+        "DebugPointerMarker",
+        "PositionMove",
+        "PositionRail",
+        "PositionRailVertOffset",
+        "Grab_2_big",
+        "PointerRailVert",
+        "PointerMarker",
+        "Collider",
+        "Agent_device",
+        "Agent_device_a",
+        "Agent_device_b",
+        "Agent_device_c",
+        "Backback",
+        "Glass",
+        "Rail",
+        "Shoulder_left",
+        "Shoulder_right",
+        "WorkerArms",
+        "PR_ChristmasDecor",
+        "PR_ChristmasTree",
+        "sprite (1)",
+        "ParkingZoneBack"
+      ],
+      "CityStates": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "PathInHierarchy": null,
+      "InsidePath": true,
+      "ConditionsPresent": true
+    },
+    {
+      "LocalId": 74,
+      "DescriptionName": "",
+      "UniqueName": "",
+      "LoadPath": "Prefabs/Roads/PR_Concrete_01_5x5_fat",
+      "LocalPosition": [
+        -275.5,
+        0,
+        70
+      ],
+      "LocalRotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "LocalScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EntityType": "Undefined",
+      "DisableNames": [],
+      "CityStates": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "PathInHierarchy": null,
+      "InsidePath": false,
+      "ConditionsPresent": false
+    }
+  ]
+}

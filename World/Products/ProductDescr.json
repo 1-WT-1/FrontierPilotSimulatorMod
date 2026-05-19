@@ -1,0 +1,1339 @@
+﻿[
+	//custom products
+	{
+		"Name": "product_industrial_chemicals",
+		"Description": "product_industrial_chemicals_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Water_Icon",
+		"CargoBoxName": "Container_Red_Heavy",
+		"PriceValue": 3700,
+		"MassValue": 2500,
+		"MaxHPoints": 1000,
+		"TransportCost": 140
+	},
+	{
+		"Name": "product_laboratory_chemicals",
+		"Description": "product_laboratory_chemicals_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Water_bottle",
+		"CargoBoxName": "Container_Food_Small",
+		"PriceValue": 40500,
+		"MassValue": 180,
+		"MaxHPoints": 1000,
+		"TransportCost": 70
+	},
+	{
+		"Name": "product_household_chemicals",
+		"Description": "product_household_chemicals_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Water_Icon",
+		"CargoBoxName": "Container_Food_Small",
+		"PriceValue": 1500,
+		"MassValue": 650,
+		"MaxHPoints": 1000,
+		"TransportCost": 150
+	},
+	{
+		"Name": "product_medicines",
+		"Description": "product_medicines_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Tools_scientific_Icon",
+		"CargoBoxName": "Container_Food_Small",
+		"PriceValue": 2300,
+		"MassValue": 200,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_clothes",
+		"Description": "product_clothes_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Suit_Icon",
+		"CargoBoxName": "Container_Small",
+		"PriceValue": 2800,
+		"MassValue": 350,
+		"MaxHPoints": 1000,
+		"TransportCost": 150
+	},
+	{
+		"Name": "product_industrial_filters",
+		"Description": "product_industrial_filters_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Suit_Icon",
+		"CargoBoxName": "Container_Small",
+		"PriceValue": 35000,
+		"MassValue": 1500,
+		"MaxHPoints": 1000,
+		"TransportCost": 160
+	},
+	//end of custom products
+	// астлан линейные продукты
+	//Рационы В2
+	{
+		"Name": "product_components_food",
+		"Description": "product_components_food_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Container_Food_Small",
+		"PriceValue": 850,
+		"MassValue": 1250,
+		"MaxHPoints": 1000,
+		"TransportCost": 140
+		//"NonTradable": true
+	},
+	{
+		"Name": "product_components_food_1",
+		"Description": "product_components_food_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Container_Food_Small",
+		"PriceValue": 850,
+		"MassValue": 1250,
+		"MaxHPoints": 1000,
+		"TransportCost": 140
+		//"NonTradable": true
+	},
+	{
+		"Name": "product_components_food_2",
+		"Description": "product_components_food_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Container_Food_Small",
+		"PriceValue": 850,
+		"MassValue": 1250,
+		"MaxHPoints": 1000,
+		"TransportCost": 140
+		//"NonTradable": true
+	},
+	//Батареи G-type
+	{
+		"Name": "product_components_battery",
+		"Description": "product_components_battery_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Battery_Icon",
+		"CargoBoxName": "Container_Small",
+		"PriceValue": 1500,
+		"MassValue": 4000,
+		"MaxHPoints": 500,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_components_battery_1",
+		"Description": "product_components_battery_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Battery_Icon",
+		"CargoBoxName": "Container_Small",
+		"PriceValue": 1500,
+		"MassValue": 4000,
+		"MaxHPoints": 500,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_components_battery_2",
+		"Description": "product_components_battery_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Battery_Icon",
+		"CargoBoxName": "Container_Small",
+		"PriceValue": 1500,
+		"MassValue": 4000,
+		"MaxHPoints": 500,
+		"TransportCost": 200
+	},
+	//
+	{
+		"Name": "product_components_battery_livermory",
+		"Description": "product_components_battery_livermory_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Battery_livermory_Icon",
+		"CargoBoxName": "Container_Red_Heavy",
+		"PriceValue": 1500,
+		"MassValue": 12400,
+		"MaxHPoints": 500,
+		"TransportCost": 200
+	},
+	//G-Type (разряж.)
+	{
+		"Name": "product_empty_battery",
+		"Description": "product_empty_battery_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/BatteryEmpty_Icon",
+		"CargoBoxName": "Container_Small",
+		"PriceValue": 230,
+		"MassValue": 550,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	//
+	{
+		"Name": "product_components_water",
+		"Description": "product_components_water_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Water_Icon",
+		"PriceValue": 1000,
+		"MassValue": 6200,
+		"CargoBoxName": "Container_Food_Small",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_bio_micro_materials",
+		"Description": "product_bio_micro_materials_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Bio_micro_materials_Icon",
+		"CargoBoxName": "Container_Tiny",
+		"PriceValue": 500,
+		"MassValue": 1382,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_bacillus_pumilus",
+		"Description": "product_bacillus_pumilus_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Bacterial_Soup_Tank_Icon",
+		"CargoBoxName": "Container_bacillus_pumilus",
+		"PriceValue": 3500,
+		"MassValue": 4300,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_seafood",
+		"Description": "product_seafood_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Seafood_Icon",
+		"CargoBoxName": "Container_Tiny",
+		"PriceValue": 500,
+		"MassValue": 1500,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_waste",
+		"Description": "product_waste_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/DefaultBox_Icon",
+		"CargoBoxName": "Container_Tiny",
+		"PriceValue": 420,
+		"MassValue": 1500,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_fluere",
+		"Description": "product_fluere_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Fluere_Icon",
+		"CargoBoxName": "Container_Tiny",
+		"PriceValue": 4420,
+		"MassValue": 380,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	// астлан квестовые продукты 
+	{
+		"Name": "product_tools_service_drone",
+		"Description": "product_tools_service_drone_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Tools_car1_Icon",
+		"CargoBoxName": "Container_Red_Heavy",
+		"PriceValue": 2100,
+		"MassValue": 2300,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+		//"NonTradable": true
+	},
+	/// раглор квестовые продукты
+	{
+		"Name": "product_scaner_quest1",
+		"Description": "product_scaner_quest1_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Scaner_quest1_scaner_Icon",
+		"CargoBoxName": "Container_Radar",
+		"PriceValue": 8000,
+		"MassValue": 1000,
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_scaner_quest2",
+		"Description": "product_scaner_quest2_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Scaner_quest3_scaner_Icon",
+		"CargoBoxName": "Container_Radar",
+		"PriceValue": 8000,
+		"MassValue": 5000,
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_scaner_quest3",
+		"Description": "product_scaner_quest3_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Scaner_quest1_scaner_Icon",
+		"CargoBoxName": "Container_Radar",
+		"PriceValue": 8000,
+		"MassValue": 1000,
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_scaner_quest4",
+		"Description": "product_scaner_quest4_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Scaner_quest4_scaner_Icon",
+		"CargoBoxName": "Container_Radar",
+		"PriceValue": 8000,
+		"MassValue": 4000,
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_scaner_quest5",
+		"Description": "product_scaner_quest5_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Scaner_quest5_scaner_Icon",
+		"CargoBoxName": "Container_Radar",
+		"PriceValue": 8000,
+		"MassValue": 9500,
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_survivalcapsule", // спасательная капсула на земле
+		"Description": "product_survivalcapsule_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/CapsuleSOS_icon",
+		"PriceValue": 0,
+		"MassValue": 5750,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	//квестовые не включенные
+	{ //  секретный контерйнер
+		"Name": "product_topsecret",
+		"Description": "product_topsecret_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Topsecret_Icon",
+		"PriceValue": 1000,
+		"MassValue": 5000,
+		"CargoBoxName": "Container_Tiny",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	/// раглор линейные продукты
+	// экранированный контейнер ливермория
+	{
+		"Name": "product_livermorium_small",
+		"Description": "product_livermorium_small_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Livermorium_small_Icon",
+		"PriceValue": 2500,
+		"MassValue": 3250,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000
+	},
+	{
+		"Name": "product_Actinobacteria",
+		"Description": "product_Actinobacteria_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Actinobacteria_Icon",
+		"PriceValue": 12500,
+		"MassValue": 18500,
+		"CargoBoxName": "Container_Actinobacteria",
+		"MaxHPoints": 1000
+	},
+	{
+		"Name": "product_mining_drill",
+		"Description": "product_mining_drill_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Mining_drill_Icon",
+		"PriceValue": 24500,
+		"MassValue": 19850,
+		"CargoBoxName": "Container_mining_drill",
+		"MaxHPoints": 1000
+	},
+	{
+		"Name": "product_tools_service_drone_v2",
+		"Description": "product_tools_service_drone_v2_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Tools_car1_Icon",
+		"CargoBoxName": "Container_Red_Heavy",
+		"PriceValue": 2100,
+		"MassValue": 2300,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_water1",
+		"Description": "product_raw_water1_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Raw_water1_Icon",
+		"PriceValue": 3200,
+		"MassValue": 2500,
+		"CargoBoxName": "Container_raw_water1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_water2",
+		"Description": "product_raw_water2_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Raw_water2_Icon",
+		"PriceValue": 6400,
+		"MassValue": 5000,
+		"CargoBoxName": "Container_raw_water2",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_expl_water1",
+		"Description": "product_expl_water1_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Expl_water1_Icon",
+		"PriceValue": 13000,
+		"MassValue": 4000,
+		"CargoBoxName": "Container_expl_water1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_metal1",
+		"Description": "product_raw_metal1_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_metal1_Icon",
+		"PriceValue": 350,
+		"MassValue": 5000,
+		"CargoBoxName": "Container_Green",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_metal2",
+		"Description": "product_raw_metal2_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_metal2_Icon",
+		"PriceValue": 4600,
+		"MassValue": 9400,
+		"CargoBoxName": "Container_Red_Heavy",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_ore1",
+		"Description": "product_raw_ore1_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_ore1_Icon",
+		"PriceValue": 2300,
+		"MassValue": 7840,
+		"CargoBoxName": "Container_Green",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_ore2",
+		"Description": "product_raw_ore2_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/TerbiumMolded_Icon",
+		"PriceValue": 5000,
+		"MassValue": 11000,
+		"CargoBoxName": "Container_raw_ore2",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_ore3",
+		"Description": "product_raw_ore3_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_ore2_Icon",
+		"PriceValue": 6800,
+		"MassValue": 13000,
+		"CargoBoxName": "Container_raw_ore3",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_egg",
+		"Description": "product_egg_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Bio_materials_Icon",
+		"PriceValue": 1525,
+		"MassValue": 2300,
+		"CargoBoxName": "Container_Egg",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_rock_ore1",
+		"Description": "product_raw_rock_ore1_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Raw_ore1_Icon",
+		"PriceValue": 6221,
+		"MassValue": 9422,
+		"CargoBoxName": "Container_Rock_Ore1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_rock_ore2",
+		"Description": "product_raw_rock_ore2_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Raw_ore1_Icon",
+		"PriceValue": 9323,
+		"MassValue": 13214,
+		"CargoBoxName": "Container_Rock_Ore1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_rock_ore3",
+		"Description": "product_raw_rock_ore3_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Raw_ore1_Icon",
+		"PriceValue": 15841,
+		"MassValue": 14103,
+		"CargoBoxName": "Container_Rock_Ore1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_bio_materials",
+		"Description": "product_bio_materials_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Bio_materials_Icon",
+		"PriceValue": 6200,
+		"MassValue": 7500,
+		"CargoBoxName": "Container_Tank_Blue",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_shellfish",
+		"Description": "product_shellfish_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Shellfish_Icon",
+		"PriceValue": 17200,
+		"MassValue": 4500,
+		"CargoBoxName": "Container_Small_A",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_composite1",
+		"Description": "product_raw_composite1_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_composite1_Icon",
+		"PriceValue": 8200,
+		"MassValue": 10500,
+		"CargoBoxName": "Container_raw_composite1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_raw_composite2",
+		"Description": "product_raw_composite2_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_composite2_Icon",
+		"PriceValue": 11029,
+		"MassValue": 13500,
+		"CargoBoxName": "Container_raw_composite2",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_components_optic",
+		"Description": "product_components_optic_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Optic_Icon",
+		"PriceValue": 1250,
+		"MassValue": 2000,
+		"CargoBoxName": "Container_Small",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_components_protein",
+		"Description": "product_components_protein_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"PriceValue": 500,
+		"MassValue": 5000,
+		"CargoBoxName": "Container_Food_Small",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_components_canned_fish",
+		"Description": "product_components_canned_fish_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Canned_fish_Icon",
+		"PriceValue": 1000,
+		"MassValue": 2500,
+		"CargoBoxName": "Container_canned_fish",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_components_maintenance_kit",
+		"Description": "product_components_maintenance_kit_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Maintenance_kit_Icon",
+		"PriceValue": 2250,
+		"MassValue": 1907,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_scientific",
+		"Description": "product_tools_scientific_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Maintenance_kit_Icon",
+		"PriceValue": 2300,
+		"MassValue": 4180,
+		"CargoBoxName": "Container_Small",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_car1",
+		"Description": "product_tools_car1_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_car1_Icon",
+		"PriceValue": 12300,
+		"MassValue": 1100,
+		"CargoBoxName": "Container_Red_Heavy",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_car2",
+		"Description": "product_tools_car2_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Tools_car2_Icon",
+		"PriceValue": 3000,
+		"MassValue": 7500,
+		"CargoBoxName": "Container_Green",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_mining_zond",
+		"Description": "product_mining_zond_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/ScanerGeo_Icon",
+		"CargoBoxName": "Container_GeologicalStation",
+		"PriceValue": 2000,
+		"MassValue": 3750,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_aqua_zond",
+		"Description": "product_aqua_zond_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Aqua_zond_Icon",
+		"CargoBoxName": "Container_Barrel",
+		"PriceValue": 2000,
+		"MassValue": 3750,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_box1",
+		"Description": "product_tools_box1_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_box1_Icon",
+		"PriceValue": 4200,
+		"MassValue": 2800,
+		"CargoBoxName": "Container_Small",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_box2",
+		"Description": "product_tools_box2_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_box2_Icon",
+		"PriceValue": 4000,
+		"MassValue": 3200,
+		"CargoBoxName": "Container_Food_Small",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_filtr_module",
+		"Description": "product_tools_filtr_module_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_filtr_module_Icon",
+		"PriceValue": 4000,
+		"MassValue": 1500,
+		"CargoBoxName": "Container_Aqurium_sidequest",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_tech_drone",
+		"Description": "product_tools_tech_drone_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_car1_Icon",
+		"CargoBoxName": "Container_Red_Heavy",
+		"PriceValue": 21000,
+		"MassValue": 5500,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_crush_drone",
+		"Description": "product_crush_drone_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Tools_car1_Icon",
+		"CargoBoxName": "Container_Drone_Small",
+		"PriceValue": 21000,
+		"MassValue": 2500,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_tools_tool_drone",
+		"Description": "product_tools_tool_drone_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_car1_Icon",
+		"PriceValue": 20000,
+		"MassValue": 6200,
+		"CargoBoxName": "Container_Green",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_agent_ship",
+		"Description": "product_agent_ship_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Topsecret_Icon",
+		"CargoBoxName": "Safeboat_Wreck_1",
+		"PriceValue": 40000,
+		"MassValue": 2500,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_radar_quest1",
+		"Description": "product_radar_quest1_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/ScanerGeo_Icon",
+		"PriceValue": 8000,
+		"MassValue": 1000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_radar_quest2",
+		"Description": "product_radar_quest2_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/ScanerGeo_Icon",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_radar_quest3",
+		"Description": "product_radar_quest3_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/ScanerGeo_Icon",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_pvo_quest1",
+		"Description": "product_pvo_quest1_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_pvo_quest2",
+		"Description": "product_pvo_quest2_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_pvo_quest3",
+		"Description": "product_pvo_quest3_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_alien_ship_quest1",
+		"Description": "product_alien_ship_quest1_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Safeboat_Wreck_1",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_alien_ship_quest2",
+		"Description": "product_alien_ship_quest2_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Safeboat_Wreck_1",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_geological_station",
+		"Description": "product_geological_station_descr",
+		"MaterialName": "mat_fragility_none",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Container_GeologicalStation",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "aquarium whith life: slider",
+		"Description": "aquarium whith life: slider",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"CargoBoxName": "Container_Aqurium_sidequest",
+		"PriceValue": 8000,
+		"MassValue": 100,
+		"MaxHPoints": 100000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "slider dead",
+		"Description": "slider dead",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Food_Icon",
+		"PriceValue": 8000,
+		"MassValue": 1000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_radar_quest",
+		"Description": "product_radar_quest_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Tools",
+		"PriceValue": 8000,
+		"MassValue": 11000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_BiggunCargo",
+		"Description": "product_BiggunCargo_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Conect_tower_Icon",
+		"PriceValue": 8000,
+		"MassValue": 13000,
+		"CargoBoxName": "Container_BiggunCargo",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Isoptera",
+		"Description": "product_Isoptera_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Insect_Parts_Icon",
+		"PriceValue": 5300,
+		"MassValue": 970,
+		"CargoBoxName": "Container_Isoptera",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	// --- Водные грибы
+	{
+		"Name": "product_Fungus_Mycelium",
+		"Description": "product_Fungus_Mycelium_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Steel_Icon",
+		"PriceValue": 1350,
+		"MassValue": 2000,
+		"CargoBoxName": "Container_Egg",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Fungus_Sporeorgan",
+		"Description": "product_Fungus_Sporeorgan_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Sporeorgan_Icon",
+		"PriceValue": 4125,
+		"MassValue": 5200,
+		"CargoBoxName": "Container_Egg",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Fungus_Equipment",
+		"Description": "product_Fungus_Equipment_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Maintenance_kit_Icon",
+		"PriceValue": 1000,
+		"MassValue": 1500,
+		"CargoBoxName": "Container_Fungus_Equipment",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	// --- Продукты арехологии
+	{
+		"Name": "product_archeology1",
+		"Description": "product_archeology1_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Archeological1_Icon",
+		"PriceValue": 2125,
+		"MassValue": 190,
+		"CargoBoxName": "Container_Archeology1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_archeology2",
+		"Description": "product_archeology2_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Archeological2_Icon",
+		"PriceValue": 5270,
+		"MassValue": 270,
+		"CargoBoxName": "Container_Archeology2",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_archeology3",
+		"Description": "product_archeology2_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Archeological3_Icon",
+		"PriceValue": 3300,
+		"MassValue": 370,
+		"CargoBoxName": "Container_Archeology3",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_archeology_endproduct",
+		"Description": "product_archeology_endproduct_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/ArcheologicalBox3_Icon",
+		"PriceValue": 15300,
+		"MassValue": 3100,
+		"CargoBoxName": "Container_archeology_endproduct",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	// --- Продукты Контрабандисткой линии квестов
+	{
+		"Name": "product_Smugglers_Alcobox",
+		"Description": "product_Smugglers_Alcobox_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Contraband_alcohol_Icon",
+		"PriceValue": 1000,
+		"MassValue": 4000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Smugglers_Housing_Kit",
+		"Description": "product_Smugglers_Housing_Kit_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Contraband_Interior_Icon",
+		"PriceValue": 6000,
+		"MassValue": 5000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Smugglers_Stealth_Device",
+		"Description": "product_Smugglers_Stealth_Device_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Topsecret_Icon",
+		"PriceValue": 10000,
+		"MassValue": 6000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Smugglers_Toxic_Mineral",
+		"Description": "product_Smugglers_Toxic_Mineral_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Ore_Icon",
+		"PriceValue": 100,
+		"MassValue": 7000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Smugglers_Toxic_Bomb",
+		"Description": "product_Smugglers_Toxic_Bomb_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Contraband_Bomb_Icon",
+		"PriceValue": 1000,
+		"MassValue": 8000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Smugglers_Weapons",
+		"Description": "product_Smugglers_Weapons_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Contraband_Gun_Icon",
+		"PriceValue": 10000,
+		"MassValue": 9000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Contraband_Cargo",
+		"Description": "product_Contraband_Cargo_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Topsecret_Icon",
+		"PriceValue": 2500,
+		"MassValue": 4500,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	// Продукты финалки сюжетной линии
+	{
+		"Name": "product_Quest_Main_Ending_Emitter",
+		"Description": "product_Quest_Main_Ending_Emitter_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Tools_service_drone_2_Icon",
+		"PriceValue": 0,
+		"MassValue": 3000, //!!!1
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Quest_Main_Ending_Armored_Cargo",
+		"Description": "product_Quest_Main_Ending_Armored_Cargo_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Tools_service_drone_2_Icon",
+		"PriceValue": 0,
+		"MassValue": 13500, //!!!1
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Quest_Main_Ending_Strange_box",
+		"Description": "product_Quest_Main_Ending_Strange_box_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Topsecret_Icon",
+		"PriceValue": 0,
+		"MassValue": 15000, // !!!1
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	// Продукты Каньона
+	// --- Квестовые продукты
+	{
+		"Name": "product_Canyon_Start_Box",
+		"Description": "product_Canyon_Start_Box_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Mining_zond_Icon",
+		"PriceValue": 1000,
+		"MassValue": 5000,
+		"CargoBoxName": "DefaultBox",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Canyon_Soil_Analyzer",
+		"Description": "product_Canyon_Soil_Analyzer_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Mining_zond_Icon",
+		"PriceValue": 250,
+		"MassValue": 1500,
+		"CargoBoxName": "Container_Canyon_Soil_Analyzer",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Canyon_Cartographer_Device",
+		"Description": "product_Canyon_Cartographer_Device_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Mining_zond_Icon",
+		"PriceValue": 250,
+		"MassValue": 1500,
+		"CargoBoxName": "Container_Canyon_Cartographer_Device",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Canyon_Ore_Analyzer",
+		"Description": "product_Canyon_Ore_Analyzer_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Mining_zond_Icon",
+		"PriceValue": 250,
+		"MassValue": 1000,
+		"CargoBoxName": "Container_Canyon_Ore_Analyzer",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_whale_steaks",
+		"Description": "product_whale_steaks_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Whale_steaks_Icon",
+		"PriceValue": 7050,
+		"MassValue": 12200,
+		"CargoBoxName": "Container_canne_big",
+		"MaxHPoints": 1000,
+		"TransportCost": 150
+	},
+	{
+		"Name": "product_underwater_drone",
+		"Description": "product_underwater_drone_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Underwater_drone_Icon",
+		"PriceValue": 12750,
+		"MassValue": 15200,
+		"CargoBoxName": "Container_underwater_drone",
+		"MaxHPoints": 1000,
+		"TransportCost": 100
+	},
+	{
+		"Name": "product_termodrill",
+		"Description": "product_termodrill_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Drill_nucliar_icon",
+		"PriceValue": 9750,
+		"MassValue": 13200,
+		"CargoBoxName": "Container_underwater_drone",
+		"MaxHPoints": 1000,
+		"TransportCost": 130
+	},
+	{
+		"Name": "product_Canyon_Bio_Analyzer",
+		"Description": "product_Canyon_Bio_Analyzer_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Mining_zond_Icon",
+		"PriceValue": 500,
+		"MassValue": 1850,
+		"CargoBoxName": "Container_Canyon_Bio_Analyzer",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Canyon_Water_Chassis",
+		"Description": "product_Canyon_Water_Chassis_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Upgrades/OxChassisHard_Icon",
+		"PriceValue": 500,
+		"MassValue": 2650,
+		"CargoBoxName": "Container_Canyon_Bio_Analyzer",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Canyon_Fisher_1",
+		"Description": "product_Canyon_Fisher_1_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Canned_fish_Icon",
+		"PriceValue": 800,
+		"MassValue": 1600,
+		"CargoBoxName": "Container_Canyon_Fisher_1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Canyon_Fisher_2",
+		"Description": "product_Canyon_Fisher_2_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Canned_fish_Icon",
+		"PriceValue": 800,
+		"MassValue": 1600,
+		"CargoBoxName": "Container_Canyon_Fisher_2",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	{
+		"Name": "product_Canyon_Water_Filter_New",
+		"Description": "product_Canyon_Water_Filter_New_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Water_Icon",
+		"PriceValue": 150,
+		"MassValue": 1850,
+		"CargoBoxName": "Container_Canyon_Water_Filter_New",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+		//"NonTradable": true
+	},
+	{
+		"Name": "product_Canyon_Water_Filter_Old",
+		"Description": "product_Canyon_Water_Filter_Old_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Water_Icon",
+		"PriceValue": 800,
+		"MassValue": 1500,
+		"CargoBoxName": "Container_Canyon_Water_Filter_Old",
+		"MaxHPoints": 1000,
+		"TransportCost": 200,
+		"NonTradable": true
+	},
+	// --- Городские продукты
+	{
+		"Name": "product_Canyon_Hefesto_Scanner",
+		"Description": "product_Canyon_Hefesto_Scanner_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/ScanerGeo_Icon",
+		"PriceValue": 6500,
+		"MassValue": 6500,
+		"CargoBoxName": "Container_Canyon_Hefesto_Scanner",
+		"MaxHPoints": 1000,
+		"TransportCost": 150
+	},
+	{
+		"Name": "product_Canyon_Metal_Construct",
+		"Description": "product_Canyon_Metal_Construct_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Raw_metal1_Icon",
+		"PriceValue": 6000,
+		"MassValue": 3500,
+		"CargoBoxName": "Container_Canyon_Metal_Construct",
+		"MaxHPoints": 1000,
+		"TransportCost": 150
+	},
+	{
+		"Name": "product_Canyon_Crystal_Ore",
+		"Description": "product_Canyon_Crystal_Ore_descr",
+		"MaterialName": "mat_fragility_high",
+		"Icon": "GUI/Icons/Products/Raw_ore1_Icon",
+		"PriceValue": 3500,
+		"MassValue": 4000,
+		"CargoBoxName": "Container_Tank_Blue",
+		"MaxHPoints": 1000,
+		"TransportCost": 150
+	},
+	// misc
+	{
+		"Name": "product_Rover",
+		"Description": "product_Rover_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Rover_Icon",
+		"PriceValue": 12000,
+		"MassValue": 10370,
+		"CargoBoxName": "Container_Rover",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_stat_1",
+		"Description": "product_stat_1_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Battery_livermory_Icon",
+		"PriceValue": 4700,
+		"MassValue": 3500,
+		"CargoBoxName": "Container_stat_1",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_stat_2",
+		"Description": "product_stat_2_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Optic_Icon",
+		"PriceValue": 3400,
+		"MassValue": 2900,
+		"CargoBoxName": "Container_stat_2",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_stat_3",
+		"Description": "product_stat_3_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/DefaultBox_Icon",
+		"PriceValue": 2900,
+		"MassValue": 2100,
+		"CargoBoxName": "Container_stat_3",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_pumpkin",
+		"Description": "product_pumpkin_descr",
+		"MaterialName": "mat_fragility_low",
+		"Icon": "GUI/Icons/Products/Pumpkin_Icon",
+		"PriceValue": 1234,
+		"MassValue": 666,
+		"CargoBoxName": "Container_Pumpkin",
+		"MaxHPoints": 777,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Astlan_Wires",
+		"Description": "product_Astlan_Wires_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Raw_metal2_icon",
+		"PriceValue": 1100,
+		"MassValue": 1950,
+		"CargoBoxName": "Container_Wires",
+		"MaxHPoints": 1000,
+		"TransportCost": 200
+	},
+	{
+		"Name": "product_Medusa",
+		"Description": "product_Medusa_descr",
+		"MaterialName": "mat_fragility_medium",
+		"Icon": "GUI/Icons/Products/Product_Medusa_Icon",
+		"PriceValue": 2890,
+		"MassValue": 3800,
+		"CargoBoxName": "Container_Wires",
+		"MaxHPoints": 1000,
+		"TransportCost": 250
+	}
+]

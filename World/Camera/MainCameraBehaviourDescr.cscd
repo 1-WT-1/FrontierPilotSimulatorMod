@@ -1,0 +1,547 @@
+﻿--
+Name: BaseShip
+States:
+	--
+	Name: StartState
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPosition
+			TargetPoint: DefaultTarget
+--
+Name: CapsuleOx
+States:
+	--
+	Name: ExlposionState
+	NoInputSet: true
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: CapsuleStartPosition
+			TargetPoint: CapsuleStartTarget	
+	--
+	Name: CabinViewCloseState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: CapsuleOxCockpitPosition
+			TargetPoint: CapsuleOxCockpitTarget
+			CameraPositionSetting: Cockpit
+	--
+	Name: DefaultState
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPosition
+			TargetPoint: DefaultTarget	
+
+--
+Name: Scarab
+States:
+	--
+	Name: DefaultState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos1
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPack
+			TargetPoint: ScarabTargetJetPack
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: ScarabPositionPlane
+			TargetPoint: ScarabTargetPlane
+		--
+		ShipFlyState: Wheels
+		StateDescr:
+			PositionPoint: ScarabPositionWheels
+			TargetPoint: ScarabTargetWheels
+	--
+	Name: TPViewState
+	ShipVisualState: ThirdPersonView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackTP
+			TargetPoint: ScarabTargetJetPackTP
+			CameraPositionSetting: Cockpit
+		// --
+		// ShipFlyState:  Captured
+		// StateDescr:
+		// 	PositionPoint: ScarabPositionJetPackFP
+		// 	TargetPoint: ScarabTargetJetPackFP
+	// --
+	// Name: Cinematic
+	// CameraEnable: CockpitCamera
+	// FlyStates:
+	// 	--
+	// 	ShipFlyState: JetPack
+	// 	StateDescr:
+	// 		ControllerType: Cinematic
+	// 		PositionPoint: Cinematic1	
+	// --
+	// Name: CabinViewCloseState
+	// Tags: Cabin
+	// CameraEnable: CockpitCamera
+	// ShipVisualState: CabinViewClose
+	// FlyStates:
+	// 	--
+	// 	ShipFlyState: JetPack
+	// 	StateDescr:
+	// 		PositionPoint: ScarabCockpitPosition
+	// 		TargetPoint: ScarabCockpitTarget	
+	// 		CameraPositionSetting: Cockpit
+	--
+	Name: CabinViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: CabinView
+	HotInput: Ship_Camera_Pos2
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabCockpitPosition
+			TargetPoint: ScarabCockpitTarget	
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: ScarabCockpitPosition
+			TargetPoint: ScarabCockpitTarget
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: ChairViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: ChairView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: ScarabCockpitPosition
+			TargetPoint: ScarabCockpitTarget
+			CameraPositionSetting: Cockpit	
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: ScarabCockpitPosition
+			TargetPoint: ScarabCockpitTarget
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: FPViewState
+	HotInput: Ship_Camera_Pos3
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackFP
+			TargetPoint: ScarabTargetJetPackFP
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackFP
+			TargetPoint: ScarabTargetJetPackFP
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: TPUnderWingViewState
+	ShipVisualState: ThirdPersonView	
+	HotInput: Ship_Camera_Pos4
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackTPUnderWing
+			TargetPoint: ScarabTargetJetPackTPUnderWing
+			CameraPositionSetting: Cockpit
+	--
+	Name: TPCargoViewState
+	HotInput: Ship_Camera_Pos5 
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackTPCargo
+			TargetPoint: ScarabTargetJetPackTPCargo
+			CameraPositionSetting: Cargo
+	--
+	Name: TPHangarViewState1
+	InHangar: true
+	NoInputSet: true
+	FlyStates:
+		--
+		ShipFlyState: Hangar		
+		StateDescr:
+			PositionPoint: HangarCameraPosition1
+			TargetPoint: HangarCameraTarget
+	--
+	Name: TPHangarViewState2
+	InHangar: true
+	NoInputSet: true
+	FlyStates:
+		--
+		ShipFlyState: Hangar
+		StateDescr:
+			PositionPoint: HangarCameraPosition2
+			TargetPoint: HangarCameraTarget
+	--
+	Name: TPHangarViewState3
+	InHangar: true
+	NoInputSet: true
+	FlyStates:
+		--
+		ShipFlyState: Hangar
+		StateDescr:
+			PositionPoint: HangarCameraPosition3
+			TargetPoint: HangarCameraTarget
+
+--
+Name: Ox //Переключения основной камеры для Окса
+States:
+	--
+	Name: DefaultState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos1
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPosition
+			TargetPoint: DefaultTarget
+			CameraPositionSetting: ThirdFace	
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: DefaultPositionPlane
+			TargetPoint: DefaultTargetPlane
+			CameraPositionSetting: ThirdFacePlane			
+		--
+		ShipFlyState: Wheels
+		StateDescr:
+			PositionPoint: DefaultPositionWheels
+			TargetPoint: DefaultTargetWheels
+	--
+	Name: TPViewState
+	//NoInputSet: true
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPositionTP
+			TargetPoint: DefaultTargetTP
+			CameraPositionSetting: Cockpit
+	// --
+	// Name: CabinViewCloseState //закрытая кабина
+	// Tags: Cabin
+	// CameraEnable: CockpitCamera
+	// ShipVisualState: CabinViewClose
+	// FlyStates:
+	// 	--
+	// 	ShipFlyState: JetPack
+	// 	StateDescr:
+	// 		PositionPoint: DefaultCockpitPosition
+	// 		TargetPoint: DefaultCockpitView	
+	// 		CameraPositionSetting: Cockpit
+	--
+	Name: CabinViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: CabinView
+	HotInput: Ship_Camera_Pos2
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView	
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView	
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: ChairViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: ChairView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView	
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView	
+			CameraPositionSetting: CockpitPlane			
+	--
+	Name: FPViewState
+	HotInput: Ship_Camera_Pos3
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPositionFP
+			TargetPoint: DefaultTargetFP
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: DefaultPositionFP
+			TargetPoint: DefaultTargetFP
+			CameraPositionSetting: CockpitPlane			
+	--
+	Name: TPUnderWingViewState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos4
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: OxPositionJetPackTPUnderWing
+			TargetPoint: OxTargetJetPackTPUnderWing
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: OxPositionJetPackTPUnderWing
+			TargetPoint: OxTargetJetPackTPUnderWing
+			CameraPositionSetting: CockpitPlane
+			
+	--
+	Name: TPCargoViewState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos5 
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: OxPositionJetPackTPCargo
+			TargetPoint: OxTargetJetPackTPCargo
+			CameraPositionSetting: Cargo
+--
+Name: Ballena //Переключения основной камеры для Баллены
+States:
+	--
+	Name: DefaultState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos1
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPosition
+			TargetPoint: DefaultTarget
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: DefaultPositionPlane
+			TargetPoint: DefaultTargetPlane
+		--
+		ShipFlyState: Wheels
+		StateDescr:
+			PositionPoint: DefaultPositionWheels
+			TargetPoint: DefaultTargetWheels
+	--
+	Name: TPViewState
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: DefaultPositionTP
+			TargetPoint: DefaultTargetTP
+			CameraPositionSetting: Cockpit	
+	// --
+	// Name: CabinViewCloseState
+	// Tags: Cabin
+	// CameraEnable: CockpitCamera
+	// ShipVisualState: CabinViewClose
+	// FlyStates:
+	// 	--
+	// 	ShipFlyState: JetPack
+	// 	StateDescr:
+	// 		PositionPoint: BallenaCockpitPosition
+	// 		TargetPoint: BallenaCockpitTarget
+	// 		CameraPositionSetting: Cockpit
+	--
+	Name: CabinViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: CabinView
+	HotInput: Ship_Camera_Pos2
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: BallenaCockpitPosition
+			TargetPoint: BallenaCockpitTarget
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: BallenaCockpitPosition
+			TargetPoint: BallenaCockpitTarget	
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: ChairViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: ChairView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: FPViewState
+	HotInput: Ship_Camera_Pos3
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: BallenaPositionFP
+			TargetPoint: DefaultTargetFP
+			CameraPositionSetting: Cockpit
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: BallenaPositionFP
+			TargetPoint: DefaultTargetFP
+			CameraPositionSetting: CockpitPlane
+	--
+	Name: TPUnderWingViewState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos4
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: BallenaPositionJetPackTPUnderWing
+			TargetPoint: BallenaTargetJetPackTPUnderWing
+			CameraPositionSetting: Cockpit
+	--
+	Name: TPCargoViewState
+	ShipVisualState: ThirdPersonView
+	HotInput: Ship_Camera_Pos5
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: BallenaPositionJetPackTPCargo
+			TargetPoint: BallenaTargetJetPackTPCargo
+			CameraPositionSetting: Cargo
+--
+Name: Peregrine
+States:
+	--
+	Name: DefaultState
+	ShipVisualState: ThirdPersonView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPack
+			TargetPoint: ScarabTargetJetPack
+		--
+		ShipFlyState: Plane
+		StateDescr:
+			PositionPoint: ScarabPositionPlane
+			TargetPoint: ScarabTargetPlane
+		--
+		ShipFlyState: Wheels
+		StateDescr:
+			PositionPoint: ScarabPositionWheels
+			TargetPoint: ScarabTargetWheels
+	--
+	Name: TPViewState
+	ShipVisualState: ThirdPersonView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackTP
+			TargetPoint: ScarabTargetJetPackTP
+			CameraPositionSetting: Cockpit
+	--
+	Name: CabinViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: CabinView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabCockpitPosition
+			TargetPoint: ScarabCockpitTarget	
+			CameraPositionSetting: Cockpit
+	--
+	Name: ChairViewState
+	Tags: Cabin
+	CameraEnable: CockpitCamera
+	ShipVisualState: ChairView
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			ControllerType: Cockpit
+			PositionPoint: DefaultCockpitPosition
+			TargetPoint: DefaultCockpitView	
+			CameraPositionSetting: Cockpit	
+
+	--
+	Name: FPViewState
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackFP
+			TargetPoint: ScarabTargetJetPackFP
+			CameraPositionSetting: Cockpit
+	--
+	Name: TPUnderWingViewState
+	ShipVisualState: ThirdPersonView	
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackTPUnderWing
+			TargetPoint: ScarabTargetJetPackTPUnderWing
+			CameraPositionSetting: Cockpit
+	--
+	Name: TPCargoViewState
+	FlyStates:
+		--
+		ShipFlyState: JetPack
+		StateDescr:
+			PositionPoint: ScarabPositionJetPackTPCargo
+			TargetPoint: ScarabTargetJetPackTPCargo
+			CameraPositionSetting: Cargo

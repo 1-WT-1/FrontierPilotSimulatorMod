@@ -1,0 +1,4437 @@
+[
+//ScarabHullBase 1
+    {
+		"Name": "ScarabHullBase",
+		"Description": "ScarabHullBase_Descr",
+        "RequireSlot": "Hull",   
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/DefaultUpgrade_Icon",
+            "ColumnHP": "HP",
+            "Sellable": false,
+            "Hidden": true,
+            "PriceCredits": 258800
+        },
+        "AddSlots": [
+            "FuelTank_Scarab",
+            "Locator_Scarab",
+            "Chassis_Scarab",
+			"Wings_Scarab",
+			"Cargo_Scarab",	
+			"Light_Scarab",
+			"CustomUpgrade_Scarab",
+			"CustomUpgrade_Universal",
+			//
+			"AFC_Scarab", //active flow control system
+			"FCS_Scarab", //Fuel Cooling System
+			//Теплообменники с замкнутым контуром (Cryocoolers)
+			//Системы испарительного охлаждения (Evaporative Cooling)
+			//Жидкий кислород (-183°C)
+			//жидкий азот (-196°C)
+			//Жидкий водород (-253°C)
+			//Жидкий гелий (-269°C)
+			
+			"CCS_Scarab", //cargo compression system
+			"AOS_Scarab", //AntiOverload System
+			"Fuel_Injectors",
+			"Fuel_Pumping",
+			"Fuel_System_Scarab",
+			"Coating"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+                "Value": 1850
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Hull",
+                "Value": 1500
+            }
+        ],
+        "SetPrefabs": [ ],
+        "SetEffects": [
+		//Эффект для закрылок
+			/*
+			{
+				"Prefab": "FX/ShipFx/fx_scarabHighspeedWind",
+				"Hook": "HookHullMain"
+			},
+			*/
+			{
+				"Prefab": "FX/ShipFx/fx_scarab_flap_back_V_L",
+				"Hook": "flap_back_V_L_AnimHook"
+			},
+			{
+				"Prefab": "FX/ShipFx/fx_scarab_flap_back_V2_L",
+				"Hook": "flap_back_V2_L_AnimHook"
+			},
+			{
+				"Prefab": "FX/ShipFx/fx_scarab_flap_back_V_R",
+				"Hook": "flap_back_V_R_AnimHook"
+			},
+			{
+				"Prefab": "FX/ShipFx/fx_scarab_flap_back_V2_R",
+				"Hook": "flap_back_V2_R_AnimHook"
+			},
+			{
+				"Prefab": "FX/ShipFx/fx_scarab_air_brake",
+				"Hook": "AirBrake_fxHook"
+			},
+			{
+				"Prefab": "FX/ShipFx/fx_scarabDangerousZone",
+				"Hook": "HookHullMain"
+			},
+			{
+				"Prefab": "FX/ShipFx/fx_scarabEnergyCharge",
+				"Hook": "HookHullMain"
+			},
+		//Эффекты для высокой скорости
+			{
+				"Prefab": "FX/ShipFx/HullFX/Scarab/fx_scarabSoundbarrier",
+				"Hook": "HookHullMain"
+			},
+        //Трейлы от хвоста
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookHullHoleLB"
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookHullHoleRB"
+            },
+        //Зона поднятия груза
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_NotDownloadArea",
+                "Hook": "HookDownloadArea"
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_DownloadArea",
+                "Hook": "HookDownloadArea"
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_ErrorDownloadArea",
+                "Hook": "HookDownloadArea"
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AvailableArea",
+                "Hook": "HookDownloadArea"
+            },
+        //Повреждения корпуса
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_DamageSmoke_F",
+                "Hook": "HookHullHoleRF",
+                "Params": 
+                {
+                    "GameParamPart": "ShipHull"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_DamageSmoke_F",
+                "Hook": "HookHullHoleLF",
+                "Params": 
+                {
+                    "GameParamPart": "ShipHull"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageHull",
+                "Hook": "HookHullMain",
+                "Params": 
+                {
+                    "GameParamPart": "ShipHull"
+                }
+            }
+        ]
+	},
+	//certificate
+	
+	//Lights
+	//ScarabAdditionalLight
+	{
+		"Name": "ScarabLightBase",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "Light_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": false,
+			"ColumnHP": "HP",
+			"PriceCredits": 2000
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 25
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Lights/scarab_headlightsUpgrade",
+				"Hook": "LightsHook",
+				"TakeHooks": [
+					"Light_TakePoint"
+				]
+			}
+		]
+	},
+	{
+		"Name": "ScarabLightAdditional",
+		"Description": "ScarabAdditionalLight_Descr",
+		"RequireSlot": "Light_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightLandindg_Icon",
+			"Sellable": false,
+			"ColumnHP": "HP",
+			"PriceCredits": 16000
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 25
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Lights/scarab_headlightsUpgradePower",
+				"Hook": "LightsHook",
+				"TakeHooks": [
+					"Light_TakePoint"
+				]
+			}
+		]
+	},	
+	{
+		"Name": "ScarabLightAdditionalLanding",
+		"Description": "ScarabAdditionalLandingLight_Descr",
+		"RequireSlot": "Light_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLight_Icon",
+			"Sellable": false,
+			"ColumnHP": "HP",
+			"PriceCredits": 23000
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 50
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Lights/scarab_headlightsUpgradeLanding",
+				"Hook": "LightsHook",
+				"TakeHooks": [
+					"Light_TakePoint"
+				]
+			}
+		]
+	},		
+	//LOCATORS//
+	//ScarabLocatorBase//////////////////////////////////////////////////////////////////
+	{ 
+		"Name": "ScarabLocatorBase",
+		"Description": "ScarabLocatorBase_Descr",
+		"RequireSlot": "Locator_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/LocatorBase_Icon",
+				"Sellable": false,
+				"ColumnHP": "HP",
+				"PriceCredits": 20000
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Locator",
+				"Value": 350
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Locator",
+				"Value": 100
+			},			
+			{
+				"Type": "LocatorCargoDistance",
+				"Aggregate": "Locator",
+				"Coef": 0.33
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorBase_L",
+				"Hook": "scarab_locatorHook_L",
+				"TakeHooks": ["locatorReplaceL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorBase_R",
+				"Hook": "scarab_locatorHook_R",
+				"TakeHooks": ["locatorReplaceR"],
+				"Place": "Right"
+			}
+		],
+		"SetEffects": [
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionLocator",
+				"Hook": "scarab_locatorHook_L"				
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Damage/SFXDamageLocator",
+				"Hook": "scarab_locatorHook_L"				
+			}
+		]
+	},
+	//ScarabLocatorWaterProof
+	{ 
+		"Name": "ScarabLocatorWaterProof",
+		"Description": "ScarabLocatorWaterProof_Descr",
+		"RequireSlot": "Locator_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/LocatorWaterProof_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 28500
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Locator",
+				"Value": 30
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Locator",
+				"Value": 100
+			},			
+			{
+				"Type": "LocatorCargoDistance",
+				"Aggregate": "Locator",
+				"Coef": 0.43
+			},
+            {
+                "Visible": true,
+				"Type": "Consumption", //ARFuelConsume
+				"Aggregate": "Locator",
+                "Coef": 0.3
+            }
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorWaterproof_L",
+				"Hook": "scarab_locatorHook_L",
+				"TakeHooks": ["locatorReplaceL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorWaterproof_R",
+				"Hook": "scarab_locatorHook_R",
+				"TakeHooks": ["locatorReplaceR"],
+				"Place": "Right"
+			}
+		],
+		"SetEffects": [
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionLocator",
+				"Hook": "scarab_locatorHook_L"				
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Damage/SFXDamageLocator",
+				"Hook": "scarab_locatorHook_L"				
+			}
+		]
+	},
+	//ScarabLocatorCargoRange большие плюхи далеко видят каргобоксы
+	{ 
+		"Name": "ScarabLocatorCargoRange",
+		"Description": "ScarabLocatorCargoRange_Descr",
+		"RequireSlot": "Locator_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/LocatorCargoRange_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 29200
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Locator",
+				"Value": 224
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Locator",
+				"Value": 100
+			},
+			{
+				"Visible": true,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Locator",
+				"Coef": 0.9
+			},
+			{
+				//"Visible": true,
+				"Type": "LocatorCargoDistance",
+				"Aggregate": "Locator",
+				"Coef": 0.66
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorUpgrade_L",
+				"Hook": "scarab_locatorHook_L",
+				"TakeHooks": ["locatorReplaceL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorUpgrade_R",
+				"Hook": "scarab_locatorHook_R",
+				"TakeHooks": ["locatorReplaceR"],
+				"Place": "Right"
+			}
+		],
+		"SetEffects": [
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionLocator",
+				"Hook": "scarab_locatorHook_L"				
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Damage/SFXDamageLocator",
+				"Hook": "scarab_locatorHook_L"				
+			}
+		]
+	},	
+		//ScarabLocatorCargoRange2 большие плюхи далеко видят каргобоксы
+	{ 
+		"Name": "ScarabLocatorCargoRange2",
+		"Description": "ScarabLocatorCargoRange2_Descr",
+		"RequireSlot": "Locator_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/LocatorCargoRange2_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 193000
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Locator",
+				"Value": 324
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Locator",
+				"Value": 230
+			},
+			{
+				"Visible": false,
+				"Type": "DragPointsJetpack",
+				"Aggregate": "Locator",
+				"Coef": 1.12
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Locator",
+				"Coef": 1.12
+			},
+			{
+				"Visible": true,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Locator",
+				"Coef": 0.8
+			},
+			{
+				//"Visible": true,
+				"Type": "LocatorCargoDistance",
+				"Aggregate": "Locator",
+				"Coef": 1
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorUpgrade2_L",
+				"Hook": "scarab_locatorHook_L",
+				"TakeHooks": ["locatorReplaceL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/Locators/scarab_locatorUpgrade2_R",
+				"Hook": "scarab_locatorHook_R",
+				"TakeHooks": ["locatorReplaceR"],
+				"Place": "Right"
+			}
+		],
+		"SetEffects": [
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionLocator",
+				"Hook": "scarab_locatorHook_L"				
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Damage/SFXDamageLocator",
+				"Hook": "scarab_locatorHook_L"				
+			}
+		]
+	},	
+//ScarabWingsBase/////////////////////////////////////////////////////////////////
+    {
+        "Name": "ScarabWingsBase",
+		"Description": "ScarabWingsBase_Descr",
+        "RequireSlot": "Wings_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabWings1_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 4200
+        },
+        "AddSlots": [
+            "Engine_Scarab"
+        ],
+        "ChangeParams": [
+            {
+                "Type": "ShipMass",
+                "Aggregate": "Wing",
+                "Value": 520
+            },
+            {
+                "Type": "HP",
+                "Aggregate": "Wing",
+                "Value": 500
+            },
+            {
+                "Type": "PlaneMode",
+                "Aggregate": "Wing",
+                "Value": 0
+            }
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Base_L",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Base_R",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceR"]
+            }
+        ],
+        "SetEffects": [
+            //Повреждения крыльев
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingL",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingR",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			//SFX
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            }
+        ]
+	},
+	//ScarabWingsLight/////////////////////////////////////////////////////////////////
+    {
+        "Name": "ScarabWingsLight",
+		"Description": "ScarabWingsLight_Descr",
+        "RequireSlot": "Wings_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabWings2_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 126000
+        },
+        "AddSlots": [
+            "Engine_Scarab"
+        ],
+        "ChangeParams": [
+            {
+                "Type": "ShipMass",
+                "Aggregate": "Wing",
+                "Value": 124
+            },
+            {
+                "Type": "HP",
+                "Aggregate": "Wing",
+                "Value": 650
+            },
+            {
+                "Type": "PlaneMode",
+                "Aggregate": "Wing",
+                "Value": 0
+            }
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Light_L",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Light_R",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceR"]
+            }
+        ],
+        "SetEffects": [
+            //Повреждения крыльев
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingL",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingR",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            }
+        ]
+    },
+//ScarabWingsPlane/////////////////////////////////////////////////////////////////
+    {
+		"Name": "ScarabWingsPlane",
+		"Description": "ScarabWingsPlane_Descr",
+        "RequireSlot": "Wings_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabWings4_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 83000
+        },
+        "AddSlots": [
+        "Engine_Scarab"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Wing",
+                "Value": 655
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Wing",
+                "Value": 300
+            },
+            {
+				"Type": "PlaneMode",
+				"Aggregate": "Wing",
+                "Value": 1
+            }
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Plane_L",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Plane_R",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceR"]
+            }
+        ],
+        "SetEffects": [
+        //Повреждения крыльев
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingL",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingR",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },	
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },	
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            }
+        ]
+    },
+//ScarabWingsShuttle/////////////////////////////////////////////////////////////////
+    {
+		"Name": "ScarabWingsShuttle",
+		"Description": "ScarabWingsShuttle_Descr",
+        "RequireSlot": "Wings_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabWings3_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 102000
+        },
+        "AddSlots": [
+        "Engine_Scarab"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Wing",
+                "Value": 850
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Wing",
+                "Value": 300
+            },
+            {
+				"Type": "PlaneMode",
+				"Aggregate": "Wing",
+                "Value": 1
+			},
+			{
+				"Type": "SquarePlane",
+				"Aggregate": "Airplane",
+				"ObjectName": "LeftWing",
+				"Coef": 1.25
+			},
+			{
+				"Type": "SquarePlane",
+				"Aggregate": "Airplane",
+				"ObjectName": "RightWing",
+				"Coef": 1.25
+			}
+			// ,
+			// {
+			// 	"Visible": true,
+			// 	"Type": "PlaneAirDrag",
+			// 	"Aggregate": "Wing",
+			// 	"Coef": 1
+			// },
+			// {
+			// 	"Visible": true,
+			// 	"Type": "SquarePlane",
+			// 	"Aggregate": "Wing",
+			// 	"Coef": 1.25
+			// }
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Shuttle_L",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Shuttle_R",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceR"]
+            }
+        ],
+        "SetEffects": [	
+			{
+				"Prefab": "FX/ShipFx/WingFX_Base/vfx_scarab_wing_plane_flap_l",
+				"Hook": "Wing_Flap_1_Hook_VFX_L",
+				"Params": {
+					"GameParamPart": "ShipWing"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/WingFX_Base/vfx_scarab_wing_plane_flap_r",
+				"Hook": "Wing_Flap_1_Hook_VFX_R",
+				"Params": {
+					"GameParamPart": "ShipWing"
+				}
+			},
+        //Повреждения крыльев
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingL",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingR",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },	
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },	
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            }
+        ]
+    },
+
+//ScarabWingsTransform/////////////////////////////////////////////////////////////////
+    {
+		"Name": "ScarabWingsTransform",
+		"Description": "ScarabWingsShuttle_Descr",
+        "RequireSlot": "Wings_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabWings3_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 132000
+        },
+        "AddSlots": [
+        "Engine_Scarab"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Wing",
+                "Value": 300
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Wing",
+                "Value": 300
+            },
+            {
+				"Type": "PlaneMode",
+				"Aggregate": "Wing",
+                "Value": 1
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Wing",
+				"Coef": 0.85
+			},
+			{
+				"Visible": true,
+				"Type": "SquarePlane",
+				"Aggregate": "Airplane",
+				"ObjectName": "LeftWing",
+				"Coef": 0.75
+			},
+			{
+				"Type": "SquarePlane",
+				"Aggregate": "Airplane",
+				"ObjectName": "RightWing",
+				"Coef": 0.75
+			}
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Transform_L",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Wings/Scarab_Wing_Transform_R",
+				"Hook": "WingsHook",
+				"TakeHooks": ["WingReplaceR"]
+            }
+        ],
+        "SetEffects": [
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookWingTrail_L2",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookWingTrail_R2",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+        //Повреждения крыльев
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingL",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/WingFX_Base/FXDroneWing_Damage",
+                "Hook": "HookWingR",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },	
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_L",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            },	
+            {
+                "Prefab": "FX/ShipFx/HullFX/FXHull_AirTrail_R",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionWings",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_R",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/Damage/SFXDamageWing",
+                "Hook": "HookWingTrail_L",
+                "Params": {
+                    "GameParamPart": "ShipWing"
+                }
+            }
+        ]
+    },
+    
+//Engines
+//ScarabEnginesBase
+    {
+		"Name": "ScarabEnginesBase",
+		"Description": "ScarabEnginesBase_Descr",
+        "RequireSlot": "Engine_Scarab",
+        "TradeParams": {
+                "Icon": "GUI/Icons/Upgrades/ScarabEnginesBase_Icon",
+                "ColumnHP": "HP",
+                "PriceCredits": 10000
+            },
+        "AddSlots": [
+            "EngineUpgrade_Scarab"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Engine",
+                "Value": 835
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Engine",
+                "Value": 520
+            }
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Base_LF",
+                "Hook": "EngineLFHook",
+				"Place": "Left",
+				"TakeHooks": ["EngineReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Base_RF",
+                "Hook": "EngineRFHook",
+				"Place": "Right",
+				"TakeHooks": ["EngineReplaceR"]
+            }
+        ],
+        "SetEffects": [
+        //Поломка двигателей (насколько мне известно, не подключена кодом)
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+        //Повреждения двигателей
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Left"
+                }
+            },
+        //Флепсы двигателей - доп. движки
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap1L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap2L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap3L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap4L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap5L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap6L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap1R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap2R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap3R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap4R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap5R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap6R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+        //Основной эффект двигателей
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_main",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_main",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Right"
+                }
+            },
+    // Engine SFX
+                {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFire",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFire",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXAirBrakes",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+				"Prefab": "SFX/ShipSFX/SFXAccelerationOverload",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/SFXEngineAfterburner",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+			}
+        ]
+    },
+//ScarabEnginesWaterProof
+    {
+		"Name": "ScarabEnginesWaterProof",
+		"Description": "ScarabEnginesWaterProof_Descr",
+        "RequireSlot": "Engine_Scarab",
+        "TradeParams": {
+                "Icon": "GUI/Icons/Upgrades/ScarabEnginesWaterProof_Icon",
+                "ColumnHP": "HP",
+                "PriceCredits": 125000
+            },
+        "AddSlots": [
+            "EngineUpgrade_Scarab"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Engine",
+                "Value": 955
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Engine",
+                "Value": 320
+            },
+            {
+				"Visible": true,
+				"Type": "WaterResistance",
+				"Aggregate": "Engine",
+                "Value": 100
+            }
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Water_LF",
+                "Hook": "EngineLFHook",
+                "Place": "Left",
+				"TakeHooks": ["EngineReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Water_RF",
+                "Hook": "EngineRFHook",
+                "Place": "Right",
+				"TakeHooks": ["EngineReplaceR"]
+            }
+        ],
+        "SetEffects": [
+        //Поломка двигателей (насколько мне известно, не подключена кодом)
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+        //Повреждения двигателей
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Left"
+                }
+            },
+        //Флепсы двигателей - доп. движки
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap1L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap2L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap3L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap4L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap5L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap6L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap1R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap2R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap3R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap4R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap5R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap6R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+        //Основной эффект двигателей
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineWater_main",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineWater_main",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace":  "Right"
+                }
+            },
+    // Engine SFX
+                {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFire",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFire",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXAirBrakes",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+				"Prefab": "SFX/ShipSFX/SFXEngineAfterburner",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+            {
+				"Prefab": "SFX/ShipSFX/SFXAccelerationOverload",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+			}
+        ]
+    },
+    
+//ScarabEnginesPower1
+    {
+		"Name": "ScarabEnginesPower1",
+		"Description": "ScarabEnginesPower1_Descr",
+		"Ship": "Scarab",
+        "RequireSlot": "Engine_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabEnginesPower1_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 54990
+        },
+		"AddSlots": [
+			"EngineUpgrade_Scarab"
+		],
+		"AutoRepairParts": [
+			{
+				"Part": "ShipEngine",
+				"Place": "Left"
+			},
+			{
+				"Part": "ShipEngine",
+				"Place": "Right"
+			}
+		],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Engine",
+                "Value": 1073
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Engine",
+                "Value": 1500
+            },
+            {
+                "Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+                "Coef": 1.25
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 1.3
+			}
+			// {
+			// 	"Visible": true,
+			// 	"Type": "DragPointsJetpack",
+			// 	"Aggregate": "Engine",
+			// 	"Coef": 1.15
+			// }	
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Small_LF",
+                "Hook": "EngineLFHook",
+				"Place": "Left",
+				"TakeHooks": ["EngineReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Small_RF",
+                "Hook": "EngineRFHook",
+				"Place": "Right",
+				"TakeHooks": ["EngineReplaceR"]
+            }
+        ],
+        "SetEffects": [
+        //Поломка двигателей (насколько мне известно, не подключена кодом)
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+        //Повреждения двигателей
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+        //Флепсы двигателей - доп. движки
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap1L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap2L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap3L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap4L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap5L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap6L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap1R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap2R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap3R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap4R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap5R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_flaps",
+                "Hook": "Scarab_EngineFlap6R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+                //Основной эффект двигателей
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_main",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_main",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            //SFX upgrade power1
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFirePower1",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFirePower1",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXAirBrakes",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+				"Prefab": "SFX/ShipSFX/SFXEngineAfterburner",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+            {
+				"Prefab": "SFX/ShipSFX/SFXAccelerationOverload",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+			}
+        ]
+	},
+	//ScarabEnginesPower2
+    {
+		"Name": "ScarabEnginesPower2",
+		"Description": "ScarabEnginesPower2_Descr",
+        "RequireSlot": "Engine_Scarab",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/ScarabEnginesPower2_Icon",
+            "ColumnHP": "HP",
+            "PriceCredits": 524990
+        },
+        "AddSlots": [
+        "EngineUpgrade_Scarab"
+        ],
+        "ChangeParams": [
+            {
+				"Type": "ShipMass",
+				"Aggregate": "Engine",
+                "Value": 1252
+            },
+            {
+				"Type": "HP",
+				"Aggregate": "Engine",
+                "Value": 1300
+            },
+            {
+                "Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+                "Coef": 1.75
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 2.25
+			}
+        ],
+        "SetPrefabs": [
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Power2_LF",
+                "Hook": "EngineLFHook",
+				"Place": "Left",
+				"TakeHooks": ["EngineReplaceL"]
+            },
+            {
+                "Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Power2_RF",
+                "Hook": "EngineRFHook",
+				"Place": "Right",
+				"TakeHooks": ["EngineReplaceR"]
+            }
+        ],
+        "SetEffects": [
+        //Поломка двигателей (насколько мне известно, не подключена кодом)
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+        //Повреждения двигателей
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+        //Флепсы двигателей - доп. движки
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap1L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap2L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap3L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap4L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap5L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap6L_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap1R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap2R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap3R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap4R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap5R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_enginePower_flaps",
+                "Hook": "Scarab_EngineFlap6R_FXHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+                //Основной эффект двигателей
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_main",
+                "Hook": "HookEngineHoleLF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineBase_main",
+                "Hook": "HookEngineHoleRF",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+                    //SFX upgrade power1
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFirePower1",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabJetFirePower1",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+                "Prefab": "SFX/ShipSFX/SFXAirBrakes",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+				"Prefab": "SFX/ShipSFX/SFXEngineAfterburner",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+            {
+				"Prefab": "SFX/ShipSFX/SFXAccelerationOverload",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+			}
+        ]
+	},
+	//ScarabEnginesEconomy
+	{
+		"Name": "ScarabEnginesEconomy",
+		"Description": "ScarabEnginesEconomy_Descr",
+		"RequireSlot": "Engine_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabEnginesEconomy_Icon",
+			"ColumnHP": "HP",
+			"PriceCredits": 125000
+		},
+		"AddSlots": [
+			"EngineUpgrade_Scarab"
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Engine",
+				"Value": 780
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Engine",
+				"Value": 450
+			},
+            {
+                "Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+                "Coef": 1.12
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 0.65
+			},
+			{
+				"Visible": true,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Hull",
+				"Coef": 0.75
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Economy_LF",
+				"Hook": "EngineLFHook",
+				"Place": "Left",
+				"TakeHooks": [
+					"EngineReplaceL"
+				]
+			},
+			{
+				"Prefab": "Ships/Upgrades/Engines/Scarab_Engine_Economy_RF",
+				"Hook": "EngineRFHook",
+				"Place": "Right",
+				"TakeHooks": [
+					"EngineReplaceR"
+				]
+			}
+		],
+		"SetEffects": [
+			//Поломка двигателей (насколько мне известно, не подключена кодом)
+			{
+				"Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+				"Hook": "HookEngineHoleLF",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Restart_Single",
+				"Hook": "HookEngineHoleRF",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Right"
+				}
+			},
+			//Повреждения двигателей
+			{
+				"Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+				"Hook": "HookEngineHoleRF",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Right"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/EngineFX_Base/FXEngine_Damage",
+				"Hook": "HookEngineHoleLF",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			//Флепсы двигателей - доп. движки
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap1L_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap2L_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap3L_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap4L_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap5L_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap6L_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap1R_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap2R_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap3R_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap4R_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap5R_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_flaps",
+				"Hook": "Scarab_EngineFlap6R_FXHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			//Основной эффект двигателей
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_main",
+				"Hook": "HookEngineHoleLF",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "FX/ShipFx/Engine/Scarab/fx_scarab_engineEconomy_main",
+				"Hook": "HookEngineHoleRF",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Right"
+				}
+			},
+			// Engine SFX
+			{
+				"Prefab": "SFX/ShipSFX/SFXScarabJetFire",
+				"Hook": "EngineLFHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Left"
+				}
+			},
+			{
+				"Prefab": "SFX/ShipSFX/SFXScarabJetFire",
+				"Hook": "EngineRFHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Right"
+				}
+			},
+			{
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+            },
+            {
+                "Prefab": "SFX/ShipSFX/SFXScarabEngineStop",
+                "Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+            },
+			{
+				"Prefab": "SFX/ShipSFX/SFXAirBrakes",
+				"Hook": "EngineRFHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Right"
+				}
+			},
+			{
+				"Prefab": "SFX/ShipSFX/SFXEngineAfterburner",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/SFXAccelerationOverload",
+				"Hook": "EngineRFHook",
+				"Params": {
+					"GameParamPart": "ShipEngine",
+					"GameParamPlace": "Right"
+				}
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineRFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Right"
+                }
+			},
+			{
+				"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionEngines",
+				"Hook": "EngineLFHook",
+                "Params": {
+                    "GameParamPart": "ShipEngine",
+                    "GameParamPlace": "Left"
+                }
+			}
+		]
+	},
+	//FuelTanks
+	//ScarabFuelTankAdditional
+	{
+		"Name": "ScarabFuelTankAdditional",
+		"Description": "ScarabFuelTankAdditional_Descr",
+		"RequireSlot": "FuelTank_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabFuelTankAdditional_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 45990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 327
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Fuel",
+				"Value": 400
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Fuel",
+				"Coef": 1.1
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 450
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExtL",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": [
+					"ExtTankTakePointL"
+				],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExtR",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": [
+					"ExtTankTakePointR"
+				],
+				"Place": "Right"
+			}
+		]
+	},
+	//ScarabFuelTankAdditional1
+	{ 
+		"Name": "ScarabFuelTankAdditional1",
+		"Description": "ScarabFuelTankAdditional1_Descr",
+		"RequireSlot": "FuelTank_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/ScarabFuelTankAdditional1_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 75000
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 450
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Fuel",
+				"Value": 500
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Fuel",
+				"Coef": 1.15
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 1050
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExt_1_L",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExt_1_R",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointR"],
+				"Place": "Right"
+			}
+		]
+	},
+	//ScarabFuelTankAdditional2
+	{ 
+		"Name": "ScarabFuelTankAdditional2",
+		"Description": "ScarabFuelTankAdditional2_Descr",
+		"RequireSlot": "FuelTank_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/Scarab_FuelTankExt_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 100000
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 530
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Fuel",
+				"Value": 500
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Fuel",
+				"Coef": 1.2
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 2500
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExt_2_L",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExt_2_R",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointR"],
+				"Place": "Right"
+			}
+		]
+	},
+	//ScarabFuelTankAdditional3
+	{ 
+		"Name": "ScarabFuelTankAdditional3",
+		"Description": "ScarabFuelTankAdditional3_Descr",
+		"RequireSlot": "FuelTank_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/BallenaFuelTankExt_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 130000
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 750
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Fuel",
+				"Value": 600
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Fuel",
+				"Coef": 1.25
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 3850
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExt_3_L",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankExt_3_R",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointR"],
+				"Place": "Right"
+			}
+		]
+	},
+	//ScarabFuelTankConsumption
+	{ 
+		"Name": "ScarabFuelTankConsumption",
+		"Description": "ScarabFuelTankAdditional_Descr",
+		"RequireSlot": "FuelTank_Scarab",
+		"TradeParams": {
+				"Icon": "GUI/Icons/Upgrades/Scarab_FuelTankCon_Icon",
+				"Sellable": true,
+				"ColumnHP": "HP",
+				"PriceCredits": 135000
+			},      
+		"AddSlots": [
+		],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 200
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Fuel",
+				"Value": 300
+			},
+			{
+				"Visible": true,
+				"Type": "DragPointsJetpack",
+				"Aggregate": "Fuel",
+				"Coef": 1.2
+			},
+			{
+				"Visible": true,
+				"Type": "DragPointsPlane",
+				"Aggregate": "Fuel",
+				"Coef": 1.2
+			},			
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 125
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 0.53
+			}
+		],
+		"SetPrefabs": [
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankCon_L",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointL"],
+				"Place": "Left"
+			},
+			{
+				"Prefab": "Ships/Upgrades/FuelTanks/Scarab_FuelTankCon_R",
+				"Hook": "FuelTunkHook",
+				"TakeHooks": ["ExtTankTakePointR"],
+				"Place": "Right"
+			}
+		]
+	},
+
+//Chassis
+//ScarabChassisBase
+{
+	"Name": "ScarabChassisBase",
+	"Description": "ScarabChassisBase_Descr",
+	"RequireSlot": "Chassis_Scarab",
+	"TradeParams": {
+		"Icon": "GUI/Icons/Upgrades/ScarabChassisBase_Icon",
+		"ColumnHP": "HP",
+		"PriceCredits": 5000
+	},
+	"AddSlots": [
+	],
+	"ChangeParams": [
+		{
+			"Type": "ShipMass",
+			"Aggregate": "Chassis",
+			"Value": 663
+		},
+		{
+			"Type": "HP",
+			"Aggregate": "Chassis",
+			"Value": 480
+		},
+		{
+			"Type": "ShiftTime",
+			"Aggregate": "Chassis",
+			"Coef": 2
+		}
+		],
+		"SetPrefabs": [
+		{
+			"Prefab": "Ships/Upgrades/Chassis/Scarab_ChassisGroup",
+			"Hook": "ChassisHook",
+			"TakeHooks": ["ChassisHookLF","ChassisHookRF","ChassisHookLB","ChassisHookRB"]
+		}
+	],
+	"SetEffects": [
+
+	//Поломка шасси
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+
+	//Повреждения шасси - дым
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+
+	//SFX Шасси
+		{
+			"Prefab": "SFX/ShipSFX/SFXTires",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionChassis",
+			"Hook": "ChassisHook"
+			
+		},
+
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageChassis",
+			"Hook": "ChassisHook"
+		},
+	//SFX Руль, вешаем на Шасси для центрирования
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		}
+	]
+},
+//ScarabChassisAdvance
+{
+	"Name": "ScarabChassisAdvance",
+	"Description": "ScarabChassisAdvance_Descr",
+	"RequireSlot": "Chassis_Scarab",
+	"TradeParams": {
+		"Icon": "GUI/Icons/Upgrades/ScarabChassisAdvance_Icon",
+		"ColumnHP": "HP",
+		"PriceCredits": 29990
+	},
+	"AddSlots": [
+	],
+	"ChangeParams": [
+		{
+			"Type": "ShipMass",
+			"Aggregate": "Chassis",
+			"Value": 671
+		},
+		{
+			"Type": "HP",
+			"Aggregate": "Chassis",
+			"Value": 820
+		},
+		{
+			"Visible": true,
+			"Type": "SpringRate", //SpringRate
+			"Aggregate": "Chassis",
+			"Coef": 1.2
+		},
+		{
+			"Visible": true,
+			"Type": "Rate", 
+			"Aggregate": "Chassis",
+			"Coef": 1.5
+		}
+
+	],
+	"SetPrefabs": [
+		{
+			"Prefab": "Ships/Upgrades/Chassis/Scarab_ChassisGroupAdvance",
+			"Hook": "ChassisHook",
+			"TakeHooks": ["ChassisHookLF","ChassisHookRF","ChassisHookLB","ChassisHookRB"]
+		}
+	],
+	"SetEffects": [
+
+	//Поломка шасси
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+
+		//Повреждения шасси - дым
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+		{
+			"Prefab": "SFX/ShipSFX/SFXTiresScarabUpgrade1",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionChassis",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageChassis",
+			"Hook": "ChassisHook"
+		},
+	//SFX Руль, вешаем на Шасси для центрирования
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		}
+	]
+},
+
+{
+	"Name": "ScarabChassisWaterProof",
+	"Description": "ScarabChassisWaterproof_Descr",
+	"RequireSlot": "Chassis_Scarab",
+	"TradeParams": {
+		"Icon": "GUI/Icons/Upgrades/ScarabChassisWaterProof_Icon",
+		"ColumnHP": "HP",
+		"PriceCredits": 150000
+	},
+	"AddSlots": [
+	],
+	"ChangeParams": [
+		{
+			"Type": "ShipMass",
+			"Aggregate": "Chassis",
+			"Value": 520
+		},
+		{
+			"Type": "HP",
+			"Aggregate": "Chassis",
+			"Value": 320
+		},
+		{
+			"Visible": true,
+			"Type": "SpringRate", //SpringRate
+			"Aggregate": "Chassis",
+			"Coef": 0.9
+		},
+		{
+			"Visible": true,
+			"Type": "WaterResistance",
+			"Aggregate": "Chassis",
+			"Value": 100
+		},
+		{
+			"Type": "ShiftTime",
+			"Aggregate": "Chassis",
+			"Coef": 2
+		}
+		],
+		"SetPrefabs": [
+		{
+			"Prefab": "Ships/Upgrades/Chassis/Scarab_ChassisGroupWater",
+			"Hook": "ChassisHook",
+			"TakeHooks": ["ChassisHookLF","ChassisHookRF","ChassisHookLB","ChassisHookRB"]
+		}
+	],
+	"SetEffects": [
+
+	//Поломка шасси
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+
+	//Повреждения шасси - дым
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+		{
+			"Prefab": "SFX/ShipSFX/SFXTiresScarabUpgrade1",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionChassis",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageChassis",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+	//SFX Руль, вешаем на Шасси для центрирования
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		}
+	]
+},
+
+//ScarabChassisLight
+{
+	"Name": "ScarabChassisLight",
+	"Description": "ScarabChassisLight_Descr",
+	"RequireSlot": "Chassis_Scarab",
+	"TradeParams": {
+		"Icon": "GUI/Icons/Upgrades/ScarabChassisLight_Icon",
+		"ColumnHP": "HP",
+		"PriceCredits": 75090
+	},
+	"AddSlots": [
+	],
+	"ChangeParams": [
+		{
+			"Type": "ShipMass",
+			"Aggregate": "Chassis",
+			"Value": 220
+		},
+		{
+			"Type": "HP",
+			"Aggregate": "Chassis",
+			"Value": 250
+		},
+		{
+			"Type": "ShiftTime",
+			"Aggregate": "Chassis",
+			"Coef": 1.2
+		},
+		{
+			"Visible": true,
+			"Type": "SpringRate", //SpringRate
+			"Aggregate": "Chassis",
+			"Coef": 0.8
+		},
+		{
+			"Visible": true,
+			"Type": "Rate", 
+			"Aggregate": "Chassis",
+			"Coef": 1.3
+		}
+	],
+	"SetPrefabs": [
+		{
+			"Prefab": "Ships/Upgrades/Chassis/Scarab_ChassisGroupLight",
+			"Hook": "ChassisHook",
+			"TakeHooks": ["ChassisHookLF","ChassisHookRF","ChassisHookLB","ChassisHookRB"]
+		}
+	],
+	"SetEffects": [
+
+	//Поломка шасси
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Stuck",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+
+		//Повреждения шасси - дым
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRB",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisLF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Left, Front"
+			}
+		},
+		{
+			"Prefab": "FX/ShipFx/ChassisFX/FXChassis_Damage",
+			"Hook": "HookFXChassisRF",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Front"
+			}
+		},
+		{
+			"Prefab": "SFX/ShipSFX/SFXTires",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionChassis",
+			"Hook": "ChassisHook"
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageChassis",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+	//SFX Руль, вешаем на Шасси для центрирования
+		{
+			"Prefab": "SFX/ShipSFX/Malfunctions/SFXMalfunctionSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		},
+		{
+			"Prefab": "SFX/ShipSFX/Damage/SFXDamageSteerer",
+			"Hook": "ChassisHook",
+			"Params": {
+				"GameParamPart": "ShipChassis",
+				"GameParamPlace": "Right, Back"
+			}
+		}
+	]
+},
+	//ScarabCustomUpgrade
+	{
+		"Name": "Scarab_VIP_Cabine",
+		"Description": "Scarab_VIP_Cabine_Descr",
+		"RequireSlot": "CustomUpgrade_Scarab",
+		"AddSlots": [
+		],
+		"ChangeParams": [
+		{
+			"Type": "ShipMass",
+			"Aggregate": "Hull",
+			"Value": 550
+		},
+		{
+			"Type": "HP",
+			"Aggregate": "Hull",
+			"Value": 100
+		}
+
+		],
+		"SetPrefabs": [
+		],
+		"TradeParams": {
+		"Icon": "GUI/Icons/Upgrades/Scarab_VIP_Cabine_Icon",
+		"Sellable": true,
+		"ColumnHP": "HP",
+		"PriceCredits": 15000
+		}
+	},
+	//CARGO
+	//ScarabCargoWeight//////////////////////////////////////////////
+	{
+		"Name": "ScarabCargoWeight",
+		"Description": "ScarabCargoWeight_Descr",
+		"RequireSlot": "Cargo_Scarab",
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Cargo",
+				"Value": 150
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Cargo",
+				"Value": 500
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": 2200
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": 3
+            }
+		],
+		"SetPrefabs": [],
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabCargoWeight_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 35000
+		}
+	},	
+	//ScarabCargoWeight1//////////////////////////////////////////////
+	{
+		"Name": "ScarabCargoWeight1",
+		"Description": "ScarabCargoWeight1_Descr",
+		"RequireSlot": "Cargo_Scarab",
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Cargo",
+				"Value": 240
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Cargo",
+				"Value": 500
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": 2500
+			}
+		],
+		"SetPrefabs": [],
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabCargoWeight1_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 78990
+		}
+	},
+	//ScarabCargoCount//////////////////////////////////////////////
+	{
+		"Name": "ScarabCargoCount",
+		"Description": "ScarabCargoCount_Descr",
+		"RequireSlot": "Cargo_Scarab",
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Cargo",
+				"Value": 330
+			},
+			{
+				"Type": "HP",
+				"Aggregate": "Cargo",
+				"Value": 400
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": -600
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+				"Value": 5
+			}
+		],
+		"SetPrefabs": [],
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabCargoCount_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 48990
+		}
+	},
+	//custom upgrades
+	//AFC
+	{
+		"Name": "AFC_Synthetic_Jet_Actuators",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "AFC_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 34990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Hull",
+				"Coef": 0.98
+			}
+		]
+	},
+	{
+		"Name": "AFC_Compressed_Air_Injection",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "AFC_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 78990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 350
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Hull",
+				"Coef": 0.93
+			}
+		]
+	},
+	{
+		"Name": "AFC_Helium_Flow_Actuators",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "AFC_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 164990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 100
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Hull",
+				"Coef": 0.90
+			}
+		]
+	},
+	{
+		"Name": "AFC_Plasma_Flow_Actuators",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "AFC_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 389990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 350
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Hull",
+				"Coef": 0.83
+			}
+		]
+	},
+	//FCS
+	{
+		"Name": "FCS_Evaporative_Cooling",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "FCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 44990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": -100
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1
+			}
+		]
+	},
+	{
+		"Name": "FCS_Cryocoolers",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "FCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 94990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": -100
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1
+			}
+		]
+	},
+	{
+		"Name": "FCS_Liquid_Nitrogen",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "FCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 199990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": -100
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1
+			}
+		]
+	},
+		{
+		"Name": "FCS_Liquid_Hydrogen",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "FCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 424990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": -100
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1
+			}
+		]
+	},
+	{
+		"Name": "FCS_Liquid_Helium",
+		"Description": "ScarabBaseLight_Descr",
+		"RequireSlot": "FCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 649990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 300
+			},
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": -100
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1
+			}
+		]
+	},
+	{
+		"Name": "CCS_Field_Compression_Scarab",
+		"Description": "CCS_Field_Compression_Scarab_Descr",
+		"RequireSlot": "CCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 54990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+						{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": 5500
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": 8
+            }
+		]
+	},
+	{
+		"Name": "CCS_Spatial_Compression_Scarab",
+		"Description": "CCS_Spatial_Compression_Scarab_Descr",
+		"RequireSlot": "CCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 134990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+						{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": 5500
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": 8
+            }
+		]
+	},
+	{
+		"Name": "CCS_Mass_Reorganization_Scarab",
+		"Description": "CCS_Mass_Reorganization_Scarab_Descr",
+		"RequireSlot": "CCS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 264990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 30
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 50
+			},
+						{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": 5500
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": 8
+            }
+		]
+	},
+	{
+		"Name": "AOS_Passive_Depreciation_Scarab",
+		"Description": "AOS_Passive_Depreciation_Scarab_Descr",
+		"RequireSlot": "AOS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 48990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": -500
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": -1
+            },
+			{
+				"Visible": true,
+				"Type": "Overload",
+				"Aggregate": "Cargo",
+				"Coef": 0.85
+			}
+		]
+	},
+	{
+		"Name": "AOS_Inductive_Stabilization_Scarab",
+		"Description": "AOS_Inductive_Stabilization_Scarab_Descr",
+		"RequireSlot": "AOS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 119990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": -500
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": -1
+            },
+			{
+				"Visible": true,
+				"Type": "Overload",
+				"Aggregate": "Cargo",
+				"Coef": 0.6
+			}
+		]
+	},
+	{
+		"Name": "AOS_Inertia_Bubble_Scarab",
+		"Description": "AOS_Inertia_Bubble_Descr",
+		"RequireSlot": "AOS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 249990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": -1000
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": -2
+            },
+			{
+				"Visible": true,
+				"Type": "Overload",
+				"Aggregate": "Cargo",
+				"Coef": 0.4
+			}
+		]
+	},
+	{
+		"Name": "AOS_Gravitational_Alignment_Scarab",
+		"Description": "AOS_Gravitational_Alignment_Scarab_Descr",
+		"RequireSlot": "AOS_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 524990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Cargo",
+				"Value": -1000
+			},
+			{
+				"Visible": true,
+				"Type": "MaxCargoCount",
+				"Aggregate": "Cargo",
+                "Value": -2
+            },
+			{
+				"Visible": true,
+				"Type": "Overload",
+				"Aggregate": "Cargo",
+				"Coef": 0.2
+			}
+		]
+	},
+	//=== FUEL INJECTORS ===
+	// Engine power boost with fuel consumption trade-off
+	{
+		"Name": "FuelInjectors_Standard_Scarab",
+		"Description": "FuelInjectors_Standard_Scarab_Descr",
+		"RequireSlot": "Fuel_Injectors",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 39990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 80
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1.05
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 1.05
+			}
+		]
+	},
+	{
+		"Name": "FuelInjectors_HighPressure_Scarab",
+		"Description": "FuelInjectors_HighPressure_Scarab_Descr",
+		"RequireSlot": "Fuel_Injectors",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 109990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 150
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1.12
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 1.08
+			}
+		]
+	},
+	{
+		"Name": "FuelInjectors_Plasma_Scarab",
+		"Description": "FuelInjectors_Plasma_Scarab_Descr",
+		"RequireSlot": "Fuel_Injectors",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 259990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 250
+			},
+			{
+				"Visible": true,
+				"Type": "Force",
+				"Aggregate": "Engine",
+				"Coef": 1.20
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 1.10
+			}
+		]
+	},
+	//=== FUEL PUMPING ===
+	// Pure fuel efficiency (consumption reduction)
+	{
+		"Name": "FuelPumping_Mechanical_Scarab",
+		"Description": "FuelPumping_Mechanical_Scarab_Descr",
+		"RequireSlot": "Fuel_Pumping",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 29990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 60
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 0.95
+			}
+		]
+	},
+	{
+		"Name": "FuelPumping_Electric_Scarab",
+		"Description": "FuelPumping_Electric_Scarab_Descr",
+		"RequireSlot": "Fuel_Pumping",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 89990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 120
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 0.88
+			}
+		]
+	},
+	{
+		"Name": "FuelPumping_Turbine_Scarab",
+		"Description": "FuelPumping_Turbine_Scarab_Descr",
+		"RequireSlot": "Fuel_Pumping",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 214990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 200
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 0.80
+			}
+		]
+	},
+	//=== FUEL SYSTEM ===
+	// Fuel capacity expansion
+	{
+		"Name": "FuelSystem_Extended_Scarab",
+		"Description": "FuelSystem_Extended_Scarab_Descr",
+		"RequireSlot": "Fuel_System_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 44990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 100
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 200
+			}
+		]
+	},
+	{
+		"Name": "FuelSystem_HighCapacity_Scarab",
+		"Description": "FuelSystem_HighCapacity_Scarab_Descr",
+		"RequireSlot": "Fuel_System_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 129990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 180
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 400
+			}
+		]
+	},
+	{
+		"Name": "FuelSystem_Integrated_Scarab",
+		"Description": "FuelSystem_Integrated_Scarab_Descr",
+		"RequireSlot": "Fuel_System_Scarab",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 299990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Fuel",
+				"Value": 280
+			},
+			{
+				"Visible": true,
+				"Type": "Capacity",
+				"Aggregate": "Fuel",
+				"Value": 700
+			},
+			{
+				"Visible": true,
+				"Type": "Consumption",
+				"Aggregate": "Engine",
+				"Coef": 0.95
+			}
+		]
+	},
+	//=== COATING ===
+	// Hull coating: SKI radiation resistance + air drag + HP
+	{
+		"Name": "Coating_Thermal_Scarab",
+		"Description": "Coating_Thermal_Scarab_Descr",
+		"RequireSlot": "Coating",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 34990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 40
+			},
+			{
+				"Visible": true,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Hull",
+				"Coef": 0.92
+			},
+			{
+				"Visible": true,
+				"Type": "ArmorTemperature",
+				"Aggregate": "Hull",
+				"Value": 20
+			},
+			{
+				"Visible": true,
+				"Type": "HP",
+				"Aggregate": "Hull",
+				"Value": 100
+			}
+		]
+	},
+	{
+		"Name": "Coating_Ceramic_Scarab",
+		"Description": "Coating_Ceramic_Scarab_Descr",
+		"RequireSlot": "Coating",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 99990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 90
+			},
+			{
+				"Visible": true,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Hull",
+				"Coef": 0.85
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Hull",
+				"Coef": 0.97
+			},
+			{
+				"Visible": true,
+				"Type": "ArmorCollision",
+				"Aggregate": "Hull",
+				"Value": 40
+			},
+			{
+				"Visible": true,
+				"Type": "ArmorTemperature",
+				"Aggregate": "Hull",
+				"Value": 40
+			},
+			{
+				"Visible": true,
+				"Type": "HP",
+				"Aggregate": "Hull",
+				"Value": 200
+			}
+		]
+	},
+	{
+		"Name": "Coating_Nanocomposite_Scarab",
+		"Description": "Coating_Nanocomposite_Scarab_Descr",
+		"RequireSlot": "Coating",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 234990
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{
+				"Visible": true,
+				"Type": "ShipMass",
+				"Aggregate": "Hull",
+				"Value": 160
+			},
+			{
+				"Visible": true,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Hull",
+				"Coef": 0.75
+			},
+			{
+				"Visible": true,
+				"Type": "PlaneAirDrag",
+				"Aggregate": "Hull",
+				"Coef": 0.94
+			},
+			{
+				"Visible": true,
+				"Type": "ArmorCollision",
+				"Aggregate": "Hull",
+				"Value": 60
+			},
+			{
+				"Visible": true,
+				"Type": "ArmorKinetic",
+				"Aggregate": "Hull",
+				"Value": 50
+			},
+			{
+				"Visible": true,
+				"Type": "ArmorTemperature",
+				"Aggregate": "Hull",
+				"Value": 60
+			},
+			{
+				"Visible": true,
+				"Type": "HP",
+				"Aggregate": "Hull",
+				"Value": 350
+			}
+		]
+	}
+	
+]

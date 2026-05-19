@@ -1,0 +1,309 @@
+--
+Name: Hel_Whale_Tracking_1
+Default: true
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: PlayerInCity
+		ObjectName: bases_sea_north
+		--
+		ConditionType: PlayerIsLanded
+	Actions:
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_2_dialog
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_4_drone
+		--
+		ActionType: CreateAnimal
+		Name: WhaleNord
+		DescrName: WhaleNord
+		TargetDescr: Target_Hel_Whale_Spawnpoint
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_player_refuse
+		--
+		ActionType: AddGlobalMark
+		Tag: Tag_Hel_Whale_Moving							
+		TargetDescr: Target_Hel_Whale_Animal_Tracker
+		DescrName: MarkFlyToIcon_QuestSide
+		IconText: Marktext_Quest_Hel_Whale_Oceanus
+
+--
+Name: Hel_Whale_Tracking_2_dialog
+Actions:
+	--
+	ActionType: CharacterMessage
+	DescrName: quest_Hel_Whale_1
+	CharacterName: Fungus_Tibald
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: MessageReply
+		ObjectName: quest_Hel_Whale_1
+		SubjectName: quest_Hel_Whale_1_ME_yes
+		Count: 1
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_1_NPC_yes
+		CharacterName: Fungus_Tibald
+		Tag: Tag_Hel_Whale_Spawnpoint
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_3
+
+	--
+	Conditions:
+		--
+		ConditionType: MessageReply
+		ObjectName: quest_Hel_Whale_1
+		SubjectName: quest_Hel_Whale_1_ME_no
+		Count: 1
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_1_NPC_no
+		CharacterName: Fungus_Tibald
+		Tag: Tag_Hel_Whale_Spawnpoint
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_3
+
+--
+Name: Hel_Whale_Tracking_3
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: PlayerDistanceToTarget
+		ObjectName: Target_Hel_Whale_Animal_Tracker	
+		Count: 2500
+		Invert: True
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_2
+		CharacterName: Fungus_Tibald
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_5
+
+--
+Name: Hel_Whale_Tracking_4_drone
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: TriggerActiveTime
+		ObjectName: Hel_Whale_Tracking_4_drone
+		Count: 180
+		--
+		ConditionType: CityHasPhase
+		ObjectName: bases_canyon_center
+		Count: 4
+	Actions:
+		--
+		ActionType: CreateCargoBox
+		Name: Crushed_Drone_quest
+		DescrName: Container_Drone_Small
+		TargetDescr: Target_Hel_Whale_Drone_Container_spawnpoint
+		--
+		ActionType: AddGlobalMark
+		Tag: Tag_Hel_Whale_Drone_container
+		TargetDescr: Target_Hel_Whale_Drone_Container
+		DescrName: CargoPickupIcon_QuestSide
+		IconText: Marktext_Quest_Hel_Whale_Drone_Pickup
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_3
+		CharacterName: Photographer_Colin
+		Tag: Tag_Hel_Whale_Drone_container
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_4_talk
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_5_drone
+
+--
+Name: Hel_Whale_Tracking_5_drone
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: PlayerHasProduct
+		ObjectName: product_crush_drone
+		Count: 1
+	Actions:
+		--
+		ActionType: AddGlobalMark
+		Tag: Tag_Hel_Whale_Drone_Drop_here
+		TargetDescr: Target_Hel_Whale_Drone_Sell_point
+		DescrName: CargoSellIcon_QuestSide
+		IconText: Marktext_Quest_Hel_Whale_Drone_Sell
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_6
+		CharacterName: Photographer_Colin
+		Tag: Tag_Hel_Whale_Drone_Drop_here
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_6_drone
+
+--
+Name: Hel_Whale_Tracking_6_drone
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: PlayerSellProduct
+		ObjectName: product_crush_drone
+		Count: 1
+		--
+		ConditionType: PlayerInCity
+        ObjectName: bases_sea_north
+	Actions:
+		--
+		ActionType: RemoveGlobalMark
+		Tag: Tag_Hel_Whale_Drone_container
+		--
+		ActionType: RemoveGlobalMark
+		Tag: Tag_Hel_Whale_Drone_Drop_here
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_7
+		CharacterName: Fungus_Tibald
+		Tag: Tag_Hel_Whale_Drone_Drop_here
+
+--
+Name: Hel_Whale_Tracking_4_talk
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: TriggerActiveTime
+		ObjectName: Hel_Whale_Tracking_4_talk
+		Count: 90
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_4
+		CharacterName: Photographer_Colin
+		--
+		ActionType: SetTriggerActive
+		Name: Hel_Whale_Tracking_5_talk
+
+--
+Name: Hel_Whale_Tracking_5_talk
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: TriggerActiveTime
+		ObjectName: Hel_Whale_Tracking_4_talk
+		Count: 90
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_4_info
+		CharacterName: Photographer_Colin
+
+--
+Name: Hel_Whale_Tracking_5
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: PlayerDistanceToTarget
+		ObjectName: Target_Hel_Whale_Animal_Tracker
+		Count: 5000
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_5
+		CharacterName: Fungus_Tibald
+		--
+		ActionType: RemoveGlobalMark
+		Tag: Target_Hel_Whale_Animal_Tracker
+		--
+		ActionType: SetTriggerInactive
+		Name: Hel_Whale_Tracking_player_refuse
+		--
+		ActionType: SetTriggerActive
+		Name:  WhaleNordRemove
+
+	--
+	Conditions:
+		--
+		ConditionType: PlayerDistanceToTarget
+		ObjectName: Target_Hel_Whale_Animal_Tracker
+		Count: 5000
+		Invert: True
+		--
+		ConditionType: PlayerDistanceToTarget
+		ObjectName: Target_Hel_Whale_Finale_point
+		Count: 2500
+		Invert: True
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_5
+		CharacterName: Fungus_Tibald
+		--
+		ActionType: RemoveGlobalMark
+		Tag: Target_Hel_Whale_Animal_Tracker
+		--
+		ActionType: SetTriggerInactive
+		Name: Hel_Whale_Tracking_player_refuse
+		--
+		ActionType: SetTriggerActive
+		Name:  WhaleNordRemove
+		--
+		ActionType: RemoveGlobalMark
+		Tag: Tag_Hel_Whale_Moving
+		--
+		ActionType: PlayerFundAdd
+		Name: Credits
+		Count: 31500
+		
+--
+Name: Hel_Whale_Tracking_player_refuse
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: PlayerDistanceToTarget
+		ObjectName: Target_Hel_Whale_Animal_Tracker
+		Count: 20000
+	Actions:
+		--
+		ActionType: CharacterMessage
+		Text: quest_Hel_Whale_dropped
+		CharacterName: Fungus_Tibald
+		--
+		ActionType: RemoveGlobalMark
+		Tag: Tag_Hel_Whale_Moving
+		--
+		ActionType: SetTriggerInactive
+		Name: Hel_Whale_Tracking_3
+		--
+		ActionType: SetTriggerActive
+		Name: WhaleNordRemove
+		
+
+--
+Name: WhaleNordRemove
+//Default: True
+Checks:
+	--
+	Conditions:
+		--
+		ConditionType: True
+	Actions:
+		--
+		ActionType: RemoveEntity
+		Name: WhaleNord
