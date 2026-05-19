@@ -5068,7 +5068,13 @@
                 "Aggregate": "Hull",
                 "Coef": 0.98
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Wing",
+            	"Value": 5
+            }]
     },
     {
         "Name": "AFC_Compressed_Air_Injection_Ox",
@@ -5093,7 +5099,13 @@
                 "Aggregate": "Hull",
                 "Coef": 0.93
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Wing",
+            	"Value": 15
+            }]
     },
     {
         "Name": "AFC_Helium_Flow_Actuators_Ox",
@@ -5118,7 +5130,13 @@
                 "Aggregate": "Hull",
                 "Coef": 0.9
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Wing",
+            	"Value": 25
+            }]
     },
     {
         "Name": "AFC_Plasma_Flow_Actuators_Ox",
@@ -5143,7 +5161,19 @@
                 "Aggregate": "Hull",
                 "Coef": 0.83
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Wing",
+            	"Value": 40
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Wing",
+            	"Value": 30
+            }]
     },
     {
         "Name": "FCS_Evaporative_Cooling_Ox",
@@ -5181,7 +5211,13 @@
                 "Aggregate": "Engine",
                 "Coef": 1
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Fuel",
+            	"Value": 5
+            }]
     },
     {
         "Name": "FCS_Cryocoolers_Ox",
@@ -5219,7 +5255,13 @@
                 "Aggregate": "Engine",
                 "Coef": 1
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Fuel",
+            	"Value": 10
+            }]
     },
     {
         "Name": "FCS_Liquid_Nitrogen_Ox",
@@ -5257,7 +5299,13 @@
                 "Aggregate": "Engine",
                 "Coef": 1
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Fuel",
+            	"Value": 20
+            }]
     },
     {
         "Name": "FCS_Liquid_Hydrogen_Ox",
@@ -5295,7 +5343,13 @@
                 "Aggregate": "Engine",
                 "Coef": 1
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Fuel",
+            	"Value": 35
+            }]
     },
     {
         "Name": "FCS_Liquid_Helium_Ox",
@@ -5333,7 +5387,13 @@
                 "Aggregate": "Engine",
                 "Coef": 1
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Fuel",
+            	"Value": 50
+            }]
     },
     {
         "Name": "CCS_Field_Compression_Ox",
@@ -5371,7 +5431,13 @@
                 "Aggregate": "Cargo",
                 "Value": 8
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Cargo",
+            	"Value": 10
+            }]
     },
     {
         "Name": "CCS_Spatial_Compression_Ox",
@@ -5409,7 +5475,13 @@
                 "Aggregate": "Cargo",
                 "Value": 8
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Cargo",
+            	"Value": 20
+            }]
     },
     {
         "Name": "CCS_Mass_Reorganization_Ox",
@@ -5447,7 +5519,13 @@
                 "Aggregate": "Cargo",
                 "Value": 8
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Cargo",
+            	"Value": 40
+            }]
     },
     {
         "Name": "AOS_Passive_Depreciation_Ox",
@@ -5485,7 +5563,19 @@
                 "Aggregate": "Cargo",
                 "Coef": 0.85
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Cargo",
+            	"Value": 5
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Cargo",
+            	"Value": 5
+            }]
     },
     {
         "Name": "AOS_Inductive_Stabilization_Ox",
@@ -5523,7 +5613,19 @@
                 "Aggregate": "Cargo",
                 "Coef": 0.6
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Cargo",
+            	"Value": 15
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Cargo",
+            	"Value": 10
+            }]
     },
     {
         "Name": "AOS_Inertia_Bubble_Ox",
@@ -5561,7 +5663,19 @@
                 "Aggregate": "Cargo",
                 "Coef": 0.4
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Cargo",
+            	"Value": 30
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Cargo",
+            	"Value": 20
+            }]
     },
     {
         "Name": "AOS_Gravitational_Alignment_Ox",
@@ -5599,7 +5713,19 @@
                 "Aggregate": "Cargo",
                 "Coef": 0.2
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Cargo",
+            	"Value": 50
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Cargo",
+            	"Value": 40
+            }]
     },
     {
         "Name": "FuelInjectors_Standard_Ox",
@@ -5631,7 +5757,19 @@
                 "Aggregate": "Engine",
                 "Coef": 1.05
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Engine",
+            	"Value": 5
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Engine",
+            	"Value": 5
+            }]
     },
     {
         "Name": "FuelInjectors_HighPressure_Ox",
@@ -5663,7 +5801,19 @@
                 "Aggregate": "Engine",
                 "Coef": 1.08
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Engine",
+            	"Value": 15
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Engine",
+            	"Value": 15
+            }]
     },
     {
         "Name": "FuelInjectors_Plasma_Ox",
@@ -5695,7 +5845,19 @@
                 "Aggregate": "Engine",
                 "Coef": 1.1
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Engine",
+            	"Value": 30
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Engine",
+            	"Value": 30
+            }]
     },
     {
         "Name": "FuelPumping_Mechanical_Ox",
@@ -5721,7 +5883,13 @@
                 "Aggregate": "Engine",
                 "Coef": 0.95
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Engine",
+            	"Value": 10
+            }]
     },
     {
         "Name": "FuelPumping_Electric_Ox",
@@ -5747,7 +5915,13 @@
                 "Aggregate": "Engine",
                 "Coef": 0.88
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Engine",
+            	"Value": 20
+            }]
     },
     {
         "Name": "FuelPumping_Turbine_Ox",
@@ -5773,7 +5947,13 @@
                 "Aggregate": "Engine",
                 "Coef": 0.8
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorTemperature",
+            	"Aggregate": "Engine",
+            	"Value": 40
+            }]
     },
     {
         "Name": "FuelSystem_Extended_Ox",
@@ -5799,7 +5979,19 @@
                 "Aggregate": "Fuel",
                 "Value": 400
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Fuel",
+            	"Value": 5
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Fuel",
+            	"Value": 5
+            }]
     },
     {
         "Name": "FuelSystem_HighCapacity_Ox",
@@ -5825,7 +6017,19 @@
                 "Aggregate": "Fuel",
                 "Value": 800
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Fuel",
+            	"Value": 15
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Fuel",
+            	"Value": 15
+            }]
     },
     {
         "Name": "FuelSystem_Integrated_Ox",
@@ -5857,7 +6061,19 @@
                 "Aggregate": "Engine",
                 "Coef": 0.95
             }
-        ]
+        ,
+            {
+            	"Visible": true,
+            	"Type": "ArmorCollision",
+            	"Aggregate": "Fuel",
+            	"Value": 30
+            },
+            {
+            	"Visible": true,
+            	"Type": "ArmorKinetic",
+            	"Aggregate": "Fuel",
+            	"Value": 30
+            }]
     },
     {
         "Name": "Coating_Thermal_Ox",
