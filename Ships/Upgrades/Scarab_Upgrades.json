@@ -3471,7 +3471,7 @@
 		"Description": "AFC_Synthetic_Jet_Actuators_Descr",
 		"RequireSlot": "AFC_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Wings_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 34990
@@ -3502,7 +3502,7 @@
 		"Description": "AFC_Compressed_Air_Injection_Descr",
 		"RequireSlot": "AFC_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Wings_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 78990
@@ -3533,7 +3533,7 @@
 		"Description": "AFC_Helium_Flow_Actuators_Descr",
 		"RequireSlot": "AFC_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Wings_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 164990
@@ -3564,7 +3564,7 @@
 		"Description": "AFC_Plasma_Flow_Actuators_Descr",
 		"RequireSlot": "AFC_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Wings_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 389990
@@ -3602,7 +3602,7 @@
 		"Description": "FCS_Evaporative_Cooling_Descr",
 		"RequireSlot": "FCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 44990
@@ -3646,7 +3646,7 @@
 		"Description": "FCS_Cryocoolers_Descr",
 		"RequireSlot": "FCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 94990
@@ -3690,7 +3690,7 @@
 		"Description": "FCS_Liquid_Nitrogen_Descr",
 		"RequireSlot": "FCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 199990
@@ -3734,7 +3734,7 @@
 		"Description": "FCS_Liquid_Hydrogen_Descr",
 		"RequireSlot": "FCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 424990
@@ -3778,7 +3778,7 @@
 		"Description": "FCS_Liquid_Helium_Descr",
 		"RequireSlot": "FCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 649990
@@ -3822,7 +3822,7 @@
 		"Description": "CCS_Field_Compression_Scarab_Descr",
 		"RequireSlot": "CCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 54990
@@ -3866,7 +3866,7 @@
 		"Description": "CCS_Spatial_Compression_Scarab_Descr",
 		"RequireSlot": "CCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 134990
@@ -3910,7 +3910,7 @@
 		"Description": "CCS_Mass_Reorganization_Scarab_Descr",
 		"RequireSlot": "CCS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 264990
@@ -3954,7 +3954,7 @@
 		"Description": "AOS_Passive_Depreciation_Scarab_Descr",
 		"RequireSlot": "AOS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 48990
@@ -4004,7 +4004,7 @@
 		"Description": "AOS_Inductive_Stabilization_Scarab_Descr",
 		"RequireSlot": "AOS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 119990
@@ -4054,7 +4054,7 @@
 		"Description": "AOS_Inertia_Bubble_Descr",
 		"RequireSlot": "AOS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 249990
@@ -4104,7 +4104,7 @@
 		"Description": "AOS_Gravitational_Alignment_Scarab_Descr",
 		"RequireSlot": "AOS_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Cargo_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 524990
@@ -4156,7 +4156,7 @@
 		"Description": "FuelInjectors_Standard_Scarab_Descr",
 		"RequireSlot": "Fuel_Injectors",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Engine_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 39990
@@ -4200,7 +4200,7 @@
 		"Description": "FuelInjectors_HighPressure_Scarab_Descr",
 		"RequireSlot": "Fuel_Injectors",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Engine_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 109990
@@ -4244,7 +4244,7 @@
 		"Description": "FuelInjectors_Plasma_Scarab_Descr",
 		"RequireSlot": "Fuel_Injectors",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Engine_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 259990
@@ -4290,7 +4290,7 @@
 		"Description": "FuelPumping_Mechanical_Scarab_Descr",
 		"RequireSlot": "Fuel_Pumping",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/AREconomizerLight_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 29990
@@ -4322,7 +4322,7 @@
 		"Description": "FuelPumping_Electric_Scarab_Descr",
 		"RequireSlot": "Fuel_Pumping",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/AREconomizerLight_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 89990
@@ -4354,7 +4354,7 @@
 		"Description": "FuelPumping_Turbine_Scarab_Descr",
 		"RequireSlot": "Fuel_Pumping",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/AREconomizerLight_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 214990
@@ -4388,7 +4388,7 @@
 		"Description": "FuelSystem_Extended_Scarab_Descr",
 		"RequireSlot": "Fuel_System_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 44990
@@ -4426,7 +4426,7 @@
 		"Description": "FuelSystem_HighCapacity_Scarab_Descr",
 		"RequireSlot": "Fuel_System_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 129990
@@ -4464,7 +4464,7 @@
 		"Description": "FuelSystem_Integrated_Scarab_Descr",
 		"RequireSlot": "Fuel_System_Scarab",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 299990
@@ -4510,7 +4510,7 @@
 		"Description": "Coating_Thermal_Scarab_Descr",
 		"RequireSlot": "Coating",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Chassis_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 34990
@@ -4548,7 +4548,7 @@
 		"Description": "Coating_Ceramic_Scarab_Descr",
 		"RequireSlot": "Coating",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Chassis_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 99990
@@ -4598,7 +4598,7 @@
 		"Description": "Coating_Nanocomposite_Scarab_Descr",
 		"RequireSlot": "Coating",
 		"TradeParams": {
-			"Icon": "GUI/Icons/Upgrades/ScarabLightAdv_Icon",
+			"Icon": "GUI/Icons/Upgrades/Chassis_Icon",
 			"Sellable": true,
 			"ColumnHP": "HP",
 			"PriceCredits": 234990
