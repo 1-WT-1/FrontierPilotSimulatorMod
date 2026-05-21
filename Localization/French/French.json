@@ -3544,4 +3544,7 @@
 ,
   "product_components_food_1": "B3 rations",
   "product_components_food_2": "B4 rations"
+,
+  "product_components_battery_1": "G-type-2 batteries",
+  "product_components_battery_2": "G-type-3 batteries"
 }

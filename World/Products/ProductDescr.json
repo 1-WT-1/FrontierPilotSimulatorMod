@@ -87,10 +87,10 @@
 		"MaterialName": "mat_fragility_low",
 		"Icon": "GUI/Icons/Products/Food_Icon",
 		"CargoBoxName": "Container_Food_Small",
-		"PriceValue": 850,
-		"MassValue": 1250,
+		"PriceValue": 1650,
+		"MassValue": 1100,
 		"MaxHPoints": 1000,
-		"TransportCost": 140
+		"TransportCost": 180
 		//"NonTradable": true
 	},
 	{
@@ -99,10 +99,10 @@
 		"MaterialName": "mat_fragility_low",
 		"Icon": "GUI/Icons/Products/Food_Icon",
 		"CargoBoxName": "Container_Food_Small",
-		"PriceValue": 850,
-		"MassValue": 1250,
+		"PriceValue": 2950,
+		"MassValue": 950,
 		"MaxHPoints": 1000,
-		"TransportCost": 140
+		"TransportCost": 220
 		//"NonTradable": true
 	},
 	//Батареи G-type
@@ -123,10 +123,10 @@
 		"MaterialName": "mat_fragility_medium",
 		"Icon": "GUI/Icons/Products/Battery_Icon",
 		"CargoBoxName": "Container_Small",
-		"PriceValue": 1500,
-		"MassValue": 4000,
+		"PriceValue": 3200,
+		"MassValue": 3800,
 		"MaxHPoints": 500,
-		"TransportCost": 200
+		"TransportCost": 250
 	},
 	{
 		"Name": "product_components_battery_2",
@@ -134,10 +134,10 @@
 		"MaterialName": "mat_fragility_medium",
 		"Icon": "GUI/Icons/Products/Battery_Icon",
 		"CargoBoxName": "Container_Small",
-		"PriceValue": 1500,
-		"MassValue": 4000,
+		"PriceValue": 5800,
+		"MassValue": 3500,
 		"MaxHPoints": 500,
-		"TransportCost": 200
+		"TransportCost": 300
 	},
 	//
 	{
