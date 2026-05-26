@@ -3,9 +3,9 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 
-namespace FPS_DamageSystem_Mod.ArmorBridge
+namespace FPS.ArmorBridge
 {
-    [BepInPlugin("com.fps.mods.armorbridge", "FPS Armor Bridge Mod", "1.0.0")]
+    [BepInPlugin("com.fps.mods.armorbridge", "FPS Armor Bridge", "1.0.0")]
     public class ArmorBridgePlugin : BaseUnityPlugin
     {
         private void Awake()
@@ -13,7 +13,7 @@ namespace FPS_DamageSystem_Mod.ArmorBridge
             var harmony = new Harmony("com.fps.mods.armorbridge");
             harmony.PatchAll();
             
-            Logger.LogInfo("FPS Armor Bridge Mod (JSON to Combat Layer) successfully initialized!");
+            Logger.LogInfo("FPS Armor Bridge successfully initialized.");
         }
     }
 
@@ -63,13 +63,13 @@ namespace FPS_DamageSystem_Mod.ArmorBridge
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[ArmorBridgeMod] Fail-safe error bridging aggregate upgrades: {ex.Message}");
+                Debug.LogError($"[ArmorBridge] Fail-safe error bridging aggregate upgrades: {ex.Message}");
             }
         }
     }
 
     // ==========================================
-    // PATCH: Fixes vanilla bug where CDamageModif constructor fails to assign the private _damage_type field!
+    // PATCH: Addresses constructor issue where CDamageModif fails to assign the private _damage_type field
     // ==========================================
     [HarmonyPatch(typeof(CDamageModif), MethodType.Constructor, new Type[] { typeof(EDamageType), typeof(CValueModificator), typeof(CValueModificator) })]
     public class CDamageModif_Constructor_Patch

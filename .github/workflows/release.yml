@@ -1,0 +1,76 @@
+name: Build and Publish Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name for the release (e.g. v1.0.0). If empty, the current branch/tag name will be used.'
+        required: false
+        default: ''
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Restore and Build ArmorBridge
+        run: dotnet build BepInExMods/ArmorBridge/ArmorBridge.csproj -c Release
+
+      - name: Restore and Build ProbabilisticMalfunction
+        run: dotnet build BepInExMods/ProbabilisticMalfunction/ProbabilisticMalfunction.csproj -c Release
+
+      - name: Restore and Build DamageLogger
+        run: dotnet build BepInExMods/DamageLogger/DamageLogger.csproj -c Release
+
+      - name: Restore and Build ProductionEconomy
+        run: dotnet build BepInExMods/ProductionEconomy/ProductionEconomy.csproj -c Release
+
+      - name: Structure Release Assets
+        run: |
+          # Create separate staging folders
+          mkdir -p dist/bepinex/BepInEx/plugins
+          mkdir -p "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native"
+
+          # Copy BepInEx plugins
+          cp BepInExMods/ArmorBridge/bin/Release/net472/ArmorBridge.dll dist/bepinex/BepInEx/plugins/
+          cp BepInExMods/ProbabilisticMalfunction/bin/Release/net472/ProbabilisticMalfunction.dll dist/bepinex/BepInEx/plugins/
+          cp BepInExMods/DamageLogger/bin/Release/net472/DamageLogger.dll dist/bepinex/BepInEx/plugins/
+          cp BepInExMods/ProductionEconomy/bin/Release/net472/ProductionEconomy.dll dist/bepinex/BepInEx/plugins/
+          cp BepInExMods/ProductionEconomy/recipes.json dist/bepinex/BepInEx/plugins/
+
+          # Copy Native StreamingAssets structure
+          cp -r Ships "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
+          cp -r Localization "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
+          cp -r World "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
+
+      - name: Package Assets
+        run: |
+          cd dist/bepinex
+          zip -r ../../BepInEx-Plugins.zip *
+          cd ../native
+          zip -r ../../Native-Overrides.zip *
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            BepInEx-Plugins.zip
+            Native-Overrides.zip
+          tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

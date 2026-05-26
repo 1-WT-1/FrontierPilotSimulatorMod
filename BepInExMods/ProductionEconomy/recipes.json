@@ -1,0 +1,20 @@
+[
+  {
+    "Product": "product_components_food",
+    "Requirements": [
+      {
+        "Product": "product_components_water",
+        "BoxCount": 1
+      }
+    ]
+  },
+  {
+    "Product": "product_components_battery",
+    "Requirements": [
+      {
+        "Product": "product_empty_battery",
+        "BoxCount": 1
+      }
+    ]
+  }
+]
