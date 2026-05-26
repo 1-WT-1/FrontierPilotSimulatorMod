@@ -83,7 +83,7 @@
 	},
 	{
 		"Name": "product_components_food_1",
-		"Description": "product_components_food_descr",
+		"Description": "product_components_food_1_descr",
 		"MaterialName": "mat_fragility_low",
 		"Icon": "GUI/Icons/Products/Food_Icon",
 		"CargoBoxName": "Container_Food_Small",
@@ -95,7 +95,7 @@
 	},
 	{
 		"Name": "product_components_food_2",
-		"Description": "product_components_food_descr",
+		"Description": "product_components_food_2_descr",
 		"MaterialName": "mat_fragility_low",
 		"Icon": "GUI/Icons/Products/Food_Icon",
 		"CargoBoxName": "Container_Food_Small",

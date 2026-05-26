@@ -4,9 +4,9 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 
-namespace FPS_DamageSystem_Mod.ProbabilisticMalfunctions
+namespace FPS.ProbabilisticMalfunction
 {
-    [BepInPlugin("com.fps.mods.probabilisticmalfunctions", "FPS Probabilistic Malfunctions Mod", "1.0.0")]
+    [BepInPlugin("com.fps.mods.probabilisticmalfunctions", "FPS Probabilistic Malfunctions", "1.0.0")]
     public class ProbabilisticMalfunctionsPlugin : BaseUnityPlugin
     {
         private void Awake()
@@ -14,7 +14,7 @@ namespace FPS_DamageSystem_Mod.ProbabilisticMalfunctions
             var harmony = new Harmony("com.fps.mods.probabilisticmalfunctions");
             harmony.PatchAll();
             
-            Logger.LogInfo("FPS Probabilistic Malfunctions Mod (Chance Saving Throws) successfully initialized!");
+            Logger.LogInfo("FPS Probabilistic Malfunctions successfully initialized.");
         }
     }
 
@@ -79,14 +79,14 @@ namespace FPS_DamageSystem_Mod.ProbabilisticMalfunctions
 
                 if (roll > failureChance)
                 {
-                    // SUCCESS: The ship resisted! Reset the warning countdown phase
+                    // Success: The vessel resisted. Reset the warning countdown phase
                     ResetWarningTimer(__instance, toStartField, timeBeforeStartMin);
                     return false; // Interrupt breakdown sequence, keeping systems active
                 }
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[ProbabilisticMalfunctionsMod] Fail-safe error during saving throw check: {ex.Message}");
+                Debug.LogError($"[ProbabilisticMalfunctions] Fail-safe error during saving throw check: {ex.Message}");
             }
 
             // FAILURE (or error fallback): Execute default malfunction sequence

@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Enforce CRLF line endings for Frontier Pilot Simulator
+* text=auto eol=crlf
+*.cscd text eol=crlf
+*.json text eol=crlf
