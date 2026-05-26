@@ -3547,4 +3547,7 @@
 ,
   "product_components_battery_1": "G-type-2 batteries",
   "product_components_battery_2": "G-type-3 batteries"
+,
+  "Coating_DevTest_Scarab": "DEV TEST: Full Resist Coating",
+  "Coating_DevTest_Scarab_Descr": "[DEV ONLY] Applies 999 armor resistance to ALL aggregates and types. Used to verify if resistance mechanics affect damage taken. Remove before release."
 }

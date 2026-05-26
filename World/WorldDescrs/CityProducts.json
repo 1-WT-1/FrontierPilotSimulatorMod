@@ -326,6 +326,9 @@
 				"UpgradeName": "Coating_Thermal_Scarab"
 			},
 			{
+				"UpgradeName": "Coating_DevTest_Scarab"
+			},
+			{
 				"UpgradeName": "AFC_Compressed_Air_Injection"
 			},
 			{
@@ -980,6 +983,9 @@
 			},
 			{
 				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_DevTest_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Scarab"
@@ -4698,6 +4704,9 @@
 				"UpgradeName": "Coating_Thermal_Scarab"
 			},
 			{
+				"UpgradeName": "Coating_DevTest_Scarab"
+			},
+			{
 				"UpgradeName": "Coating_Ceramic_Scarab"
 			},
 			{
@@ -5218,6 +5227,9 @@
 			},
 			{
 				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_DevTest_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Ceramic_Scarab"

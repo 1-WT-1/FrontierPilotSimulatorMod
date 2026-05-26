@@ -4648,6 +4648,72 @@
 				"Value": 350
 			}
 		]
+	},
+	//=== DEV TEST ONLY — REMOVE BEFORE RELEASE ===
+	{
+		"Name": "Coating_DevTest_Scarab",
+		"Description": "Coating_DevTest_Scarab_Descr",
+		"RequireSlot": "Coating",
+		"TradeParams": {
+			"Icon": "GUI/Icons/Upgrades/Chassis_Icon",
+			"Sellable": true,
+			"ColumnHP": "HP",
+			"PriceCredits": 1
+		},
+		"AddSlots": [],
+		"ChangeParams": [
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Hull",          "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Hull",          "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Hull",          "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Hull",          "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Engine",        "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Engine",        "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Engine",        "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Engine",        "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Wing",          "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Wing",          "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Wing",          "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Wing",          "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Fuel",          "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Fuel",          "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Fuel",          "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Fuel",          "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Steerer",       "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Steerer",       "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Steerer",       "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Steerer",       "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Chassis",       "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Chassis",       "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Chassis",       "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Chassis",       "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Locator",       "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Locator",       "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Locator",       "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Locator",       "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Cargo",         "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Cargo",         "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Cargo",         "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Cargo",         "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "Airplane",      "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "Airplane",      "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "Airplane",      "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "Airplane",      "Value": 999 },
+
+			{ "Visible": true, "Type": "ArmorCollision",          "Aggregate": "RemainingShip", "Value": 999 },
+			{ "Visible": true, "Type": "ArmorKinetic",            "Aggregate": "RemainingShip", "Value": 999 },
+			{ "Visible": true, "Type": "ArmorTemperature",        "Aggregate": "RemainingShip", "Value": 999 },
+			{ "Visible": true, "Type": "SkyRadiationResistance",  "Aggregate": "RemainingShip", "Value": 999 },
+
+			{ "Visible": true, "Type": "HP",                      "Aggregate": "Hull",          "Value": 9999 }
+		]
 	}
 	
 ]

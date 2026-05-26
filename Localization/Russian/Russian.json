@@ -3677,4 +3677,7 @@
   "Coating_Nanocomposite_Ballena": "HPC Nanocomposite",
   "Coating_Nanocomposite_Ox_Descr": "Self-healing nanocomposite alloy with active boundary-layer micro-textures. Offers premium shield integrity and superior aerodynamic drag reduction.",
   "Coating_Nanocomposite_Ballena_Descr": "Self-healing nanocomposite alloy with active boundary-layer micro-textures. Offers premium shield integrity and superior aerodynamic drag reduction."
+,
+  "Coating_DevTest_Scarab": "DEV TEST: Full Resist Coating",
+  "Coating_DevTest_Scarab_Descr": "[DEV ONLY] Applies 999 armor resistance to ALL aggregates and types. Used to verify if resistance mechanics affect damage taken. Remove before release."
 }

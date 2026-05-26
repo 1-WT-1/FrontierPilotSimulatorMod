@@ -1,0 +1,291 @@
+﻿SteererParasiticInGeyser:
+	Name: SteererParasiticInGeyser
+	Aggregate: Steerer
+	Type: ParasiticInput
+	Conditions: 
+		ConditionType: PlayerShipInWindType
+		WindType: GEYSER
+		Group: 1
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateResistanceValue
+		SubjectName: DustParticle
+		ShipAggregate: Steerer
+		Count: 20
+		Invert: True
+		Group: 1
+		--
+		ConditionType: PlayerShipInWindType
+		WindType: VOLCANO
+		Group: 2
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateResistanceValue
+		SubjectName: DustParticle
+		ShipAggregate: Steerer
+		Count: 50
+		Invert: True
+		Group: 2
+		--
+		ConditionType: PlayerShipInWindType
+		WindType: FITFUL
+		Group: 3
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateResistanceValue
+		SubjectName: DustParticle
+		ShipAggregate: Steerer
+		Count: 50
+		Invert: True
+		Group: 3
+	TimeBeforeStartMax: 6
+	TimeBeforeStartMin: 2
+	DownstepCount: 4
+	Duration: 10
+	Params: 
+		Pitch: 0.35
+		Yaw: 0.45
+		Roll: 0.15
+		RandomValue: 0.99
+		RandomSign: true
+		
+
+
+ChassisInWater:
+	Name: ChassisInWater
+	Aggregate: Chassis
+	Type: Switch
+	Conditions: 
+		ConditionType: PlayerShipAltitude
+		Count: 100
+		Invert: True
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateResistanceValue
+		SubjectName: Water
+		ShipAggregate: Chassis
+		Count: 20
+		Invert: True
+	TimeBeforeStartMax: 10
+	TimeBeforeStartMin: 10
+	DownstepCount: 1
+	Duration: 120
+	ClearAfterDead: True
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+OpenWingByAcceleration:
+	Name: OpenWingByAcceleration
+	Aggregate: Wing
+	Type: Switch
+	Conditions: 
+		ConditionType: PlayerShipAcceleration
+		Group: 1
+		Count: 80
+		--
+		ConditionType: PlayerShipVelocity
+		Group: 2
+		Count: 150
+		--
+		ConditionType: PlayerShipFlapsOpen
+		Group: 2
+	TimeBeforeStartMax: 10
+	TimeBeforeStartMin: 0.1
+	DownstepCount: 10
+	Duration: 20
+	ClearAfterDead: True
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+
+LocatorByRadiation:
+	Name: LocatorByRadiation
+	Aggregate: Locator
+	Type: Switch
+	Conditions: 
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateSkyRadiationAbsorbed
+		ShipAggregate: Locator
+		Count: 1
+	TimeBeforeStartMax: 10
+	TimeBeforeStartMin: 4
+	DownstepCount: 6
+	Duration: 30
+	SoundWarning: Warning_Radiation_Low
+//	SoundMalfuction: Warning_Radiation_Medium
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+// LocatorARByRadiation:
+// 	Name: LocatorByRadiation
+// 	Aggregate: Locator
+// 	Type: Switch
+// 	Conditions: 
+// 		--
+// 		ConditionType: PlayerShipParam
+//		ObjectName: AggregateSkyRadiationAbsorbed
+//		ShipAggregate: Locator
+// 		Count: 1
+// 	TimeBeforeStartMax: 0
+// 	TimeBeforeStartMin: 0
+// 	DownstepCount: 0
+// 	Duration: 1	
+
+LocatorByQuest:
+	Name: LocatorByQuest
+	Aggregate: Locator
+	Type: Switch
+	Conditions: 
+		--
+		ConditionType: True
+		Invert: True
+	TimeBeforeStartMax: 10
+	TimeBeforeStartMin: 10
+	DownstepCount: 1
+	Duration: 600
+
+EngineTurnOffInWater:
+	Name: EngineTurnOffInWater
+	Aggregate: Engine
+	Type: Switch
+	Conditions: 
+		ConditionType: PlayerShipAltitude
+		Count: 95
+		Invert: True
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateResistanceValue
+		SubjectName: Water
+		ShipAggregate: Engine
+		Count: 20
+		Invert: True
+	TimeBeforeStartMax: 10
+	TimeBeforeStartMin: 2
+	DownstepCount: 10
+	Duration: 6
+	ClearAfterDead: True
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+EngineTurnOffInSkyRadiation:
+	Name: EngineTurnOffInSkyRadiation
+	Aggregate: Engine
+	Type: Switch
+	Conditions:
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateSkyRadiationAbsorbed
+		ShipAggregate: Engine
+		Count: 1
+	TimeBeforeStartMax: 3
+	TimeBeforeStartMin: 1
+	DownstepCount: 3
+	Duration: 5
+	ClearAfterDead: True
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+EngineLowPowerBySpeed:
+	Name: EngineLowPowerBySpeed
+	Aggregate: Engine
+	Type: Force
+	Conditions: 
+		--
+		ConditionType: PlayerShipAirVelocity
+		Count: 335 //100
+	TimeBeforeStartMax: 5
+	TimeBeforeStartMin: 2.5
+	DownstepCount: 5
+	Duration: 0
+	ClearAfterDead: True
+	Params: 
+		Value: 0.85
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+EngineDamageInWater:
+	Name: EngineDamageInWater
+	Aggregate: Engine
+	Type: SoulDegradation
+	Conditions: 
+		ConditionType: PlayerShipAltitude
+		Count: 100
+		Invert: True
+		--
+		ConditionType: PlayerShipParam
+		ObjectName: AggregateResistanceValue
+		SubjectName: Water
+		ShipAggregate: Engine
+		Count: 20
+		Invert: True
+	TimeBeforeStartMax: 5
+	TimeBeforeStartMin: 0.1
+	DownstepCount: 10
+	Duration: 5
+	ClearAfterDead: True
+	Params:
+		Value: 5
+		Period: 0.1
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+SteererParasiticByEmitter:
+	Name: SteererParasiticByEmitter
+	Aggregate: Steerer
+	Type: ParasiticInput
+	Conditions: 
+		--
+		ConditionType: PlayerDistanceToTarget
+		ObjectName: Target_Quest_Main_Ending_Emitter
+		Count: 250
+		Invert: True
+	TimeBeforeStartMax: 0
+	TimeBeforeStartMin: 0
+	DownstepCount: 0
+	Duration: 0
+	Params: 
+		Pitch: 0.15
+		Yaw: 0.15
+		Roll: 0.15
+		RandomValue: 0.99
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+EngineEventDustDOT:
+	Name: EngineEventDustDOT
+	Aggregate: Engine
+	Type: SoulDegradation
+	Conditions:
+		--
+		ConditionType: TriggerActive
+		ObjectName: Events_3_Engines_Crash_Landing
+	TimeBeforeStartMin: 10
+	TimeBeforeStartMax: 30
+	DownstepCount: 10
+	Duration: 1
+	ClearAfterDead: True
+	Params:
+		Value: 3
+		Period: 0.5
+	SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Aggregate_Malfunction_Long_Warning_loop
+
+RechargeByManta:
+	Name: RechargeByManta
+	Aggregate: Fuel
+	Type: Leak
+	// Conditions: 
+	// 	--
+	// 	ConditionType: PlayerDistanceToTarget
+	// 	ObjectName: MantaBirdTargetSelf
+	// 	Count: 200
+	// 	Invert: True
+	TimeBeforeStartMax: 0.1
+	TimeBeforeStartMin: 0.1
+	DownstepCount: 10
+	Duration: 10
+	ClearAfterDead: True
+	Params: 
+		Value: 75 //плюс Х ед в секунду
+	//SoundWarning: Aggregate_Malfunction_Warning_loop
+	SoundMalfuction: Manta_ChargeUP
