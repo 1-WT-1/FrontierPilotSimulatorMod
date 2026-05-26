@@ -36,7 +36,7 @@ namespace FPS_DamageSystem_Mod.ArmorBridge
                 );
                 if (collision > 0f)
                 {
-                    armor.Add(EDamageType.Collision, new CValueModificator(collision, false));
+                    armor.Add(EDamageType.Collision, new CValueModificator(collision / 100f, true));
                 }
 
                 // 2. Bridge ArmorKinetic -> Kinetic (4)
@@ -46,7 +46,7 @@ namespace FPS_DamageSystem_Mod.ArmorBridge
                 );
                 if (kinetic > 0f)
                 {
-                    armor.Add(EDamageType.Kinetic, new CValueModificator(kinetic, false));
+                    armor.Add(EDamageType.Kinetic, new CValueModificator(kinetic / 100f, true));
                 }
 
                 // 3. Bridge ArmorTemperature -> Temperature (8)
@@ -56,7 +56,7 @@ namespace FPS_DamageSystem_Mod.ArmorBridge
                 );
                 if (temperature > 0f)
                 {
-                    armor.Add(EDamageType.Temperature, new CValueModificator(temperature, false));
+                    armor.Add(EDamageType.Temperature, new CValueModificator(temperature / 100f, true));
                 }
 
                 __result = armor;
@@ -65,6 +65,18 @@ namespace FPS_DamageSystem_Mod.ArmorBridge
             {
                 Debug.LogError($"[ArmorBridgeMod] Fail-safe error bridging aggregate upgrades: {ex.Message}");
             }
+        }
+    }
+
+    // ==========================================
+    // PATCH: Fixes vanilla bug where CDamageModif constructor fails to assign the private _damage_type field!
+    // ==========================================
+    [HarmonyPatch(typeof(CDamageModif), MethodType.Constructor, new Type[] { typeof(EDamageType), typeof(CValueModificator), typeof(CValueModificator) })]
+    public class CDamageModif_Constructor_Patch
+    {
+        private static void Postfix(CDamageModif __instance, EDamageType inType)
+        {
+            AccessTools.Field(typeof(CDamageModif), "_damage_type").SetValue(__instance, inType);
         }
     }
 }

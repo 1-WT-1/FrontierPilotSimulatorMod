@@ -1,4 +1,4 @@
-[
+﻿[
 	{
 		"Name": "BallenaHullBase",
 		"Description": "BallenaHullBase_Descr",
@@ -2360,7 +2360,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Wing",
             	"Value": 5
@@ -2391,7 +2391,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Wing",
             	"Value": 15
@@ -2422,7 +2422,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Wing",
             	"Value": 25
@@ -2453,13 +2453,13 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Wing",
             	"Value": 40
             },
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Wing",
             	"Value": 30
@@ -2503,7 +2503,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Fuel",
             	"Value": 5
@@ -2547,7 +2547,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Fuel",
             	"Value": 10
@@ -2591,7 +2591,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Fuel",
             	"Value": 20
@@ -2635,7 +2635,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Fuel",
             	"Value": 35
@@ -2679,7 +2679,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Fuel",
             	"Value": 50
@@ -2723,7 +2723,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Cargo",
             	"Value": 10
@@ -2767,7 +2767,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Cargo",
             	"Value": 20
@@ -2811,7 +2811,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Cargo",
             	"Value": 40
@@ -2855,7 +2855,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Cargo",
             	"Value": 5
@@ -2905,7 +2905,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Cargo",
             	"Value": 15
@@ -2955,7 +2955,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Cargo",
             	"Value": 30
@@ -3005,7 +3005,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Cargo",
             	"Value": 50
@@ -3049,7 +3049,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Engine",
             	"Value": 5
@@ -3093,7 +3093,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Engine",
             	"Value": 15
@@ -3137,7 +3137,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Engine",
             	"Value": 30
@@ -3175,7 +3175,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Engine",
             	"Value": 10
@@ -3207,7 +3207,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Engine",
             	"Value": 20
@@ -3239,7 +3239,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorTemperature",
             	"Aggregate": "Engine",
             	"Value": 40
@@ -3271,7 +3271,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Fuel",
             	"Value": 5
@@ -3309,7 +3309,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Fuel",
             	"Value": 15
@@ -3353,7 +3353,7 @@
             }
         ,
             {
-            	"Visible": true,
+            	"Visible": false,
             	"Type": "ArmorCollision",
             	"Aggregate": "Fuel",
             	"Value": 30
@@ -3390,7 +3390,7 @@
                 "Coef": 0.92
             },
             {
-                "Visible": true,
+                "Visible": false,
                 "Type": "ArmorTemperature",
                 "Aggregate": "Hull",
                 "Value": 20
@@ -3434,13 +3434,13 @@
                 "Coef": 0.97
             },
             {
-                "Visible": true,
+                "Visible": false,
                 "Type": "ArmorCollision",
                 "Aggregate": "Hull",
                 "Value": 40
             },
             {
-                "Visible": true,
+                "Visible": false,
                 "Type": "ArmorTemperature",
                 "Aggregate": "Hull",
                 "Value": 40
@@ -3484,7 +3484,7 @@
                 "Coef": 0.94
             },
             {
-                "Visible": true,
+                "Visible": false,
                 "Type": "ArmorCollision",
                 "Aggregate": "Hull",
                 "Value": 60
@@ -3496,7 +3496,7 @@
                 "Value": 50
             },
             {
-                "Visible": true,
+                "Visible": false,
                 "Type": "ArmorTemperature",
                 "Aggregate": "Hull",
                 "Value": 60
@@ -3506,6 +3506,1449 @@
                 "Type": "HP",
                 "Aggregate": "Hull",
                 "Value": 1400
+            }
+        ]
+    }
+
+,
+
+    {
+        "Name": "AFC_Synthetic_Jet_Actuators_Ballena",
+        "Description": "AFC_Synthetic_Jet_Actuators_Ballena_Descr",
+        "RequireSlot": "AFC_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Wings_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 259890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "PlaneAirDrag",
+                "Aggregate": "Hull",
+                "Coef": 0.98
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Wing",
+                "Value": 5
+            }
+        ]
+    },
+    {
+        "Name": "AFC_Compressed_Air_Injection_Ballena",
+        "Description": "AFC_Compressed_Air_Injection_Ballena_Descr",
+        "RequireSlot": "AFC_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Wings_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 585490
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 1400
+            },
+            {
+                "Visible": true,
+                "Type": "PlaneAirDrag",
+                "Aggregate": "Hull",
+                "Coef": 0.93
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Wing",
+                "Value": 15
+            }
+        ]
+    },
+    {
+        "Name": "AFC_Helium_Flow_Actuators_Ballena",
+        "Description": "AFC_Helium_Flow_Actuators_Ballena_Descr",
+        "RequireSlot": "AFC_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Wings_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1221890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 400
+            },
+            {
+                "Visible": true,
+                "Type": "PlaneAirDrag",
+                "Aggregate": "Hull",
+                "Coef": 0.9
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Wing",
+                "Value": 25
+            }
+        ]
+    },
+    {
+        "Name": "AFC_Plasma_Flow_Actuators_Ballena",
+        "Description": "AFC_Plasma_Flow_Actuators_Ballena_Descr",
+        "RequireSlot": "AFC_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Wings_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 2886890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 1400
+            },
+            {
+                "Visible": true,
+                "Type": "PlaneAirDrag",
+                "Aggregate": "Hull",
+                "Coef": 0.83
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Wing",
+                "Value": 40
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Wing",
+                "Value": 30
+            }
+        ]
+    },
+    {
+        "Name": "FCS_Evaporative_Cooling_Ballena",
+        "Description": "FCS_Evaporative_Cooling_Ballena_Descr",
+        "RequireSlot": "FCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 333890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": -400
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Fuel",
+                "Value": 5
+            }
+        ]
+    },
+    {
+        "Name": "FCS_Cryocoolers_Ballena",
+        "Description": "FCS_Cryocoolers_Ballena_Descr",
+        "RequireSlot": "FCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 703890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": -400
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Fuel",
+                "Value": 10
+            }
+        ]
+    },
+    {
+        "Name": "FCS_Liquid_Nitrogen_Ballena",
+        "Description": "FCS_Liquid_Nitrogen_Ballena_Descr",
+        "RequireSlot": "FCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1480890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": -400
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Fuel",
+                "Value": 20
+            }
+        ]
+    },
+    {
+        "Name": "FCS_Liquid_Hydrogen_Ballena",
+        "Description": "FCS_Liquid_Hydrogen_Ballena_Descr",
+        "RequireSlot": "FCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 3145890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": -400
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Fuel",
+                "Value": 35
+            }
+        ]
+    },
+    {
+        "Name": "FCS_Liquid_Helium_Ballena",
+        "Description": "FCS_Liquid_Helium_Ballena_Descr",
+        "RequireSlot": "FCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 4810890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 1200
+            },
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": -400
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Fuel",
+                "Value": 50
+            }
+        ]
+    },
+    {
+        "Name": "CCS_Field_Compression_Ballena",
+        "Description": "CCS_Field_Compression_Ballena_Descr",
+        "RequireSlot": "CCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 407890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": 22000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": 8
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Cargo",
+                "Value": 10
+            }
+        ]
+    },
+    {
+        "Name": "CCS_Spatial_Compression_Ballena",
+        "Description": "CCS_Spatial_Compression_Ballena_Descr",
+        "RequireSlot": "CCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 999890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": 22000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": 8
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Cargo",
+                "Value": 20
+            }
+        ]
+    },
+    {
+        "Name": "CCS_Mass_Reorganization_Ballena",
+        "Description": "CCS_Mass_Reorganization_Ballena_Descr",
+        "RequireSlot": "CCS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1961890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 120
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": 22000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": 8
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Cargo",
+                "Value": 40
+            }
+        ]
+    },
+    {
+        "Name": "AOS_Passive_Depreciation_Ballena",
+        "Description": "AOS_Passive_Depreciation_Ballena_Descr",
+        "RequireSlot": "AOS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 363490
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": -2000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": -1
+            },
+            {
+                "Visible": true,
+                "Type": "Overload",
+                "Aggregate": "Cargo",
+                "Coef": 0.85
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Cargo",
+                "Value": 5
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Cargo",
+                "Value": 5
+            }
+        ]
+    },
+    {
+        "Name": "AOS_Inductive_Stabilization_Ballena",
+        "Description": "AOS_Inductive_Stabilization_Ballena_Descr",
+        "RequireSlot": "AOS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 888890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": -2000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": -1
+            },
+            {
+                "Visible": true,
+                "Type": "Overload",
+                "Aggregate": "Cargo",
+                "Coef": 0.6
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Cargo",
+                "Value": 15
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Cargo",
+                "Value": 10
+            }
+        ]
+    },
+    {
+        "Name": "AOS_Inertia_Bubble_Ballena",
+        "Description": "AOS_Inertia_Bubble_Ballena_Descr",
+        "RequireSlot": "AOS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1850890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": -4000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": -2
+            },
+            {
+                "Visible": true,
+                "Type": "Overload",
+                "Aggregate": "Cargo",
+                "Coef": 0.4
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Cargo",
+                "Value": 30
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Cargo",
+                "Value": 20
+            }
+        ]
+    },
+    {
+        "Name": "AOS_Gravitational_Alignment_Ballena",
+        "Description": "AOS_Gravitational_Alignment_Ballena_Descr",
+        "RequireSlot": "AOS_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Cargo_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 3885890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 200
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Cargo",
+                "Value": -4000
+            },
+            {
+                "Visible": true,
+                "Type": "MaxCargoCount",
+                "Aggregate": "Cargo",
+                "Value": -2
+            },
+            {
+                "Visible": true,
+                "Type": "Overload",
+                "Aggregate": "Cargo",
+                "Coef": 0.2
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Cargo",
+                "Value": 50
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Cargo",
+                "Value": 40
+            }
+        ]
+    },
+    {
+        "Name": "FuelInjectors_Standard_Ballena",
+        "Description": "FuelInjectors_Standard_Ballena_Descr",
+        "RequireSlot": "Fuel_Injectors_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Engine_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 296890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 320
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1.05
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 1.05
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Engine",
+                "Value": 5
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Engine",
+                "Value": 5
+            }
+        ]
+    },
+    {
+        "Name": "FuelInjectors_HighPressure_Ballena",
+        "Description": "FuelInjectors_HighPressure_Ballena_Descr",
+        "RequireSlot": "Fuel_Injectors_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Engine_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 814890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 600
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1.12
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 1.08
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Engine",
+                "Value": 15
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Engine",
+                "Value": 15
+            }
+        ]
+    },
+    {
+        "Name": "FuelInjectors_Plasma_Ballena",
+        "Description": "FuelInjectors_Plasma_Ballena_Descr",
+        "RequireSlot": "Fuel_Injectors_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Engine_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1924890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 1000
+            },
+            {
+                "Visible": true,
+                "Type": "Force",
+                "Aggregate": "Engine",
+                "Coef": 1.2
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 1.1
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Engine",
+                "Value": 30
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Engine",
+                "Value": 30
+            }
+        ]
+    },
+    {
+        "Name": "FuelPumping_Mechanical_Ballena",
+        "Description": "FuelPumping_Mechanical_Ballena_Descr",
+        "RequireSlot": "Fuel_Pumping_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/AREconomizerLight_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 222890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 240
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 0.95
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Engine",
+                "Value": 10
+            }
+        ]
+    },
+    {
+        "Name": "FuelPumping_Electric_Ballena",
+        "Description": "FuelPumping_Electric_Ballena_Descr",
+        "RequireSlot": "Fuel_Pumping_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/AREconomizerLight_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 666890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 480
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 0.88
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Engine",
+                "Value": 20
+            }
+        ]
+    },
+    {
+        "Name": "FuelPumping_Turbine_Ballena",
+        "Description": "FuelPumping_Turbine_Ballena_Descr",
+        "RequireSlot": "Fuel_Pumping_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/AREconomizerLight_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1591890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 800
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 0.8
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Engine",
+                "Value": 40
+            }
+        ]
+    },
+    {
+        "Name": "FuelSystem_Extended_Ballena",
+        "Description": "FuelSystem_Extended_Ballena_Descr",
+        "RequireSlot": "Fuel_System_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 333890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": 400
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 800
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Fuel",
+                "Value": 5
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Fuel",
+                "Value": 5
+            }
+        ]
+    },
+    {
+        "Name": "FuelSystem_HighCapacity_Ballena",
+        "Description": "FuelSystem_HighCapacity_Ballena_Descr",
+        "RequireSlot": "Fuel_System_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 962890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": 720
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 1600
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Fuel",
+                "Value": 15
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Fuel",
+                "Value": 15
+            }
+        ]
+    },
+    {
+        "Name": "FuelSystem_Integrated_Ballena",
+        "Description": "FuelSystem_Integrated_Ballena_Descr",
+        "RequireSlot": "Fuel_System_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/FuelTank_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 2220890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Fuel",
+                "Value": 1120
+            },
+            {
+                "Visible": true,
+                "Type": "Capacity",
+                "Aggregate": "Fuel",
+                "Value": 2800
+            },
+            {
+                "Visible": true,
+                "Type": "Consumption",
+                "Aggregate": "Engine",
+                "Coef": 0.95
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Fuel",
+                "Value": 30
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Fuel",
+                "Value": 30
+            }
+        ]
+    },
+    {
+        "Name": "Coating_Thermal_Ballena",
+        "Description": "Coating_Thermal_Ballena_Descr",
+        "RequireSlot": "Coating_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Chassis_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 259890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 160
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Hull",
+                "Coef": 0.92
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Hull",
+                "Value": 20
+            },
+            {
+                "Visible": true,
+                "Type": "HP",
+                "Aggregate": "Hull",
+                "Value": 400
+            }
+        ]
+    },
+    {
+        "Name": "Coating_Ceramic_Ballena",
+        "Description": "Coating_Ceramic_Ballena_Descr",
+        "RequireSlot": "Coating_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Chassis_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 740890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 360
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Hull",
+                "Coef": 0.85
+            },
+            {
+                "Visible": true,
+                "Type": "PlaneAirDrag",
+                "Aggregate": "Hull",
+                "Coef": 0.97
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Hull",
+                "Value": 40
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Hull",
+                "Value": 40
+            },
+            {
+                "Visible": true,
+                "Type": "HP",
+                "Aggregate": "Hull",
+                "Value": 800
+            }
+        ]
+    },
+    {
+        "Name": "Coating_Nanocomposite_Ballena",
+        "Description": "Coating_Nanocomposite_Ballena_Descr",
+        "RequireSlot": "Coating_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Chassis_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 1739890
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": true,
+                "Type": "ShipMass",
+                "Aggregate": "Hull",
+                "Value": 640
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Hull",
+                "Coef": 0.75
+            },
+            {
+                "Visible": true,
+                "Type": "PlaneAirDrag",
+                "Aggregate": "Hull",
+                "Coef": 0.94
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Hull",
+                "Value": 60
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Hull",
+                "Value": 50
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Hull",
+                "Value": 60
+            },
+            {
+                "Visible": true,
+                "Type": "HP",
+                "Aggregate": "Hull",
+                "Value": 1400
+            }
+        ]
+    },
+    {
+        "Name": "Coating_DevTest_Ballena",
+        "Description": "Coating_DevTest_Ballena_Descr",
+        "RequireSlot": "Coating_Ballena",
+        "TradeParams": {
+            "Icon": "GUI/Icons/Upgrades/Chassis_Icon",
+            "Sellable": true,
+            "ColumnHP": "HP",
+            "PriceCredits": 990
+        },
+        "AddSlots": [],
+        "ChangeParams": [
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Hull",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Hull",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Hull",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Hull",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Engine",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Engine",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Engine",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Engine",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Wing",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Wing",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Wing",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Wing",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Fuel",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Fuel",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Fuel",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Fuel",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Steerer",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Steerer",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Steerer",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Steerer",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Chassis",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Chassis",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Chassis",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Chassis",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Locator",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Locator",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Locator",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Locator",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Cargo",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Cargo",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Cargo",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Cargo",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "Airplane",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "Airplane",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "Airplane",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "Airplane",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorCollision",
+                "Aggregate": "RemainingShip",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "ArmorKinetic",
+                "Aggregate": "RemainingShip",
+                "Value": 999
+            },
+            {
+                "Visible": false,
+                "Type": "ArmorTemperature",
+                "Aggregate": "RemainingShip",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "SkyRadiationResistance",
+                "Aggregate": "RemainingShip",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "DustParticleResistance",
+                "Aggregate": "RemainingShip",
+                "Value": 999
+            },
+            {
+                "Visible": true,
+                "Type": "HP",
+                "Aggregate": "Hull",
+                "Value": 39996
             }
         ]
     }

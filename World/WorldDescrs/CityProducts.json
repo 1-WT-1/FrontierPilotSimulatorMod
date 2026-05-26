@@ -299,36 +299,6 @@
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
 			},
 			{
-				"UpgradeName": "FCS_Cryocoolers"
-			},
-			//CCS - Cargo Compression (Tier 1)
-			{
-				"UpgradeName": "CCS_Field_Compression_Scarab"
-			},
-			//AOS - Anti-Overload (Tier 1)
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
-			},
-			//Fuel Injectors (Tier 1)
-			{
-				"UpgradeName": "FuelInjectors_Standard_Scarab"
-			},
-			//Fuel Pumping (Tier 1)
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Scarab"
-			},
-			//Fuel System (Tier 1)
-			{
-				"UpgradeName": "FuelSystem_Extended_Scarab"
-			},
-			//Coating (Tier 1)
-			{
-				"UpgradeName": "Coating_Thermal_Scarab"
-			},
-			{
-				"UpgradeName": "Coating_DevTest_Scarab"
-			},
-			{
 				"UpgradeName": "AFC_Compressed_Air_Injection"
 			},
 			{
@@ -341,6 +311,9 @@
 				"UpgradeName": "FCS_Evaporative_Cooling"
 			},
 			{
+				"UpgradeName": "FCS_Cryocoolers"
+			},
+			{
 				"UpgradeName": "FCS_Liquid_Nitrogen"
 			},
 			{
@@ -349,11 +322,19 @@
 			{
 				"UpgradeName": "FCS_Liquid_Helium"
 			},
+			//CCS - Cargo Compression (Tier 1)
+			{
+				"UpgradeName": "CCS_Field_Compression_Scarab"
+			},
 			{
 				"UpgradeName": "CCS_Spatial_Compression_Scarab"
 			},
 			{
 				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			//AOS - Anti-Overload (Tier 1)
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
 			},
 			{
 				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
@@ -364,11 +345,19 @@
 			{
 				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
 			},
+			//Fuel Injectors (Tier 1)
+			{
+				"UpgradeName": "FuelInjectors_Standard_Scarab"
+			},
 			{
 				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
 			},
 			{
 				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			//Fuel Pumping (Tier 1)
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Scarab"
 			},
 			{
 				"UpgradeName": "FuelPumping_Electric_Scarab"
@@ -376,17 +365,28 @@
 			{
 				"UpgradeName": "FuelPumping_Turbine_Scarab"
 			},
+			//Fuel System (Tier 1)
+			{
+				"UpgradeName": "FuelSystem_Extended_Scarab"
+			},
 			{
 				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
 			},
 			{
 				"UpgradeName": "FuelSystem_Integrated_Scarab"
 			},
+			//Coating (Tier 1)
+			{
+				"UpgradeName": "Coating_Thermal_Scarab"
+			},
 			{
 				"UpgradeName": "Coating_Ceramic_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_DevTest_Scarab"
 			}
 		],
 		"NPCs": [
@@ -895,46 +895,22 @@
 					]
 				]
 			},
+			{
+				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
+			},
 			//AFC - Active Flow Control (Tier 2)
 			{
 				"UpgradeName": "AFC_Compressed_Air_Injection"
-			},
-			//FCS - Fuel Cooling (Tier 1)
-			{
-				"UpgradeName": "FCS_Evaporative_Cooling"
-			},
-			//CCS - Cargo Compression (Tier 2)
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Scarab"
-			},
-			//AOS - Anti-Overload (Tier 2)
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
-			},
-			//Fuel Injectors (Tier 2)
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
-			},
-			//Fuel Pumping (Tier 2)
-			{
-				"UpgradeName": "FuelPumping_Electric_Scarab"
-			},
-			//Fuel System (Tier 2)
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
-			},
-			//Coating (Tier 2)
-			{
-				"UpgradeName": "Coating_Ceramic_Scarab"
-			},
-			{
-				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
 			},
 			{
 				"UpgradeName": "AFC_Helium_Flow_Actuators"
 			},
 			{
 				"UpgradeName": "AFC_Plasma_Flow_Actuators"
+			},
+			//FCS - Fuel Cooling (Tier 1)
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling"
 			},
 			{
 				"UpgradeName": "FCS_Cryocoolers"
@@ -951,11 +927,19 @@
 			{
 				"UpgradeName": "CCS_Field_Compression_Scarab"
 			},
+			//CCS - Cargo Compression (Tier 2)
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Scarab"
+			},
 			{
 				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
 			},
 			{
 				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
+			},
+			//AOS - Anti-Overload (Tier 2)
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
 			},
 			{
 				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
@@ -966,11 +950,19 @@
 			{
 				"UpgradeName": "FuelInjectors_Standard_Scarab"
 			},
+			//Fuel Injectors (Tier 2)
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
+			},
 			{
 				"UpgradeName": "FuelInjectors_Plasma_Scarab"
 			},
 			{
 				"UpgradeName": "FuelPumping_Mechanical_Scarab"
+			},
+			//Fuel Pumping (Tier 2)
+			{
+				"UpgradeName": "FuelPumping_Electric_Scarab"
 			},
 			{
 				"UpgradeName": "FuelPumping_Turbine_Scarab"
@@ -978,17 +970,25 @@
 			{
 				"UpgradeName": "FuelSystem_Extended_Scarab"
 			},
+			//Fuel System (Tier 2)
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
+			},
 			{
 				"UpgradeName": "FuelSystem_Integrated_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Thermal_Scarab"
 			},
+			//Coating (Tier 2)
 			{
-				"UpgradeName": "Coating_DevTest_Scarab"
+				"UpgradeName": "Coating_Ceramic_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_DevTest_Scarab"
 			}
 		],
 		"SellingSkins": [
@@ -1808,166 +1808,166 @@
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
 			},
 			{
-				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Cryocoolers_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Helium_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Field_Compression_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Standard_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Electric_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Turbine_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Extended_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Integrated_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Thermal_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Ceramic_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Nanocomposite_Ox"
-			},
-			{
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
 			},
 			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
 				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Cryocoolers_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Liquid_Helium_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
 			},
 			{
 				"UpgradeName": "CCS_Field_Compression_Ballena"
 			},
 			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
 				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
 			},
 			{
 				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
 			},
 			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
 				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
 			},
 			{
 				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
 			},
 			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
 				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
 			},
 			{
 				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
 			},
 			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
 				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
 			},
 			{
 				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
 			},
 			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
 				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
 			},
 			{
 				"UpgradeName": "FuelPumping_Mechanical_Ballena"
 			},
 			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
 				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
 			},
 			{
 				"UpgradeName": "FuelPumping_Turbine_Ballena"
 			},
 			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
 				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
 			},
 			{
 				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
 			},
 			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
 				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
 			},
 			{
 				"UpgradeName": "Coating_Thermal_Ballena"
 			},
 			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
 				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Ballena"
@@ -2193,166 +2193,166 @@
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
 			},
 			{
-				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Cryocoolers_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Helium_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Field_Compression_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Standard_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Electric_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Turbine_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Extended_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Integrated_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Thermal_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Ceramic_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Nanocomposite_Ox"
-			},
-			{
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
 			},
 			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
 				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Cryocoolers_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Liquid_Helium_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
 			},
 			{
 				"UpgradeName": "CCS_Field_Compression_Ballena"
 			},
 			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
 				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
 			},
 			{
 				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
 			},
 			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
 				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
 			},
 			{
 				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
 			},
 			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
 				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
 			},
 			{
 				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
 			},
 			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
 				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
 			},
 			{
 				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
 			},
 			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
 				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
 			},
 			{
 				"UpgradeName": "FuelPumping_Mechanical_Ballena"
 			},
 			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
 				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
 			},
 			{
 				"UpgradeName": "FuelPumping_Turbine_Ballena"
 			},
 			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
 				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
 			},
 			{
 				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
 			},
 			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
 				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
 			},
 			{
 				"UpgradeName": "Coating_Thermal_Ballena"
 			},
 			{
+				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			{
 				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Ballena"
@@ -2605,49 +2605,7 @@
 				"UpgradeName": "AFC_Ox"
 			},
 			{
-				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Field_Compression_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Standard_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Extended_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Thermal_Ox"
-			},
-			{
 				"UpgradeName": "AFC_Ballena"
-			},
-			{
-				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
-			},
-			{
-				"UpgradeName": "CCS_Field_Compression_Ballena"
-			},
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Standard_Ballena"
-			},
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Ballena"
-			},
-			{
-				"UpgradeName": "FuelSystem_Extended_Ballena"
-			},
-			{
-				"UpgradeName": "Coating_Thermal_Ballena"
 			},
 			// ENGINES
 			{
@@ -2749,6 +2707,48 @@
 						"Corsair_Availability"
 					]
 				]
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ballena"
 			}
 		]
 	},
@@ -2848,30 +2848,6 @@
 		],
 		"SellingUpgrades": [
 			{
-				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Cryocoolers_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Electric_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Ceramic_Ox"
-			},
-			{
 				"UpgradeName": "OxEnginePower1"
 			},
 			// {
@@ -2909,6 +2885,30 @@
 			},
 			{
 				"UpgradeName": "BallenaWingsLight"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
 			}
 		],
 		"NPCs": [
@@ -3228,43 +3228,15 @@
 					]
 				]
 			},
-			//AFC - Active Flow Control (Tier 3)
-			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators"
-			},
-			//FCS - Fuel Cooling (Tier 3)
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen"
-			},
-			//CCS - Cargo Compression (Tier 3)
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
-			},
-			//AOS - Anti-Overload (Tier 3)
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
-			},
-			//Fuel Injectors (Tier 3)
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Scarab"
-			},
-			//Fuel Pumping (Tier 3)
-			{
-				"UpgradeName": "FuelPumping_Turbine_Scarab"
-			},
-			//Fuel System (Tier 3)
-			{
-				"UpgradeName": "FuelSystem_Integrated_Scarab"
-			},
-			//Coating (Tier 3)
-			{
-				"UpgradeName": "Coating_Nanocomposite_Scarab"
-			},
 			{
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			//AFC - Active Flow Control (Tier 3)
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
 			},
 			{
 				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
@@ -3277,6 +3249,10 @@
 			},
 			{
 				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			//FCS - Fuel Cooling (Tier 3)
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
 			},
 			{
 				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
@@ -3293,6 +3269,10 @@
 			{
 				"UpgradeName": "CCS_Spatial_Compression_Ox"
 			},
+			//CCS - Cargo Compression (Tier 3)
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
 			{
 				"UpgradeName": "CCS_Mass_Reorganization_Ox"
 			},
@@ -3301,6 +3281,10 @@
 			},
 			{
 				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			//AOS - Anti-Overload (Tier 3)
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
 			},
 			{
 				"UpgradeName": "AOS_Inertia_Bubble_Ox"
@@ -3314,6 +3298,10 @@
 			{
 				"UpgradeName": "FuelInjectors_HighPressure_Ox"
 			},
+			//Fuel Injectors (Tier 3)
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
 			{
 				"UpgradeName": "FuelInjectors_Plasma_Ox"
 			},
@@ -3322,6 +3310,10 @@
 			},
 			{
 				"UpgradeName": "FuelPumping_Electric_Ox"
+			},
+			//Fuel Pumping (Tier 3)
+			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
 			},
 			{
 				"UpgradeName": "FuelPumping_Turbine_Ox"
@@ -3332,6 +3324,10 @@
 			{
 				"UpgradeName": "FuelSystem_HighCapacity_Ox"
 			},
+			//Fuel System (Tier 3)
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
 			{
 				"UpgradeName": "FuelSystem_Integrated_Ox"
 			},
@@ -3340,6 +3336,10 @@
 			},
 			{
 				"UpgradeName": "Coating_Ceramic_Ox"
+			},
+			//Coating (Tier 3)
+			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Ox"
@@ -4279,78 +4279,6 @@
 		],
 		"SellingUpgrades": [
 			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Turbine_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Integrated_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Nanocomposite_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
-			},
-			{
-				"UpgradeName": "FCS_Cryocoolers_Ballena"
-			},
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Ballena"
-			},
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
-			},
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
-			},
-			{
-				"UpgradeName": "FuelPumping_Electric_Ballena"
-			},
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
-			},
-			{
-				"UpgradeName": "Coating_Ceramic_Ballena"
-			},
-			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
-			},
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
-			},
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Ballena"
-			},
-			{
-				"UpgradeName": "FuelPumping_Turbine_Ballena"
-			},
-			{
-				"UpgradeName": "FuelSystem_Integrated_Ballena"
-			},
-			{
-				"UpgradeName": "Coating_Nanocomposite_Ballena"
-			},
-			{
 				"UpgradeName": "UniversalTuner_EcoPower",
 				"ConditionAliases": [
 					[
@@ -4446,6 +4374,15 @@
 					]
 				]
 			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
+			},
 			//AFC - Active Flow Control (Tier 4)
 			{
 				"UpgradeName": "AFC_Plasma_Flow_Actuators",
@@ -4454,6 +4391,15 @@
 						"Canyon_Base_4_Stage_Trading_upgrades"
 					]
 				]
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
 			},
 			//FCS - Fuel Cooling (Tier 4+5)
 			{
@@ -4472,6 +4418,24 @@
 					]
 				]
 			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
+			},
 			//AOS - Anti-Overload (Tier 4)
 			{
 				"UpgradeName": "AOS_Gravitational_Alignment_Scarab",
@@ -4480,6 +4444,42 @@
 						"Canyon_Base_4_Stage_Trading_upgrades"
 					]
 				]
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ballena"
 			}
 		],
 		"NPCs": [
@@ -4704,13 +4704,13 @@
 				"UpgradeName": "Coating_Thermal_Scarab"
 			},
 			{
-				"UpgradeName": "Coating_DevTest_Scarab"
-			},
-			{
 				"UpgradeName": "Coating_Ceramic_Scarab"
 			},
 			{
 				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_DevTest_Scarab"
 			}
 		],
 		"NPCs": [
@@ -5154,256 +5154,256 @@
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators"
 			},
 			{
-				"UpgradeName": "AFC_Compressed_Air_Injection"
-			},
-			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators"
-			},
-			{
-				"UpgradeName": "AFC_Plasma_Flow_Actuators"
-			},
-			{
-				"UpgradeName": "FCS_Evaporative_Cooling"
-			},
-			{
-				"UpgradeName": "FCS_Cryocoolers"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Hydrogen"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Helium"
-			},
-			{
-				"UpgradeName": "CCS_Field_Compression_Scarab"
-			},
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Scarab"
-			},
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
-			},
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
-			},
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
-			},
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
-			},
-			{
-				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Standard_Scarab"
-			},
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Scarab"
-			},
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Scarab"
-			},
-			{
-				"UpgradeName": "FuelPumping_Electric_Scarab"
-			},
-			{
-				"UpgradeName": "FuelPumping_Turbine_Scarab"
-			},
-			{
-				"UpgradeName": "FuelSystem_Extended_Scarab"
-			},
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
-			},
-			{
-				"UpgradeName": "FuelSystem_Integrated_Scarab"
-			},
-			{
-				"UpgradeName": "Coating_Thermal_Scarab"
-			},
-			{
-				"UpgradeName": "Coating_DevTest_Scarab"
-			},
-			{
-				"UpgradeName": "Coating_Ceramic_Scarab"
-			},
-			{
-				"UpgradeName": "Coating_Nanocomposite_Scarab"
-			},
-			{
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Cryocoolers_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
-			},
-			{
-				"UpgradeName": "FCS_Liquid_Helium_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Field_Compression_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Spatial_Compression_Ox"
-			},
-			{
-				"UpgradeName": "CCS_Mass_Reorganization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Passive_Depreciation_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Inertia_Bubble_Ox"
-			},
-			{
-				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Standard_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_HighPressure_Ox"
-			},
-			{
-				"UpgradeName": "FuelInjectors_Plasma_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Mechanical_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Electric_Ox"
-			},
-			{
-				"UpgradeName": "FuelPumping_Turbine_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Extended_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_HighCapacity_Ox"
-			},
-			{
-				"UpgradeName": "FuelSystem_Integrated_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Thermal_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Ceramic_Ox"
-			},
-			{
-				"UpgradeName": "Coating_Nanocomposite_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Synthetic_Jet_Actuators_Ballena"
 			},
 			{
+				"UpgradeName": "AFC_Compressed_Air_Injection"
+			},
+			{
+				"UpgradeName": "AFC_Compressed_Air_Injection_Ox"
+			},
+			{
 				"UpgradeName": "AFC_Compressed_Air_Injection_Ballena"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Helium_Flow_Actuators_Ox"
 			},
 			{
 				"UpgradeName": "AFC_Helium_Flow_Actuators_Ballena"
 			},
 			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators"
+			},
+			{
+				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ox"
+			},
+			{
 				"UpgradeName": "AFC_Plasma_Flow_Actuators_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling"
+			},
+			{
+				"UpgradeName": "FCS_Evaporative_Cooling_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Evaporative_Cooling_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Cryocoolers"
+			},
+			{
+				"UpgradeName": "FCS_Cryocoolers_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Cryocoolers_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Nitrogen_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Liquid_Nitrogen_Ballena"
 			},
 			{
+				"UpgradeName": "FCS_Liquid_Hydrogen"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Hydrogen_Ox"
+			},
+			{
 				"UpgradeName": "FCS_Liquid_Hydrogen_Ballena"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium"
+			},
+			{
+				"UpgradeName": "FCS_Liquid_Helium_Ox"
 			},
 			{
 				"UpgradeName": "FCS_Liquid_Helium_Ballena"
 			},
 			{
+				"UpgradeName": "CCS_Field_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Field_Compression_Ox"
+			},
+			{
 				"UpgradeName": "CCS_Field_Compression_Ballena"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Spatial_Compression_Ox"
 			},
 			{
 				"UpgradeName": "CCS_Spatial_Compression_Ballena"
 			},
 			{
+				"UpgradeName": "CCS_Mass_Reorganization_Scarab"
+			},
+			{
+				"UpgradeName": "CCS_Mass_Reorganization_Ox"
+			},
+			{
 				"UpgradeName": "CCS_Mass_Reorganization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Passive_Depreciation_Ox"
 			},
 			{
 				"UpgradeName": "AOS_Passive_Depreciation_Ballena"
 			},
 			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inductive_Stabilization_Ox"
+			},
+			{
 				"UpgradeName": "AOS_Inductive_Stabilization_Ballena"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Inertia_Bubble_Ox"
 			},
 			{
 				"UpgradeName": "AOS_Inertia_Bubble_Ballena"
 			},
 			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Scarab"
+			},
+			{
+				"UpgradeName": "AOS_Gravitational_Alignment_Ox"
+			},
+			{
 				"UpgradeName": "AOS_Gravitational_Alignment_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Standard_Ox"
 			},
 			{
 				"UpgradeName": "FuelInjectors_Standard_Ballena"
 			},
 			{
+				"UpgradeName": "FuelInjectors_HighPressure_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_HighPressure_Ox"
+			},
+			{
 				"UpgradeName": "FuelInjectors_HighPressure_Ballena"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Scarab"
+			},
+			{
+				"UpgradeName": "FuelInjectors_Plasma_Ox"
 			},
 			{
 				"UpgradeName": "FuelInjectors_Plasma_Ballena"
 			},
 			{
+				"UpgradeName": "FuelPumping_Mechanical_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Mechanical_Ox"
+			},
+			{
 				"UpgradeName": "FuelPumping_Mechanical_Ballena"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Electric_Ox"
 			},
 			{
 				"UpgradeName": "FuelPumping_Electric_Ballena"
 			},
 			{
+				"UpgradeName": "FuelPumping_Turbine_Scarab"
+			},
+			{
+				"UpgradeName": "FuelPumping_Turbine_Ox"
+			},
+			{
 				"UpgradeName": "FuelPumping_Turbine_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Extended_Ox"
 			},
 			{
 				"UpgradeName": "FuelSystem_Extended_Ballena"
 			},
 			{
+				"UpgradeName": "FuelSystem_HighCapacity_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_HighCapacity_Ox"
+			},
+			{
 				"UpgradeName": "FuelSystem_HighCapacity_Ballena"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Scarab"
+			},
+			{
+				"UpgradeName": "FuelSystem_Integrated_Ox"
 			},
 			{
 				"UpgradeName": "FuelSystem_Integrated_Ballena"
 			},
 			{
+				"UpgradeName": "Coating_Thermal_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Thermal_Ox"
+			},
+			{
 				"UpgradeName": "Coating_Thermal_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Ceramic_Ox"
 			},
 			{
 				"UpgradeName": "Coating_Ceramic_Ballena"
 			},
 			{
+				"UpgradeName": "Coating_Nanocomposite_Scarab"
+			},
+			{
+				"UpgradeName": "Coating_Nanocomposite_Ox"
+			},
+			{
 				"UpgradeName": "Coating_Nanocomposite_Ballena"
+			},
+			{
+				"UpgradeName": "Coating_DevTest_Scarab"
 			}
 		],
 		"SellingShips": [
