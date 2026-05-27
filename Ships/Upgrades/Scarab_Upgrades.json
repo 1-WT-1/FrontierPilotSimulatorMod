@@ -1,4 +1,4 @@
-﻿[
+[
 //ScarabHullBase 1
     {
 		"Name": "ScarabHullBase",
@@ -4527,7 +4527,19 @@
 				"Visible": true,
 				"Type": "SkyRadiationResistance",
 				"Aggregate": "Hull",
-				"Coef": 0.92
+				"Coef": 1.08
+			},
+			{
+				"Visible": false,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Engine",
+				"Coef": 1.08
+			},
+			{
+				"Visible": false,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Locator",
+				"Coef": 1.08
 			},
 			{
 				"Visible": false,
@@ -4565,7 +4577,19 @@
 				"Visible": true,
 				"Type": "SkyRadiationResistance",
 				"Aggregate": "Hull",
-				"Coef": 0.85
+				"Coef": 1.15
+			},
+			{
+				"Visible": false,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Engine",
+				"Coef": 1.15
+			},
+			{
+				"Visible": false,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Locator",
+				"Coef": 1.15
 			},
 			{
 				"Visible": true,
@@ -4615,7 +4639,19 @@
 				"Visible": true,
 				"Type": "SkyRadiationResistance",
 				"Aggregate": "Hull",
-				"Coef": 0.75
+				"Coef": 1.25
+			},
+			{
+				"Visible": false,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Engine",
+				"Coef": 1.25
+			},
+			{
+				"Visible": false,
+				"Type": "SkyRadiationResistance",
+				"Aggregate": "Locator",
+				"Coef": 1.25
 			},
 			{
 				"Visible": true,

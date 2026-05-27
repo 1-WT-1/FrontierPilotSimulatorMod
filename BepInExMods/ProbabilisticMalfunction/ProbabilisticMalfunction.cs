@@ -43,6 +43,8 @@ namespace FPS.ProbabilisticMalfunction
                 // Non-environmental malfunctions trigger automatically as intended
                 if (resistanceEnumName == "None") return true;
 
+                Debug.Log($"[ProbabilisticMalfunctions] Intercepted malfunction '{malfunctionName}' (mapped to {resistanceEnumName})");
+
                 // 2. Retrieve active component resistance score from ship aggregates
                 var ownerField = AccessTools.Field(typeof(CMalfunction), "_owner");
                 if (ownerField == null) return true;
@@ -63,12 +65,15 @@ namespace FPS.ProbabilisticMalfunction
                     resistanceRating = hull.GetResistanceValue(resEnum, inLogContext);
                 }
 
+                Debug.Log($"[ProbabilisticMalfunctions] Hull aggregate resistance for {resEnum} is {resistanceRating}");
+
                 var toStartField = AccessTools.Field(typeof(CMalfunction), "_to_start");
                 if (toStartField == null) return true;
 
                 // 3. Complete immunity cutoff (100% or higher resistance)
                 if (resistanceRating >= 100f)
                 {
+                    Debug.Log($"[ProbabilisticMalfunctions] FULL IMMUNITY (rating {resistanceRating} >= 100). Malfunction '{malfunctionName}' blocked.");
                     ResetWarningTimer(__instance, toStartField, timeBeforeStartMin);
                     return false; // Skip execution, blocking the breakdown
                 }
@@ -77,12 +82,17 @@ namespace FPS.ProbabilisticMalfunction
                 float failureChance = 100f - resistanceRating;
                 float roll = UnityEngine.Random.Range(0f, 100f);
 
+                Debug.Log($"[ProbabilisticMalfunctions] Rolling saving throw: failure chance = {failureChance}%, roll = {roll}");
+
                 if (roll > failureChance)
                 {
+                    Debug.Log($"[ProbabilisticMalfunctions] SUCCESS! Saving throw passed ({roll} > {failureChance}%). Malfunction '{malfunctionName}' prevented.");
                     // Success: The vessel resisted. Reset the warning countdown phase
                     ResetWarningTimer(__instance, toStartField, timeBeforeStartMin);
                     return false; // Interrupt breakdown sequence, keeping systems active
                 }
+
+                Debug.Log($"[ProbabilisticMalfunctions] FAILURE! Saving throw failed ({roll} <= {failureChance}%). Malfunction '{malfunctionName}' will execute.");
             }
             catch (Exception ex)
             {
