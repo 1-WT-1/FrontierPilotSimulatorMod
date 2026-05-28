@@ -1,4 +1,4 @@
-﻿{
+{
   "VersionNum": "Version №: <b>{VERSION}</b>",
   "Trawler": "Trawler",
   "LandingZone": "Landing zone",
@@ -549,7 +549,7 @@
   "GUI_HangarWindow_UpgradeParam_PlaneAirDrag": "Air Drag {VALUE}",
   "GUI_HangarWindow_UpgradeParam_HP": "Durability {VALUE}",
   "GUI_HangarWindow_UpgradeParam_ArmorCollision": "Survivability {VALUE}",
-  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Armour {VALUE}",
+  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Armour {VALUE}%",
   "GUI_HangarWindow_UpgradeParam_ArmorTemperature": "Heat Resistance {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoCapacity": "Capacity {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoOverload": "G-force Tolerance {VALUE}",

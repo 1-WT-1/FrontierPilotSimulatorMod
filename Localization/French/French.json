@@ -1,4 +1,4 @@
-﻿{
+{
   "VersionNum": "Version n°: <b>{VERSION}</b>",
   "Trawler": "Chalutier",
   "LandingZone": "Zone d'atterrissage",
@@ -547,7 +547,7 @@
   "GUI_HangarWindow_UpgradeParam_PlaneAirDrag": "Traînée aérienne {VALUE}",
   "GUI_HangarWindow_UpgradeParam_HP": "Durabilité {VALUE}",
   "GUI_HangarWindow_UpgradeParam_ArmorCollision": "Capacité de la coque {VALUE}",
-  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Armure {VALUE}",
+  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Armure {VALUE}%",
   "GUI_HangarWindow_UpgradeParam_ArmorTemperature": "Résistance thermique {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoCapacity": "Capacité {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoOverload": "Tolérance à la force G {VALUE}",

@@ -1,4 +1,4 @@
-﻿{
+{
   "VersionNum": "Versión №: <b>{VERSION}</b>",
   "Trawler": "Jabeguero",
   "LandingZone": "Zona de aterrizaje",
@@ -546,7 +546,7 @@
   "GUI_HangarWindow_UpgradeParam_PlaneAirDrag": "Arrastre de aire {VALUE}",
   "GUI_HangarWindow_UpgradeParam_HP": "Durabilidad {VALUE}",
   "GUI_HangarWindow_UpgradeParam_ArmorCollision": "Supervivencia {VALUE}",
-  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Armadura {VALUE}",
+  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Armadura {VALUE}%",
   "GUI_HangarWindow_UpgradeParam_ArmorTemperature": "Resistencia térmica {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoCapacity": "Capacidad {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoOverload": "Tolerancia a la fuerza G {VALUE}",

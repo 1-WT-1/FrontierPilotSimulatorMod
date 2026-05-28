@@ -1,4 +1,4 @@
-﻿{
+{
   "VersionNum": "Verze №: <b>{VERSION}</b>",
   "Trawler": "Trauler",
   "LandingZone": "Přistávací zóna",
@@ -546,7 +546,7 @@
   "GUI_HangarWindow_UpgradeParam_PlaneAirDrag": "Tah vzduchu {VALUE}",
   "GUI_HangarWindow_UpgradeParam_HP": "Durabilita {VALUE}",
   "GUI_HangarWindow_UpgradeParam_ArmorCollision": "Přežití {VALUE}",
-  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Brnění {VALUE}",
+  "GUI_HangarWindow_UpgradeParam_ArmorKinetic": "Brnění {VALUE}%",
   "GUI_HangarWindow_UpgradeParam_ArmorTemperature": "Tepelná odolnost {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoCapacity": "Kapacita {VALUE}",
   "GUI_HangarWindow_UpgradeParam_CargoOverload": "Tolerance síly G {VALUE}",
