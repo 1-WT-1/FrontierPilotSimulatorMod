@@ -173,7 +173,7 @@
 		"Hull": {
 			"EntityPlaces": [ "Undefined" ],
 			"Resistance": {
-				"SkyRadiationResistance": 1000
+				"SkyRadiationResistance": 140
 			},
 			"SoulDescr": {
 				"Params": {

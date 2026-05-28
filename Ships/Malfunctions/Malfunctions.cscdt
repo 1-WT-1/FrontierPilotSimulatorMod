@@ -1,4 +1,4 @@
-﻿SteererParasiticInGeyser:
+SteererParasiticInGeyser:
 	Name: SteererParasiticInGeyser
 	Aggregate: Steerer
 	Type: ParasiticInput
@@ -175,7 +175,7 @@ EngineTurnOffInSkyRadiation:
 		--
 		ConditionType: PlayerShipParam
 		ObjectName: AggregateSkyRadiationAbsorbed
-		ShipAggregate: Engine
+		ShipAggregate: Hull
 		Count: 1
 	TimeBeforeStartMax: 3
 	TimeBeforeStartMin: 1

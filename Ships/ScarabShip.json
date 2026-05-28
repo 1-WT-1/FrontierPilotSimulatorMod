@@ -185,7 +185,7 @@
 		"Hull": {
 			"EntityPlaces": [ "Undefined" ],
 			"Resistance": {
-				"SkyRadiationResistance": 1000
+				"SkyRadiationResistance": 125
 			},
 			"SoulDescr": {
 				"Params": {
@@ -204,7 +204,7 @@
 		"Engine": {
 			"EntityPlaces": [ "Left", "Right" ],
 			"Resistance": {
-				"SkyRadiationResistance": 1000
+				"SkyRadiationResistance": 125
 			},
 			"SoulDescr": {
 				"Params": {
@@ -703,7 +703,7 @@
 				}
 			],
 			"Resistance": {
-				"SkyRadiationResistance": 1000
+				"SkyRadiationResistance": 119
 			},
 			"ARFuelConsume": 3,
 			"SoulDescr": {

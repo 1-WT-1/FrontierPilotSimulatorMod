@@ -210,7 +210,7 @@
 				"Undefined"
 			],
 			"Resistance": {
-				"SkyRadiationResistance": 1000
+				"SkyRadiationResistance": 136
 			},
 			"SoulDescr": {
 				"Params": {
@@ -1024,7 +1024,7 @@
 				}
 			],
 			"Resistance": {
-				"SkyRadiationResistance": 1000
+				"SkyRadiationResistance": 129
 			},
 			"ARFuelConsume": 5,
 			"SoulDescr": {
