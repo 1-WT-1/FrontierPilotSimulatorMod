@@ -36,8 +36,7 @@ namespace FPS.ProbabilisticMalfunction
 
                 // 1. Map the malfunction name to its corresponding Resistance parameter
                 string resistanceEnumName = "None";
-                if (malfunctionName.Contains("Radiation")) resistanceEnumName = "SkyRadiationResistance";
-                else if (malfunctionName.Contains("Water")) resistanceEnumName = "WaterResistance";
+                if (malfunctionName.Contains("Water")) resistanceEnumName = "WaterResistance";
                 else if (malfunctionName.Contains("Geyser") || malfunctionName.Contains("Dust")) resistanceEnumName = "DustParticleResistance";
 
                 // Non-environmental malfunctions trigger automatically as intended
