@@ -35,6 +35,7 @@ Download the latest release zip files from the [Releases page](https://github.co
 * **Damage Logger**: Development tool that logs component damage.
 * **Probabilistic Malfunction**: Changes the malfunction mechanic from time-based to chance-based.
 * **Production Economy**: Processes custom factory recipes.
+* **VTOL Airbrake**: Enables the airbrake toggle key in VTOL mode.
 
 ---
 
