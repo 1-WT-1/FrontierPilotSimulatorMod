@@ -12,12 +12,13 @@ using GUIManager.Messenger;
 
 namespace FPS.ProductionEconomy
 {
-    [BepInPlugin("com.fps.mods.productioneconomy", "FPS Production Economy", "1.0.0")]
+    [BepInPlugin("com.fps.mods.productioneconomy", "FPS Production Economy", "1.1.0")]
     public class ProductionEconomyPlugin : BaseUnityPlugin
     {
         public static ManualLogSource Log;
         public static List<ProductionRecipe> Recipes = new List<ProductionRecipe>();
         private static Dictionary<string, bool> _pausedStates = new Dictionary<string, bool>();
+        private static Dictionary<string, bool> _hasConsumedForCurrentCycle = new Dictionary<string, bool>();
 
         // Classes for json serialization/deserialization
         public class RecipeRequirement
@@ -74,7 +75,7 @@ namespace FPS.ProductionEconomy
                     {
                         new ProductionRecipe
                         {
-                            Product = "product_components_food",
+                            Product = "product_components_food_1",
                             Requirements = new List<RecipeRequirement>
                             {
                                 new RecipeRequirement { Product = "product_components_water", BoxCount = 1 }
@@ -82,7 +83,7 @@ namespace FPS.ProductionEconomy
                         },
                         new ProductionRecipe
                         {
-                            Product = "product_components_battery",
+                            Product = "product_components_battery_1",
                             Requirements = new List<RecipeRequirement>
                             {
                                 new RecipeRequirement { Product = "product_empty_battery", BoxCount = 1 }
@@ -127,90 +128,88 @@ namespace FPS.ProductionEconomy
                     CCity city = (CCity)AccessTools.Field(typeof(CSellingProduct), "_owner").GetValue(__instance);
                     if (city == null) return true;
 
-                    // Verify ingredients availability in the base warehouse (BuyingProducts volume)
-                    bool hasIngredients = true;
-                    RecipeRequirement missingReq = null;
-                    CProductDescr missingIngredientDescr = null;
-
-                    foreach (var req in recipe.Requirements)
-                    {
-                        CProductDescr ingredientDescr = CStaticDataManager.Instance.Products.GetDescr(NamedId.GetNamedId(req.Product));
-                        if (ingredientDescr == null) continue;
-
-                        float requiredMass = req.BoxCount * ingredientDescr.Mass;
-                        float currentStock = 0f;
-                        bool found = false;
-
-                        for (int i = 0; i < city.GetProductsBuyingCount(); i++)
-                        {
-                            CBuyingProduct buyingProduct = city.GetProductsBuyingByIndex(i);
-                            if (buyingProduct.Name.name == req.Product && buyingProduct.IsAvailable())
-                            {
-                                currentStock = (float)AccessTools.Field(typeof(CBuyingProduct), "_volume").GetValue(buyingProduct);
-                                found = true;
-                                break;
-                            }
-                        }
-
-                        if (!found || currentStock < requiredMass)
-                        {
-                            hasIngredients = false;
-                            missingReq = req;
-                            missingIngredientDescr = ingredientDescr;
-                            break;
-                        }
-                    }
-
                     string stateKey = $"{city.Name.name}_{prodName}";
 
-                    if (!hasIngredients)
-                    {
-                        // Pause the production timer
-                        inTime = 0f;
-
-                        // Trigger HUD notification once
-                        if (!_pausedStates.ContainsKey(stateKey) || !_pausedStates[stateKey])
-                        {
-                            _pausedStates[stateKey] = true;
-                            string localCity = CLocalization.Instance.GetString(city.Name.name, inLogContext);
-                            string localProd = CLocalization.Instance.GetString(__instance.ProductDescr.Name.name, inLogContext);
-                            string localIngredient = CLocalization.Instance.GetString(missingIngredientDescr.Name.name, inLogContext);
-                            
-                            string msgText = $"{localCity}: Refining of {localProd} paused. Requires {missingReq.BoxCount} box(es) of {localIngredient}.";
-                            CAppManager.Instance.GUIManager.Messages.Add(new CMessage(NamedId.GetNamedId(msgText), inLogContext));
-                            Log.LogInfo($"Paused production of {prodName} at {city.Name.name} (missing {missingReq.Product}).");
-                        }
-
-                        return true; // Still call original update so dynamic checks run, but timer won't advance
-                    }
-
-                    // Reset paused state and notify if it was previously paused
-                    if (_pausedStates.ContainsKey(stateKey) && _pausedStates[stateKey])
-                    {
-                        _pausedStates[stateKey] = false;
-                        string localCity = CLocalization.Instance.GetString(city.Name.name, inLogContext);
-                        string localProd = CLocalization.Instance.GetString(__instance.ProductDescr.Name.name, inLogContext);
-                        
-                        string msgText = $"{localCity}: Refining of {localProd} resumed.";
-                        CAppManager.Instance.GUIManager.Messages.Add(new CMessage(NamedId.GetNamedId(msgText), inLogContext));
-                        Log.LogInfo($"Resumed production of {prodName} at {city.Name.name}.");
-                    }
-
-                    // Check if the timer cycle is about to complete and produce a box
+                    // Retrieve description and timer components.
                     var descr = (CSellingProductDescr)AccessTools.Field(typeof(CSellingProduct), "_descr").GetValue(__instance);
                     CTimeCounter timer = (CTimeCounter)AccessTools.Field(typeof(CSellingProduct), "_timer").GetValue(__instance);
 
                     if (timer == null || descr == null) return true;
 
                     float passedTime = (float)AccessTools.Field(typeof(CTimeCounter), "_times").GetValue(timer);
-                    bool willFinish = __instance.IsCanBeAvailable() &&
-                                     __instance.Count < descr.MaxCount &&
-                                     (passedTime + inTime >= descr.ProductionTime) &&
-                                     BuildSettings.IsCreateCargoBoxEnable;
 
-                    if (willFinish)
+                    // Track whether ingredients have been consumed for the current cycle.
+                    if (!_hasConsumedForCurrentCycle.ContainsKey(stateKey))
                     {
-                        // Consume requirements from city's BuyingProducts volume
+                        // If a saved game was loaded and the timer is already active,
+                        // assume the ingredients were consumed in the previous session.
+                        _hasConsumedForCurrentCycle[stateKey] = (passedTime > 0f);
+                    }
+
+                    // A new cycle starts if the timer is at zero and is not marked as consumed.
+                    if (passedTime == 0f)
+                    {
+                        _hasConsumedForCurrentCycle[stateKey] = false;
+                    }
+
+                    if (!_hasConsumedForCurrentCycle[stateKey])
+                    {
+                        // Verify availability of ingredients in the warehouse.
+                        bool hasIngredients = true;
+                        RecipeRequirement missingReq = null;
+                        CProductDescr missingIngredientDescr = null;
+
+                        foreach (var req in recipe.Requirements)
+                        {
+                            CProductDescr ingredientDescr = CStaticDataManager.Instance.Products.GetDescr(NamedId.GetNamedId(req.Product));
+                            if (ingredientDescr == null) continue;
+
+                            float requiredMass = req.BoxCount * ingredientDescr.Mass;
+                            float currentStock = 0f;
+                            bool found = false;
+
+                            for (int i = 0; i < city.GetProductsBuyingCount(); i++)
+                            {
+                                CBuyingProduct buyingProduct = city.GetProductsBuyingByIndex(i);
+                                if (buyingProduct.Name.name == req.Product && buyingProduct.IsAvailable())
+                                {
+                                    currentStock = (float)AccessTools.Field(typeof(CBuyingProduct), "_volume").GetValue(buyingProduct);
+                                    found = true;
+                                    break;
+                                }
+                            }
+
+                            if (!found || currentStock < requiredMass)
+                            {
+                                hasIngredients = false;
+                                missingReq = req;
+                                missingIngredientDescr = ingredientDescr;
+                                break;
+                            }
+                        }
+
+                        if (!hasIngredients)
+                        {
+                            // Pause the production timer.
+                            inTime = 0f;
+
+                            // Send a HUD notification if the state has transitioned to paused.
+                            if (!_pausedStates.ContainsKey(stateKey) || !_pausedStates[stateKey])
+                            {
+                                _pausedStates[stateKey] = true;
+                                string localCity = CLocalization.Instance.GetString(city.Name.name, inLogContext);
+                                string localProd = CLocalization.Instance.GetString(__instance.ProductDescr.Name.name, inLogContext);
+                                string localIngredient = CLocalization.Instance.GetString(missingIngredientDescr.Name.name, inLogContext);
+                                
+                                string msgText = $"{localCity}: Refining of {localProd} paused. Requires {missingReq.BoxCount} box(es) of {localIngredient}.";
+                                CAppManager.Instance.GUIManager.Messages.Add(new CMessage(NamedId.GetNamedId(msgText), inLogContext));
+                                Log.LogInfo($"Paused production of {prodName} at {city.Name.name} (missing {missingReq.Product}).");
+                            }
+
+                            return true; // Proceed to original update method, but the timer will not advance.
+                        }
+
+                        // Ingredients are available. Consume them immediately to start the new cycle.
                         foreach (var req in recipe.Requirements)
                         {
                             CProductDescr ingredientDescr = CStaticDataManager.Instance.Products.GetDescr(NamedId.GetNamedId(req.Product));
@@ -226,18 +225,45 @@ namespace FPS.ProductionEconomy
                                     float currentStock = (float)AccessTools.Field(typeof(CBuyingProduct), "_volume").GetValue(buyingProduct);
                                     float newStock = Math.Max(0f, currentStock - requiredMass);
                                     AccessTools.Field(typeof(CBuyingProduct), "_volume").SetValue(buyingProduct, newStock);
+                                    Log.LogInfo($"Consumed {requiredMass}kg of {req.Product} (current stock: {newStock}kg) at {city.Name.name} to start refining.");
                                     break;
                                 }
                             }
                         }
 
-                        // Send success HUD notification
+                        _hasConsumedForCurrentCycle[stateKey] = true;
+
+                        // Reset the paused state and notify if the process was previously paused.
+                        if (_pausedStates.ContainsKey(stateKey) && _pausedStates[stateKey])
+                        {
+                            _pausedStates[stateKey] = false;
+                            string localCity = CLocalization.Instance.GetString(city.Name.name, inLogContext);
+                            string localProd = CLocalization.Instance.GetString(__instance.ProductDescr.Name.name, inLogContext);
+                            
+                            string msgText = $"{localCity}: Refining of {localProd} resumed.";
+                            CAppManager.Instance.GUIManager.Messages.Add(new CMessage(NamedId.GetNamedId(msgText), inLogContext));
+                            Log.LogInfo($"Resumed production of {prodName} at {city.Name.name}.");
+                        }
+                    }
+
+                    // Check if the cycle is about to complete and produce a cargo box.
+                    bool willFinish = __instance.IsCanBeAvailable() &&
+                                     __instance.Count < descr.MaxCount &&
+                                     (passedTime + inTime >= descr.ProductionTime) &&
+                                     BuildSettings.IsCreateCargoBoxEnable;
+
+                    if (willFinish)
+                    {
+                        // Send a success HUD notification.
                         string localCity = CLocalization.Instance.GetString(city.Name.name, inLogContext);
                         string localProd = CLocalization.Instance.GetString(__instance.ProductDescr.Name.name, inLogContext);
                         string msgText = $"{localCity}: 1 crate of {localProd} has been successfully refined.";
                         
                         CAppManager.Instance.GUIManager.Messages.Add(new CMessage(NamedId.GetNamedId(msgText), inLogContext));
-                        Log.LogInfo($"Refined 1 crate of {prodName} at {city.Name.name} and consumed required materials.");
+                        Log.LogInfo($"Refined 1 crate of {prodName} at {city.Name.name}.");
+
+                        // Mark the state to require consumption for the next cycle.
+                        _hasConsumedForCurrentCycle[stateKey] = false;
                     }
                 }
                 catch (Exception ex)

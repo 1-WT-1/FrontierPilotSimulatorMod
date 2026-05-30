@@ -1,6 +1,6 @@
 [
   {
-    "Product": "product_components_food",
+    "Product": "product_components_food_1",
     "Requirements": [
       {
         "Product": "product_components_water",
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "Product": "product_components_battery",
+    "Product": "product_components_battery_1",
     "Requirements": [
       {
         "Product": "product_empty_battery",
