@@ -26,17 +26,12 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Restore and Build ArmorBridge
-        run: dotnet build BepInExMods/ArmorBridge/ArmorBridge.csproj -c Release
-
-      - name: Restore and Build ProbabilisticMalfunction
-        run: dotnet build BepInExMods/ProbabilisticMalfunction/ProbabilisticMalfunction.csproj -c Release
-
-      - name: Restore and Build DamageLogger
-        run: dotnet build BepInExMods/DamageLogger/DamageLogger.csproj -c Release
-
-      - name: Restore and Build ProductionEconomy
-        run: dotnet build BepInExMods/ProductionEconomy/ProductionEconomy.csproj -c Release
+      - name: Build All BepInEx Mods
+        run: |
+          for csproj in BepInExMods/*/*.csproj; do
+            echo "Building $csproj..."
+            dotnet build "$csproj" -c Release
+          done
 
       - name: Structure Release Assets
         run: |
@@ -44,12 +39,20 @@ jobs:
           mkdir -p dist/bepinex/BepInEx/plugins
           mkdir -p "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native"
 
-          # Copy BepInEx plugins
-          cp BepInExMods/ArmorBridge/bin/Release/net472/ArmorBridge.dll dist/bepinex/BepInEx/plugins/
-          cp BepInExMods/ProbabilisticMalfunction/bin/Release/net472/ProbabilisticMalfunction.dll dist/bepinex/BepInEx/plugins/
-          cp BepInExMods/DamageLogger/bin/Release/net472/DamageLogger.dll dist/bepinex/BepInEx/plugins/
-          cp BepInExMods/ProductionEconomy/bin/Release/net472/ProductionEconomy.dll dist/bepinex/BepInEx/plugins/
-          cp BepInExMods/ProductionEconomy/recipes.json dist/bepinex/BepInEx/plugins/
+          # Discover and copy all compiled BepInEx plugins and their JSON configs
+          for csproj in BepInExMods/*/*.csproj; do
+            proj_dir=$(dirname "$csproj")
+            proj_name=$(basename "$csproj" .csproj)
+            
+            dll_path="$proj_dir/bin/Release/net472/$proj_name.dll"
+            if [ -f "$dll_path" ]; then
+              echo "Copying $dll_path to staging..."
+              cp "$dll_path" dist/bepinex/BepInEx/plugins/
+            fi
+            
+            # Copy any JSON files located in the project's root folder (e.g. recipes.json)
+            find "$proj_dir" -maxdepth 1 -name "*.json" -exec cp {} dist/bepinex/BepInEx/plugins/ \;
+          done
 
           # Copy Native StreamingAssets structure
           cp -r Ships "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
