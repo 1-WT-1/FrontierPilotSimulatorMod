@@ -1,0 +1,1326 @@
+[
+  /////////////////////////////////////////////////////////////
+  {
+    "Name": "fx_ballena_air_brake_sparks",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipAirBrake",
+        "EnableRange": {
+          "Min": 1,
+          "Max": 1,
+          "BorderMode": "AllInclusive"
+        },
+      },
+      {
+        "GameParam": "ShipPitchInput",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": -0.5,
+          "Max": .5
+        },
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 450
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 75.0,
+              "Max": 150.0
+            }
+          },
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "fx_ballena_air_brake_glow",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipAirBrake",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 1,
+          "Max": 1,
+          "BorderMode": "AllInclusive"
+        },
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 450
+        },
+      },
+      {
+        "GameParam": "ShipPitchInput",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": -0.5,
+          "Max": .5
+        },
+      }
+    ]
+  },
+  /////////////////////////////////////////////////////////////
+  {
+    "Name": "fx_ox_air_brake_sparks",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipAirBrake",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 1,
+          "Max": 1,
+          "BorderMode": "AllInclusive"
+        },
+      },
+      {
+        "GameParam": "ShipPitchInput",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": -0.5,
+          "Max": .5
+        },
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 450
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 75.0,
+              "Max": 150.0
+            }
+          },
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "fx_ox_air_brake_glow",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipAirBrake",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 1,
+          "Max": 1,
+          "BorderMode": "AllInclusive"
+        },
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 450
+        },
+      },
+      {
+        "GameParam": "ShipPitchInput",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": -0.5,
+          "Max": .5
+        },
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_FastSpeedAirTrails",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Plane"
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 400
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 25.0,
+              "Max": 50.0
+            }
+          },
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 5.0,
+              "Max": 150.0
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "fx_soundbarrierMain",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Plane"
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 330,
+          "Max": 340
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 8,
+              "Max": 6
+            }
+          },
+        ],
+      },
+      {
+        "GameParam": "ShipAltitude",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 0,
+          "Max": 3000
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": -9.0,
+              "Max": -10.0
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_DamageSmoke_bright",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 00,
+          "Max": 10
+        },
+        "EffectParams": [],
+      },
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.3,
+          "Max": 0.75
+        },
+        "EffectParams": []
+      }
+    ]
+  },
+  {
+    "Name": "FXJetFire_Distortion",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 00,
+          "Max": 10
+        },
+        "EffectParams": [],
+      },
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.5
+        },
+        "EffectParams": []
+      }
+    ]
+  },
+  {
+    "Name": "fx_scarabDangerousZone",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 1,
+          "Max": 300
+        },
+      }
+    ]
+  },
+  {
+    "Name": "dangerousZoneSparks",
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 1,
+          "Max": 300
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 1,
+              "Max": 200
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "dangerousZoneLighitnings",
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 1,
+          "Max": 300
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 2,
+              "Max": 30
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 0.5,
+              "Max": 2
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "dangerousZoneDistorion",
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 2,
+          "Max": 300
+        },
+      }
+    ]
+  },
+  {
+    "Name": "dangerousZoneSparksHigh",
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 4,
+          "Max": 300
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 1,
+              "Max": 4000
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "fx_oxDangerousZone",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 1,
+          "Max": 300
+        },
+      }
+    ]
+  },
+  {
+    "Name": "fx_ballenaDangerousZone",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "AggregateSkyRadiationAbsorbed",
+        "AggregateType": "Locator",
+        "EnableRange": {
+          "Min": 1,
+          "Max": 300
+        },
+      }
+    ]
+  },
+  {
+    "Name": "fx_oxHighspeedWind",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "AirplaneIsOpenFlaps",
+        "EnableBool": true
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 500
+        },
+        "EffectParams": [],
+      },
+      {
+        "GameParam": "ShipAltitude",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 1000,
+          "Max": 3000
+        },
+        "EffectParams": [],
+      }
+    ]
+  },
+  {
+    "Name": "fx_oxFlowSeparation",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "WingForceFactor",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 0.1
+        },
+        "EffectParams": [],
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 50,
+          "Max": 3000
+        },
+        "EffectParams": [],
+      }
+    ]
+  },
+  {
+    "Name": "fx_scarabHighspeedWind",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "AirplaneIsOpenFlaps",
+        "EnableBool": true
+      },
+    ]
+  },
+  {
+    "Name": "fx_ballenaHighspeedWind",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "AirplaneIsOpenFlaps",
+        "EnableBool": true
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 150,
+          "Max": 500
+        },
+        "EffectParams": [],
+      },
+      {
+        "GameParam": "ShipAltitude",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 1000,
+          "Max": 3000
+        },
+        "EffectParams": [],
+      }
+    ]
+  },
+  {
+    "Name": "fx_soundbarrierSmoke",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Plane"
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 330,
+          "Max": 340
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 20,
+              "Max": 10
+            }
+          },
+        ],
+      },
+      {
+        "GameParam": "ShipAltitude",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 0,
+          "Max": 3000
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 70.0,
+              "Max": 75.0
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "fx_scarabSoundbarrierMain",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 325,
+          "Max": 335
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 5,
+              "Max": 4
+            }
+          },
+        ],
+      },
+      {
+        "GameParam": "ShipAltitude",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 0,
+          "Max": 3000
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": -9.0,
+              "Max": -10.0
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "fx_energyChargeUp_sparks",
+    "GameParams": [
+      {
+        "GameParam": "ShipRefuelingState",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 1
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 0,
+              "Max": -5
+            }
+          },
+        ],
+      },
+      {
+        "NotCommonEnable": true,
+        "GameParam": "ShipFuelTankValue01",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 1
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 0,
+              "Max": .05
+            }
+          },
+        ],
+      }
+    ],
+  },
+  {
+    "Name": "fx_energyChargeDown_sparks",
+    "GameParams": [
+      {
+        "GameParam": "ShipRefuelingState",
+        "EnableRange": {
+          "Min": -1,
+          "Max": -0.01
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 5,
+              "Max": 0
+            }
+          },
+        ],
+      },
+      {
+        "NotCommonEnable": true,
+        "GameParam": "ShipFuelTankValue01",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 1
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 0,
+              "Max": .05
+            }
+          },
+        ],
+      }
+    ],
+  },
+  {
+    "Name": "fx_scarabEnergyCharge_distortion",
+    "GameParams": [
+      {
+        "GameParam": "ShipRefuelingState",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 1
+        },
+      },
+      {
+        "GameParam": "ShipRefuelingState",
+        "EnableRange": {
+          "Min": -1,
+          "Max": -0.01
+        },
+      }
+    ]
+  },
+  {
+    "Name": "fx_scarabEnergyCharge_circles",
+    "GameParams": [
+      {
+        "GameParam": "ShipRefuelingState",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 1
+        },
+      },
+      {
+        "GameParam": "ShipRefuelingState",
+        "EnableRange": {
+          "Min": -1,
+          "Max": -0.01
+        },
+      }
+    ]
+  },
+  {
+    "Name": "fx_scarabSoundbarrierSmoke",
+    "EnableAll": true,
+    "Debug": false,
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 325,
+          "Max": 335
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 15,
+              "Max": 16
+            }
+          },
+        ],
+      },
+      {
+        "GameParam": "ShipAltitude",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 0,
+          "Max": 3000
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 15.0,
+              "Max": 10.0
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_FastSpeedAirSmoke",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Plane"
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 250,
+          "Max": 350
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 35.0,
+              "Max": 75.0
+            }
+          },
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 150.0,
+              "Max": 300.0
+            }
+          },
+        ],
+      }
+    ]
+  },
+  {
+    "Name": "FXWingPlane_AirTrail",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Plane"
+      },
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 50.0,
+          "Max": 300.0
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "StartWidth",
+            "Range": {
+              "Min": 0.0,
+              "Max": 1.2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_AirTrail_L",
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 50.0,
+          "Max": 300.0
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "StartWidth",
+            "Range": {
+              "Min": 0.0,
+              "Max": 1.2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_AirTrail_R",
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 50.0,
+          "Max": 300.0
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "StartWidth",
+            "Range": {
+              "Min": 0.0,
+              "Max": 1.2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  /*
+	{
+    "Name": "fx_oxTailEngineGlow",
+    "GameParams": [
+		{
+        "GameParam": "EngineForce01",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 1.0
+        },
+        "EffectParams": [          
+			{
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 0.0,
+              "Max": 0.01
+            }
+			}
+        ]
+		}
+    ]
+	},
+*/
+  {
+    "Name": "FXHull_DamageSmoke_F",
+    "Debug": false,
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.65
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 50.0,
+              "Max": 25.0
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 2.0,
+              "Max": 1.0
+            }
+          },
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 4.0,
+              "Max": 3.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXBallena_Hull_Lighitning",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.45
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 15.0,
+              "Max": 5.0
+            }
+          },
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FX_BallenaHull_DamageSmoke",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.65
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 12.0,
+              "Max": 8.0
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 2.0,
+              "Max": 1.0
+            }
+          },
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 4.0,
+              "Max": 3.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FX_BallenaHull_DamageSmoke2",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 1
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 15.0,
+              "Max": 8.0
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 2.0,
+              "Max": 1.25
+            }
+          },
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 1.5,
+              "Max": 0.5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FX_BallenaHull_DamageSmoke3",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.3
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 15.0,
+              "Max": 8.0
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 2.0,
+              "Max": 1.0
+            }
+          },
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 1.5,
+              "Max": 0.5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FX_BallenaHull_DamageFire2",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.25
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 20,
+              "Max": 10
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 1.0,
+              "Max": 0.75
+            }
+          },
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXDroneHull_DamageSmoke",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.75
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 50.0,
+              "Max": 25.0
+            }
+          },
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 2.0,
+              "Max": 1.5
+            }
+          },
+          {
+            "EffectParam": "Speed",
+            "Range": {
+              "Min": 4.0,
+              "Max": 3.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_DamageSmoke_B",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.7
+        },
+        "EffectParams": []
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_DamageSmoke_long",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 00,
+          "Max": 10
+        },
+        "EffectParams": [],
+      },
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.5
+        },
+        "EffectParams": []
+      }
+    ]
+  },
+  {
+    "Name": "CockpitDamageSmoke",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.30
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 5000,
+              "Max": 5000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "CockpitWheels",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Wheels"
+      },
+    ]
+  },
+  {
+    "Name": "CockpitJetPack",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "JetPack"
+      },
+    ]
+  },
+  {
+    "Name": "CockpitPlane",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "ShipFlightState",
+        "UseOnlyGameParamName": true,
+        "EnableName": "Plane"
+      },
+    ]
+  },
+  {
+    "Name": "CockpitAlarmHighDamage",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.50
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 5000,
+              "Max": 5000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "CockpitAlarmMidDamage",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.5,
+          "Max": 0.70
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 5000,
+              "Max": 5000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXDroneHull_DamageSmoke_B",
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 0.7
+        },
+        "EffectParams": [
+          {
+            "EffectParam": "Size",
+            "Range": {
+              "Min": 1.0,
+              "Max": 0.5
+            }
+          },
+          {
+            "EffectParam": "Rate",
+            "Range": {
+              "Min": 15,
+              "Max": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_NotDownloadArea",
+    "EnableAll": true,
+    //"Debug":true,
+    "GameParams": [
+      {
+        "GameParam": "ShipLocalForwardVelocityClamp0",
+        "UseOnlyGameParamName": true,
+        "EnableRange": {
+          "Min": 0.0,
+          "Max": 10.0,
+          "BorderMode": "AllInclusive"
+        },
+      },
+      {
+        "GameParam": "CargoIsOpen",
+        "EnableBool": true
+      },
+      {
+        "GameParam": "CargoIsCanGetNearestCargo",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 0,
+          "BorderMode": "AllInclusive"
+        }
+      },
+      {
+        "GameParam": "CargoIsCannotGetNearestCargo",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 0,
+          "BorderMode": "AllInclusive"
+        }
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_DownloadArea",
+    "GameParams": [
+      {
+        "GameParam": "CargoIsCanGetNearestCargo",
+        "EnableBool": true
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_ErrorDownloadArea",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "CargoIsCannotGetNearestCargo",
+        "EnableBool": true
+      }
+    ]
+  },
+  {
+    "Name": "FXHull_AvailableArea",
+    "EnableAll": true,
+    "GameParams": [
+      {
+        "GameParam": "CargoIsAvailableNearestCargo",
+        "EnableBool": true
+      }
+    ]
+  },
+  {
+    "Name": "SFXDamageHull",
+    //"Debug": true,
+    "GameParams": [
+      {
+        "GameParam": "SoulCurrentHP01",
+        "AggregateType": "Hull",
+        "EnableRange": {
+          "Min": 0,
+          "Max": 0.75,
+          "BorderMode": "AllInclusive"
+        }
+      }
+    ]
+  },
+]
