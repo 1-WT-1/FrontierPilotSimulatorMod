@@ -30,7 +30,7 @@
         "DragPointsJetpack": [ 
             { 
                 "LocalPos": [ 0, 0, 0 ],
-                "Squares": [ 6, 8, 10, 3.5 ] 
+                "Squares": [ 6, 8, 10, 12.5 ] 
             }
 		],
 		"ArchimedForceSpheres":
