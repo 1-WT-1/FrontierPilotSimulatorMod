@@ -3556,5 +3556,11 @@
   "product_components_battery_1": "G-type-2 batteries",
   "product_components_battery_2": "G-type-3 batteries",
   "Coating_DevTest_Scarab": "DEV TEST: Full Resist Coating",
-  "Coating_DevTest_Scarab_Descr": "[DEV ONLY] Applies 999 armor resistance to ALL aggregates and types. Used to verify if resistance mechanics affect damage taken."
+  "Coating_DevTest_Scarab_Descr": "[DEV ONLY] Applies 999 armor resistance to ALL aggregates and types. Used to verify if resistance mechanics affect damage taken.",
+  "GUI_HUD_Controls_ShipHeadingNumber": "Ship Heading Number",
+  "GUI_HUD_Controls_ToggleShipHeadingNumber": "Toggle",
+  "GUI_HUD_Controls_VelocityHeadingNumber": "Velocity Heading Number",
+  "GUI_HUD_Controls_ToggleVelocityHeadingNumber": "Toggle",
+  "GUI_HUD_Controls_CompassMarks": "Compass Marks (45, 135)",
+  "GUI_HUD_Controls_ToggleCompassMarks": "Toggle"
 }
