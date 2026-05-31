@@ -3554,5 +3554,8 @@
   "GUI_HUD_Controls_VelocityHeadingNumber": "Velocity Heading Number",
   "GUI_HUD_Controls_ToggleVelocityHeadingNumber": "Toggle",
   "GUI_HUD_Controls_CompassMarks": "Compass Marks (45, 135)",
-  "GUI_HUD_Controls_ToggleCompassMarks": "Toggle"
+  "GUI_HUD_Controls_ToggleCompassMarks": "Toggle",
+  "Headlights_Auto": "Headlights: Auto",
+  "Headlights_On": "Headlights: ON",
+  "Headlights_Off": "Headlights: OFF"
 }

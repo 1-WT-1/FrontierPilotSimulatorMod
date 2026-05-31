@@ -3685,5 +3685,8 @@
   "GUI_HUD_Controls_VelocityHeadingNumber": "Вектор скорости (числом)",
   "GUI_HUD_Controls_ToggleVelocityHeadingNumber": "Переключить ",
   "GUI_HUD_Controls_CompassMarks": "Доп. метки компаса (45°, 135°)",
-  "GUI_HUD_Controls_ToggleCompassMarks": "Переключить "
+  "GUI_HUD_Controls_ToggleCompassMarks": "Переключить ",
+  "Headlights_Auto": "Фары: АВТО",
+  "Headlights_On": "Фары: ВКЛ",
+  "Headlights_Off": "Фары: ВЫКЛ"
 }
