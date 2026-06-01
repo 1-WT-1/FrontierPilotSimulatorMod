@@ -19,6 +19,8 @@ namespace FPS.Compass
         public static ConfigEntry<bool> ShowVelocityHeadingNumber;
         public static ConfigEntry<bool> ShowIntermediateCompassMarks;
 
+        public static System.Runtime.CompilerServices.ConditionalWeakTable<object, object> CustomMarks = new System.Runtime.CompilerServices.ConditionalWeakTable<object, object>();
+
         private void Awake()
         {
             try
@@ -38,72 +40,7 @@ namespace FPS.Compass
         }
     }
 
-    // ==========================================
-    // Harmony Patch: Registers SetWaypoint console command
-    // ==========================================
-    [HarmonyPatch(typeof(GUIWindowScript_Console), "Init")]
-    public static class GUIWindowScript_Console_Init_Patch
-    {
-        [HarmonyPostfix]
-        public static void Postfix(GUIWindowScript_Console __instance)
-        {
-            try
-            {
-                __instance.AddCommandHandler(
-                    __instance,
-                    "SetWaypoint",
-                    new ConsoleArgumentBase[3]
-                    {
-                        new CAB_Float("X"),
-                        new CAB_Float("Y"),
-                        new CAB_Float("Z")
-                    },
-                    OnConsole_SetWaypoint
-                );
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"[FlightEnhancements] Error registering SetWaypoint command: {ex}");
-            }
-        }
 
-        private static void OnConsole_SetWaypoint(string[] inArgs, CLogContext inLogContext)
-        {
-            try
-            {
-                float x = CGameConsole.GetFloatFromArg(inArgs, 1);
-                float y = CGameConsole.GetFloatFromArg(inArgs, 2);
-                float z = CGameConsole.GetFloatFromArg(inArgs, 3);
-
-                var playerShip = CAppManager.Instance?.GameManager?.CurrentWorld?.PlayerShip;
-                if (playerShip != null)
-                {
-                    var pos = new RVector(new Vector3(x, y, z));
-                    var targetRef = new STargetRef(pos);
-                    playerShip.Navigator.AddRouteTarget(targetRef, CLogContext.Current);
-
-                    CAppManager.Instance.GetConsole().WriteResult(
-                        true,
-                        $"Waypoint set at X: {x:F1}, Y: {y:F1}, Z: {z:F1}"
-                    );
-                }
-                else
-                {
-                    CAppManager.Instance.GetConsole().WriteResult(
-                        false,
-                        "Player ship is not active."
-                    );
-                }
-            }
-            catch (Exception ex)
-            {
-                CAppManager.Instance.GetConsole().WriteResult(
-                    false,
-                    $"Error: {ex.Message}"
-                );
-            }
-        }
-    }
 
     // ==========================================
     // Harmony Patch: Implements numerical heading HUD element
@@ -119,13 +56,13 @@ namespace FPS.Compass
         {
             try
             {
-                Debug.Log("[FlightEnhancements] Compass Init Postfix started.");
+                Debug.Log("[FPS Compass] Compass Init Postfix started.");
 
                 // Find the Rose transform and carets
                 var rose = __instance.transform.FindChildByName<RectTransform>("$Rose");
                 if (rose == null)
                 {
-                    Debug.LogError("[FlightEnhancements] Could not find '$Rose' under HUDComponent_Compass!");
+                    Debug.LogError("[FPS Compass] Could not find '$Rose' under HUDComponent_Compass!");
                     return;
                 }
 
@@ -133,13 +70,13 @@ namespace FPS.Compass
                 var shipVelocity = rose.FindChildByName<RectTransform>("$ShipVelocity");
                 var cameraFov = rose.FindChildByName<RectTransform>("$CameraFOV");
 
-                Debug.Log($"[FlightEnhancements] Found carets: ShipForward={shipForward != null}, ShipVelocity={shipVelocity != null}, CameraFOV={cameraFov != null}");
+                Debug.Log($"[FPS Compass] Found carets: ShipForward={shipForward != null}, ShipVelocity={shipVelocity != null}, CameraFOV={cameraFov != null}");
 
                 // Find an existing TextMeshProUGUI to copy font and material from
                 var existingText = __instance.GetComponentInChildren<TextMeshProUGUI>(true);
                 if (existingText == null)
                 {
-                    Debug.LogWarning("[FlightEnhancements] Could not find any existing TextMeshProUGUI to copy styling from.");
+                    Debug.LogWarning("[FPS Compass] Could not find any existing TextMeshProUGUI to copy styling from.");
                 }
 
                 // Helper to create styled heading text
@@ -198,11 +135,11 @@ namespace FPS.Compass
                     new Vector2(0.5f, 0.5f)
                 );
 
-                Debug.Log("[FlightEnhancements] All heading text readouts successfully created.");
+                Debug.Log("[FPS Compass] All heading text readouts successfully created.");
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[FlightEnhancements] Error in Compass Init Postfix: {ex}");
+                Debug.LogError($"[FPS Compass] Error in Compass Init Postfix: {ex}");
             }
         }
     }
@@ -284,7 +221,7 @@ namespace FPS.Compass
             {
                 if (Time.time - _lastLogTime > 5f)
                 {
-                    Debug.LogError($"[FlightEnhancements] Error in Compass Update Postfix (throttled): {ex}");
+                    Debug.LogError($"[FPS Compass] Error in Compass Update Postfix (throttled): {ex}");
                     _lastLogTime = Time.time;
                 }
             }
@@ -306,11 +243,6 @@ namespace FPS.Compass
         [HarmonyPostfix]
         public static void Postfix(CCompass_Rose __instance)
         {
-            if (!CompassPlugin.ShowIntermediateCompassMarks.Value)
-            {
-                return; // User disabled extra compass marks in config
-            }
-
             try
             {
                 var traverse = Traverse.Create(__instance);
@@ -349,6 +281,7 @@ namespace FPS.Compass
                             if (elementView != null)
                             {
                                 elements.Add(elementView);
+                                CompassPlugin.CustomMarks.Add(elementView, null);
                             }
                         }
                     }
@@ -356,7 +289,42 @@ namespace FPS.Compass
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[FlightEnhancements] Error in CCompass_Rose constructor patch: {ex}");
+                Debug.LogError($"[FPS Compass] Error in CCompass_Rose constructor patch: {ex}");
+            }
+        }
+    }
+
+    // ==========================================
+    // Harmony Patch: Dynamic visibility of custom marks
+    // ==========================================
+    [HarmonyPatch]
+    public static class CCompass_Rose_CElementView_Update_Patch
+    {
+        public static MethodBase TargetMethod()
+        {
+            return AccessTools.Method(AccessTools.TypeByName("CGUI.CCompass_Rose+CElementView"), "Update");
+        }
+
+        public static void Postfix(object __instance)
+        {
+            try
+            {
+                if (CompassPlugin.CustomMarks.TryGetValue(__instance, out _))
+                {
+                    var element = Traverse.Create(__instance).Property<RectTransform>("Element").Value;
+                    if (element != null)
+                    {
+                        bool shouldShow = CompassPlugin.ShowIntermediateCompassMarks.Value;
+                        if (element.gameObject.activeSelf != shouldShow)
+                        {
+                            element.gameObject.SetActive(shouldShow);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[FPS Compass] Error in CElementView Update patch: {ex}");
             }
         }
     }
@@ -404,7 +372,7 @@ namespace FPS.Compass
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[FlightEnhancements] Failed to inject HUD controls: {ex}");
+                Debug.LogError($"[FPS Compass] Failed to inject HUD controls: {ex}");
             }
         }
     }
@@ -484,7 +452,7 @@ namespace FPS.Compass
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[FlightEnhancements] Error in CCommand_Update_Patch: {ex}");
+                Debug.LogError($"[FPS Compass] Error in CCommand_Update_Patch: {ex}");
             }
             return true;
         }

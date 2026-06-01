@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+
+  <!-- Game assemblies (reference without copying) -->
+  <ItemGroup>
+     <Reference Include="Assembly-CSharp">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/Assembly-CSharp.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
+     <Reference Include="UnityEngine">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/UnityEngine.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
+     <Reference Include="UnityEngine.CoreModule">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/UnityEngine.CoreModule.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/Newtonsoft.Json.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
+   </ItemGroup>
+
+   <!-- BepInEx + Harmony (from the game's BepInEx installation) -->
+   <ItemGroup>
+     <Reference Include="BepInEx">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/BepInEx.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
+     <Reference Include="0Harmony">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/0Harmony.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
+   </ItemGroup>
+</Project>
