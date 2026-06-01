@@ -71,67 +71,87 @@ namespace FPS.Headlights
 
         private void SyncLights()
         {
-            var playerShip = CAppManager.Instance?.GameManager?.CurrentWorld?.PlayerShip as MonoBehaviour;
-            if (playerShip == null) return;
-
-            // 1. Sync LightEffectScripts (used by some ships)
-            var allLightEffects = playerShip.GetComponentsInChildren<LightEffectScript>(true);
-            foreach (var effect in allLightEffects)
+            try
             {
-                var light = effect.GetComponent<Light>();
-                if (light != null && light.type == LightType.Spot)
+                var playerShip = CAppManager.Instance?.GameManager?.CurrentWorld?.PlayerShip as MonoBehaviour;
+                if (playerShip == null) return;
+
+                // 1. Sync LightEffectScripts (used by some ships)
+                var allLightEffects = playerShip.GetComponentsInChildren<LightEffectScript>(true);
+                foreach (var effect in allLightEffects)
                 {
-                    Traverse.Create(effect).Method("CheckAndSetPlaying", true).GetValue();
+                    var light = effect.GetComponent<Light>();
+                    if (light != null && light.type == LightType.Spot)
+                    {
+                        // Apply state directly first so it works even if inactive
+                        if (CurrentHeadlightsMode == EHeadlightsMode.ManualOn)
+                            light.enabled = true;
+                        else if (CurrentHeadlightsMode == EHeadlightsMode.ManualOff)
+                            light.enabled = false;
+
+                        // Safely trigger game re-evaluation for Auto mode sync
+                        var traverse = Traverse.Create(effect);
+                        if (traverse.Field("_ggp_readers").GetValue() != null && 
+                            traverse.Field("_params").GetValue() != null &&
+                            traverse.Field("_owner").GetValue() != null)
+                        {
+                            traverse.Method("CheckAndSetPlaying", true).GetValue();
+                        }
+                    }
+                }
+
+                // 2. Sync EnableByCondition scripts (used by Scarab and newer ships)
+                var allConditions = playerShip.GetComponentsInChildren<EnableByCondition>(true);
+                foreach (var cond in allConditions)
+                {
+                    bool hasSpotlight = false;
+                    var lights = cond.GetComponentsInChildren<Light>(true);
+                    foreach (var l in lights)
+                    {
+                        if (l != null && l.type == LightType.Spot)
+                        {
+                            hasSpotlight = true;
+                            break;
+                        }
+                    }
+
+                    if (hasSpotlight)
+                    {
+                        string alias = Traverse.Create(cond).Field<string>("conditionAliasName").Value;
+                        if (string.IsNullOrEmpty(alias)) continue;
+
+                        // Skip unrelated conditions (like unpurchased upgrades)
+                        if (!alias.Contains("DayTime") && !alias.Contains("Night") && !alias.Contains("Light"))
+                            continue;
+
+                        // Prevent stacking ShadowOn and ShadowOff lights at the same time!
+                        bool wantShadows = QualitySettings.shadows != ShadowQuality.Disable;
+                        if (alias.Contains("ShadowOn") && !wantShadows) continue;
+                        if (alias.Contains("ShadowOff") && wantShadows) continue;
+
+                        // Determine the target state based on override or auto
+                        bool targetState = false;
+                        if (CurrentHeadlightsMode == EHeadlightsMode.ManualOn) 
+                            targetState = true;
+                        else if (CurrentHeadlightsMode == EHeadlightsMode.ManualOff) 
+                            targetState = false;
+                        else 
+                        {
+                            // Auto mode -> read the underlying game condition state
+                            targetState = Traverse.Create(cond).Field<bool>("_isEnable").Value;
+                        }
+
+                        // Apply to children just like the game does
+                        for (int i = 0; i < cond.transform.childCount; i++)
+                        {
+                            cond.transform.GetChild(i).gameObject.SetActive(targetState);
+                        }
+                    }
                 }
             }
-
-            // 2. Sync EnableByCondition scripts (used by Scarab and newer ships)
-            var allConditions = playerShip.GetComponentsInChildren<EnableByCondition>(true);
-            foreach (var cond in allConditions)
+            catch (Exception ex)
             {
-                bool hasSpotlight = false;
-                var lights = cond.GetComponentsInChildren<Light>(true);
-                foreach (var l in lights)
-                {
-                    if (l != null && l.type == LightType.Spot)
-                    {
-                        hasSpotlight = true;
-                        break;
-                    }
-                }
-
-                if (hasSpotlight)
-                {
-                    string alias = Traverse.Create(cond).Field<string>("conditionAliasName").Value;
-                    if (string.IsNullOrEmpty(alias)) continue;
-
-                    // Skip unrelated conditions (like unpurchased upgrades)
-                    if (!alias.Contains("DayTime") && !alias.Contains("Night") && !alias.Contains("Light"))
-                        continue;
-
-                    // Prevent stacking ShadowOn and ShadowOff lights at the same time!
-                    bool wantShadows = QualitySettings.shadows != ShadowQuality.Disable;
-                    if (alias.Contains("ShadowOn") && !wantShadows) continue;
-                    if (alias.Contains("ShadowOff") && wantShadows) continue;
-
-                    // Determine the target state based on override or auto
-                    bool targetState = false;
-                    if (CurrentHeadlightsMode == EHeadlightsMode.ManualOn) 
-                        targetState = true;
-                    else if (CurrentHeadlightsMode == EHeadlightsMode.ManualOff) 
-                        targetState = false;
-                    else 
-                    {
-                        // Auto mode -> read the underlying game condition state
-                        targetState = Traverse.Create(cond).Field<bool>("_isEnable").Value;
-                    }
-
-                    // Apply to children just like the game does
-                    for (int i = 0; i < cond.transform.childCount; i++)
-                    {
-                        cond.transform.GetChild(i).gameObject.SetActive(targetState);
-                    }
-                }
+                Logger.LogError($"[FPS Headlights] Error in SyncLights: {ex}");
             }
         }
     }
