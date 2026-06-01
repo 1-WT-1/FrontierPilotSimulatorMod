@@ -35,6 +35,7 @@ Download the latest release zip files from the [Releases page](https://github.co
 * **Compass**: Adds numerical heading indicators.
 * **Damage Logger**: Development tool that logs component damage.
 * **Headlights**: Adds manual headlight control. Press 'L' to cycle modes. Key can be changed in BepInEx config.
+* **Approaches**: Adds console commands (`SetApproach` to load glideslope approach routes from JSON, and `SetWaypoint` to set custom 3D waypoints).
 * **Probabilistic Malfunction**: Changes the malfunction mechanic from time-based to chance-based.
 * **Production Economy**: Processes custom factory recipes.
 * **VTOL Airbrake**: Enables the airbrake toggle key in VTOL mode.
