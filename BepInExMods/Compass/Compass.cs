@@ -29,13 +29,18 @@ namespace FPS.Compass
                 ShowVelocityHeadingNumber = Config.Bind("Compass", "ShowVelocityHeadingNumber", true, "Show numeric heading below the ship's velocity caret");
                 ShowIntermediateCompassMarks = Config.Bind("Compass", "ShowIntermediateCompassMarks", true, "Show 45, 135, 225, 315 marks on the compass tape");
 
+                ModSettingsCore.ModSettingsAPI.AddHeader("GUI_Compass_Header");
+                ModSettingsCore.ModSettingsAPI.AddToggle("GUI_Compass_ShipHeading", () => ShowShipHeadingNumber.Value, (val) => ShowShipHeadingNumber.Value = val);
+                ModSettingsCore.ModSettingsAPI.AddToggle("GUI_Compass_VelocityHeading", () => ShowVelocityHeadingNumber.Value, (val) => ShowVelocityHeadingNumber.Value = val);
+                ModSettingsCore.ModSettingsAPI.AddToggle("GUI_Compass_IntermediateMarks", () => ShowIntermediateCompassMarks.Value, (val) => ShowIntermediateCompassMarks.Value = val);
+
                 var harmony = new Harmony("com.fps.mods.compass");
                 harmony.PatchAll();
-                Logger.LogInfo("FPS Compass Enhancements successfully initialized.");
+                Logger.LogInfo("Compass initialized.");
             }
             catch (Exception ex)
             {
-                Logger.LogError($"FPS Compass Enhancements Init failed: {ex}");
+                Logger.LogError($"Compass Init failed: {ex}");
             }
         }
     }
@@ -91,7 +96,7 @@ namespace FPS.Compass
 
                     var tmp = textGO.AddComponent<TextMeshProUGUI>();
                     tmp.text = "000";
-                    tmp.fontSize = 11; // Smaller font as requested
+                    tmp.fontSize = 11;
                     tmp.alignment = TextAlignmentOptions.Center;
                     tmp.color = color;
                     tmp.fontStyle = FontStyles.Bold;
@@ -182,7 +187,7 @@ namespace FPS.Compass
                                 rose.localPosition + new Vector3(shipForward.localPosition.x, shipForward.localPosition.y - 18f, 0f);
                         }
                         
-                        // Respect both the caret's active state AND our config setting
+                        // Respect both the caret's active state AND the config setting
                         HUDComponent_Compass_Init_Patch.ShipHeadingText.gameObject.SetActive(
                             shipForward.gameObject.activeInHierarchy && CompassPlugin.ShowShipHeadingNumber.Value);
                     }
@@ -206,7 +211,7 @@ namespace FPS.Compass
                                     rose.localPosition + new Vector3(shipVelocity.localPosition.x, shipVelocity.localPosition.y - 32f, 0f);
                             }
                             
-                            // Respect both the caret's active state AND our config setting
+                            // Respect both the caret's active state AND the config setting
                             HUDComponent_Compass_Init_Patch.VelocityHeadingText.gameObject.SetActive(
                                 shipVelocity.gameObject.activeInHierarchy && CompassPlugin.ShowVelocityHeadingNumber.Value);
                         }

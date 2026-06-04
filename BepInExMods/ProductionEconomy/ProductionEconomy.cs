@@ -310,7 +310,7 @@ namespace FPS.ProductionEconomy
             {
                 if (string.IsNullOrEmpty(key) || string.IsNullOrEmpty(baseResult)) return baseResult;
 
-                // 1. Check if this key corresponds to any of our recipe products' descriptions
+                // 1. Check if this key corresponds to any of the recipe products' descriptions
                 foreach (var recipe in Recipes)
                 {
                     CProductDescr productDescr = CStaticDataManager.Instance.Products.GetDescr(NamedId.GetNamedId(recipe.Product));

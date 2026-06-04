@@ -6,7 +6,6 @@
     <LangVersion>8</LangVersion>
   </PropertyGroup>
 
-  <!-- Game assemblies (reference without copying) -->
   <ItemGroup>
      <Reference Include="Assembly-CSharp">
        <HintPath>$(MSBuildThisFileDirectory)../../libs/Assembly-CSharp.dll</HintPath>
@@ -44,9 +43,12 @@
        <HintPath>$(MSBuildThisFileDirectory)../../libs/Newtonsoft.Json.dll</HintPath>
        <Private>False</Private>
      </Reference>
+     <Reference Include="UnityEngine.PhysicsModule">
+       <HintPath>$(MSBuildThisFileDirectory)../../libs/UnityEngine.PhysicsModule.dll</HintPath>
+       <Private>False</Private>
+     </Reference>
    </ItemGroup>
 
-   <!-- BepInEx + Harmony (from the game's BepInEx installation) -->
    <ItemGroup>
      <Reference Include="BepInEx">
        <HintPath>$(MSBuildThisFileDirectory)../../libs/BepInEx.dll</HintPath>
@@ -57,6 +59,7 @@
        <Private>False</Private>
      </Reference>
    </ItemGroup>
+
    <ItemGroup>
      <ProjectReference Include="..\ModSettingsCore\ModSettingsCore.csproj" />
    </ItemGroup>

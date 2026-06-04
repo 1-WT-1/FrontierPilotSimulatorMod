@@ -14,7 +14,7 @@ namespace FPS.ProbabilisticMalfunction
             var harmony = new Harmony("com.fps.mods.probabilisticmalfunctions");
             harmony.PatchAll();
             
-            Logger.LogInfo("FPS Probabilistic Malfunctions successfully initialized.");
+            Logger.LogInfo("Probabilistic Malfunctions initialized.");
         }
     }
 

@@ -21,11 +21,11 @@ namespace FPS.Approaches
                 LoadApproaches();
                 var harmony = new Harmony("com.fps.mods.approaches");
                 harmony.PatchAll();
-                Logger.LogInfo("FPS Approaches Mod successfully initialized.");
+                Logger.LogInfo("Approaches Mod initialized.");
             }
             catch (Exception ex)
             {
-                Logger.LogError($"FPS Approaches Init failed: {ex}");
+                Logger.LogError($"Approaches Init failed: {ex}");
             }
         }
 

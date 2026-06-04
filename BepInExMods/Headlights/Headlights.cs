@@ -22,28 +22,31 @@ namespace FPS.Headlights
         }
 
         public static EHeadlightsMode CurrentHeadlightsMode = EHeadlightsMode.Auto;
-        private static ConfigEntry<KeyCode> ToggleLightsKey;
+        private static ConfigEntry<string> ToggleLightsKey;
         public static LocTextMeshPro HeadlightsText;
 
         private void Awake()
         {
             try
             {
-                ToggleLightsKey = Config.Bind("General", "ToggleLightsKey", KeyCode.L, "Keyboard key to cycle headlights: Auto -> Manual On -> Manual Off -> Auto");
+                ToggleLightsKey = Config.Bind("General", "ToggleLightsKey", "Keyboard:0:108", "Keyboard/Controller key to cycle headlights: Auto -> Manual On -> Manual Off -> Auto (default: L)");
+                
+                ModSettingsCore.ModSettingsAPI.AddHeader("GUI_Headlights_Header");
+                ModSettingsCore.ModSettingsAPI.AddKeybind("GUI_Headlights_Key", ToggleLightsKey);
                 
                 var harmony = new Harmony("com.fps.mods.headlights");
                 harmony.PatchAll();
-                Logger.LogInfo("FPS Headlights successfully initialized with clean event-driven hooks.");
+                Logger.LogInfo("Headlights initialized.");
             }
             catch (Exception ex)
             {
-                Logger.LogError($"FPS Headlights Init failed: {ex}");
+                Logger.LogError($"Headlights Init failed: {ex}");
             }
         }
 
         private void Update()
         {
-            if (ToggleLightsKey != null && Input.GetKeyDown(ToggleLightsKey.Value))
+            if (ToggleLightsKey != null && ModSettingsCore.ModSettingsAPI.GetKeyDown(ToggleLightsKey))
             {
                 if (CurrentHeadlightsMode == EHeadlightsMode.Auto)
                     CurrentHeadlightsMode = EHeadlightsMode.ManualOn;

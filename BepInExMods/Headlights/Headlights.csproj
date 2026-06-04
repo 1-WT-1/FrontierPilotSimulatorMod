@@ -57,4 +57,7 @@
        <Private>False</Private>
      </Reference>
    </ItemGroup>
+   <ItemGroup>
+     <ProjectReference Include="..\ModSettingsCore\ModSettingsCore.csproj" />
+   </ItemGroup>
 </Project>

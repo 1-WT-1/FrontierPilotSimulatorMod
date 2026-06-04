@@ -13,7 +13,7 @@ namespace FPS.ArmorBridge
             var harmony = new Harmony("com.fps.mods.armorbridge");
             harmony.PatchAll();
             
-            Logger.LogInfo("FPS Armor Bridge successfully initialized.");
+            Logger.LogInfo("Armor Bridge initialized.");
         }
     }
 

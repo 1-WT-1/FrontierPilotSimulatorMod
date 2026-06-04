@@ -35,43 +35,83 @@ jobs:
 
       - name: Structure Release Assets
         run: |
-          # Create separate staging folders
-          mkdir -p dist/bepinex/BepInEx/plugins
-          mkdir -p "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native"
+          mkdir -p dist/core/BepInEx/plugins
+          mkdir -p "dist/core/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native"
+          mkdir -p dist/qol/BepInEx/plugins
+          mkdir -p dist/overhaul/BepInEx/plugins
+          mkdir -p "dist/overhaul/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/World"
+          mkdir -p "dist/unknown_overrides/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/World"
 
-          # Discover and copy all compiled BepInEx plugins and their JSON configs
+          # ModSettingsCore goes to core, everything else reads from .qol/.overhaul marker
+          cp BepInExMods/ModSettingsCore/bin/Release/net472/ModSettingsCore.dll dist/core/BepInEx/plugins/
+          
           for csproj in BepInExMods/*/*.csproj; do
             proj_dir=$(dirname "$csproj")
-            proj_name=$(basename "$csproj" .csproj)
+            plugin=$(basename "$csproj" .csproj)
+            dll_path="$proj_dir/bin/Release/net472/$plugin.dll"
             
-            dll_path="$proj_dir/bin/Release/net472/$proj_name.dll"
-            if [ -f "$dll_path" ]; then
-              echo "Copying $dll_path to staging..."
-              cp "$dll_path" dist/bepinex/BepInEx/plugins/
+            if [ "$plugin" = "ModSettingsCore" ]; then
+              continue
+              
+            elif [ -f "$proj_dir/.overhaul" ]; then
+              cp "$dll_path" dist/overhaul/BepInEx/plugins/
+              find "$proj_dir" -maxdepth 1 -name "*.json" -exec cp {} dist/overhaul/BepInEx/plugins/ \;
+              
+            elif [ -f "$proj_dir/.qol" ]; then
+              cp "$dll_path" dist/qol/BepInEx/plugins/
+              find "$proj_dir" -maxdepth 1 -name "*.json" -exec cp {} dist/qol/BepInEx/plugins/ \;
+              
+            else
+              echo "Warning: Plugin $plugin has no .qol or .overhaul marker file, skipping."
             fi
-            
-            # Copy any JSON files located in the project's root folder (e.g. recipes.json)
-            find "$proj_dir" -maxdepth 1 -name "*.json" -exec cp {} dist/bepinex/BepInEx/plugins/ \;
           done
 
-          # Copy Native StreamingAssets structure
-          cp -r Ships "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
-          cp -r Localization "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
-          cp -r World "dist/native/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/"
+          # Native folders - drop a marker file to control which pack a folder ends up in.
+          # .destname overrides the folder name in the zip (e.g. ShipsVTOLFix -> Ships).
+          find . -mindepth 2 -maxdepth 2 -type f \( -name ".qol" -o -name ".overhaul" -o -name ".core" -o -name ".unknown" \) 2>/dev/null | while read marker; do
+            dir=$(dirname "$marker" | sed 's|^\./||')
+            marker_name=$(basename "$marker")
+            
+            # Skip BepInExMods - already handled above
+            case "$dir" in BepInExMods*) continue ;; esac
+            
+            case "$marker_name" in
+              ".core") target="dist/core" ;;
+              ".qol") target="dist/qol" ;;
+              ".overhaul") target="dist/overhaul" ;;
+              ".unknown") target="dist/unknown_overrides" ;;
+            esac
+            
+            if [ -f "$dir/.destname" ]; then
+              dest_name=$(cat "$dir/.destname") # e.g. ShipsVTOLFix -> Ships
+            else
+              dest_name="$dir"
+            fi
+            
+            dest_dir="$target/Frontier Pilot Simulator_Data/StreamingAssets/Descriptions/Native/$dest_name"
+            mkdir -p "$dest_dir"
+            cp -a "$dir"/. "$dest_dir"/
+          done
 
       - name: Package Assets
         run: |
-          cd dist/bepinex
-          zip -r ../../BepInEx-Plugins.zip *
-          cd ../native
-          zip -r ../../Native-Overrides.zip *
+          cd dist/core
+          zip -r ../../FPS_Core.zip *
+          cd ../qol
+          zip -r ../../FPS_QoL.zip *
+          cd ../overhaul
+          zip -r ../../FPS_Overhaul.zip *
+          cd ../unknown_overrides
+          zip -r ../../FPS_UnknownOverrides.zip *
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            BepInEx-Plugins.zip
-            Native-Overrides.zip
+            FPS_Core.zip
+            FPS_QoL.zip
+            FPS_Overhaul.zip
+            FPS_UnknownOverrides.zip
           tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}
           draft: false
           prerelease: false

@@ -14,7 +14,7 @@ namespace FPS.VTOLAirbrake
             {
                 var harmony = new Harmony("com.fps.mods.vtolairbrake");
                 harmony.PatchAll();
-                Logger.LogInfo("FPS VTOL Airbrake successfully initialized.");
+                Logger.LogInfo("VTOL Airbrake initialized.");
             }
             catch (Exception ex)
             {
