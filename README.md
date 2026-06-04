@@ -11,7 +11,7 @@ This repository contains game configurations and BepInEx plugins for Frontier Pi
 
 ## Requirements and Installation
 
-To run these mods, you need BepInEx 5 installed in your game.
+To run the BepInEx mods you need BepInEx 5 installed.
 
 ### 1. Install BepInEx 5
 
@@ -22,47 +22,57 @@ To run these mods, you need BepInEx 5 installed in your game.
 
 ### 2. Install
 
-Download the latest release zip files from the [Releases page](https://github.com/1-WT-1/FrontierPilotSimulatorMod/releases):
+Download the release zip files from the [Releases page](https://github.com/1-WT-1/FrontierPilotSimulatorMod/releases).
 
-* **Native JSON Overrides (`Native-Overrides.zip`)**: Extract this archive directly into your game's root directory (where `Frontier Pilot Simulator.exe` is located) to install the Native JSON config overrides.
-* **BepInEx C# Plugins (`BepInEx-Plugins.zip`)**: Extract this archive directly into your game's root directory to install the BepInEx C# plugins
+There are four separate packs — install what you want:
 
----
+| Pack | Contents | Required |
+|---|---|---|
+| `FPS_Core.zip` | ModSettingsCore + Localization | Yes, if using any other pack |
+| `FPS_QoL.zip` | Flight assist plugins | No |
+| `FPS_Overhaul.zip` | Economy/ship rebalance + damage mods | No |
+| `FPS_UnknownOverrides.zip` | Unverified vanilla edits (Camera/Targets/Triggers) | No — experimental |
 
-## BepInEx C# Plugins
-
-* **Armor Bridge**: Makes custom armor upgrades functional.
-* **Compass**: Adds numerical heading indicators.
-* **Damage Logger**: Development tool that logs component damage.
-* **Headlights**: Adds manual headlight control. Press 'L' to cycle modes. Key can be changed in BepInEx config.
-* **Probabilistic Malfunction**: Changes the malfunction mechanic from time-based to chance-based.
-* **Production Economy**: Processes custom factory recipes.
-* **VTOL Airbrake**: Enables the airbrake toggle key in VTOL mode.
+Extract each zip directly into the game's root directory. If you install both QoL and Overhaul, install QoL first.
 
 ---
 
-## Native Configuration Overrides
+## QoL (`FPS_QoL.zip`)
 
-Modified game configuration files for economy balance, ship specifications, and custom items.
+* **OxEngineFix**: Fixes Ox engine offset on non-default wings.
+* **Compass**: Adds a numerical heading indicator to the HUD.
+* **Headlights**: Manual headlight control. Press `L` to cycle modes.
+* **Keep Cruise**: Persists fixed thrust across hangars and trade menus.
+* **VTOL Airbrake**: Enables the airbrake toggle in VTOL.
+* **STOL Mode**: Engine nacelle vectoring for STOL in plane mode. Press `G` to toggle.
+* **Crosswind Crab**: Aligns landing gear with velocity vector during crosswind landings. Press `K` to toggle.
+* **VelocityCamera**: Adds a toggle to change whether the camera tracks the velocity vector or the nose direction while playing.
+* **Approaches**: Console commands to load glideslope approach routes (`SetApproach`) and set custom 3D waypoints (`SetWaypoint`).
 
-### Economy & Price Balance
+> All keys can be changed in the mod settings menu in-game.
+
+---
+
+## Overhaul (`FPS_Overhaul.zip`)
+
+### Price Balance
 
 * **10x Cost Adjustments**: Upgrade and ship prices are increased by **10x** across the board.
-* **Ship Prices (Including default gear)**:
+* **Ship Prices (including default gear)**:
   * **Scarab**: **330,000**
   * **Ox**: **2,136,000**
   * **Ballena**: **3,000,000**
 
-### Ship Balance & Tuning
+### Ship Tuning
 
 * **Cargo Capacity**:
-  * **Scarab**: Max cargo count increased from `1` to `2`
-  * **Ox**: Max cargo count increased from `2` to `4`
-  * **Ballena**: Max cargo count increased from `2` to `6`, and cargo capacity increased from `15,000` to `20,000`
+  * **Scarab**: Max cargo count `1` → `2`
+  * **Ox**: Max cargo count `2` → `4`
+  * **Ballena**: Max cargo count `2` → `6`, cargo capacity `15,000` → `20,000`
 
 ### New Upgrades
 
-28 upgrades added to ships:
+28 upgrades added across all ships:
 
 * **Active Flow Control (AFC)**: Reduces aerodynamic drag.
   * `AFC Synthetic Jet Actuators`, `AFC Compressed Air Injection`, `AFC Helium Flow Actuators`, `AFC Plasma Flow Actuators`
@@ -78,19 +88,23 @@ Modified game configuration files for economy balance, ship specifications, and 
   * `FIS Standard`, `FIS High-Pressure`, `FIS Plasma`
 * **Fuel Pumps (FPM)**: Reduces engine fuel consumption.
   * `FPM Mechanical`, `FPM Electric`, `FPM Turbine`
-* **Fuel Systems (FSS)**: Expands fuel capacity.
+* **Fuel Systems (FSS)**: Expands fuel tank capacity.
   * `FSS Extended`, `FSS High-Capacity`, `FSS Integrated`
 
 ### New Tradeables
 
-Custom commercial commodities added to the economy:
+* **Industrial & Household Goods**: `Industrial Chemicals`, `Laboratory Chemicals`, `Household Chemicals`, `Industrial Filters`, `Clothes`
+* **Consumables & Power Cells**: `B3 rations`, `B4 rations`, `G-type-2 batteries`, `G-type-3 batteries`
 
-* **Industrial & Household Goods**: `Industrial Chemicals`, `Laboratory Chemicals`, `Household Chemicals`, `Industrial Filters`, and `Clothes` (bought and sold at regional bases).
-* **Consumables & Power Cells**: Consumables (`B3 rations`, `B4 rations`) and battery units (`G-type-2 batteries`, `G-type-3 batteries`) integrated into local trade lanes.
+### Damage & Malfunctions
 
-### Test Base (bases_test_base)
+* **Armor Bridge**: Makes custom armor coatings functional against damage.
+* **Probabilistic Malfunction**: Changes malfunctions from time-based to chance-based.
+* **Production Economy**: Processes custom factory production recipes.
 
-Staging base open by default:
+### Test Base
 
-* **Location**: Coordinate `[-94170.0, 130.0, 90383.0]`.
+Staging base available from the start:
+
+* **Location**: `[-94170.0, 130.0, 90383.0]`
 * **Inventory**: Sells all 28 custom upgrades for all three ships.
