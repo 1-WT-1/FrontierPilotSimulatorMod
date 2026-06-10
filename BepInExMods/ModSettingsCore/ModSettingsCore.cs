@@ -117,25 +117,53 @@ namespace ModSettingsCore
         {
             if (configEntry == null || string.IsNullOrEmpty(configEntry.Value) || configEntry.Value == "None") return false;
 
-            string[] parts = configEntry.Value.Split(':');
-            if (parts.Length == 3 && Enum.TryParse<ControllerType>(parts[0], out var cType) && int.TryParse(parts[1], out var cId) && int.TryParse(parts[2], out var eId))
+            string[] bindings = configEntry.Value.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var bind in bindings)
+            {
+                if (CheckSingleBinding(bind.Trim())) return true;
+            }
+            return false;
+        }
+
+        private static bool CheckSingleBinding(string binding)
+        {
+            string[] parts = binding.Split('+');
+            string mainKey = parts[0];
+            
+            string[] kParts = mainKey.Split(':');
+            if (kParts.Length != 3) return false;
+
+            bool isMainDown = false;
+            if (Enum.TryParse<ControllerType>(kParts[0], out var cType) && int.TryParse(kParts[1], out var cId) && int.TryParse(kParts[2], out var eId))
             {
                 if (cType == ControllerType.Keyboard)
                 {
-                    return UnityEngine.Input.GetKeyDown((KeyCode)eId);
+                    isMainDown = UnityEngine.Input.GetKeyDown((KeyCode)eId);
                 }
                 else
                 {
                     var player = ReInput.players.GetPlayer(0);
-                    if (player == null) return false;
-                    var controller = player.controllers.GetController(cType, cId);
-                    if (controller != null)
+                    if (player != null)
                     {
-                        return controller.GetButtonDownById(eId);
+                        var controller = player.controllers.GetController(cType, cId);
+                        if (controller != null) isMainDown = controller.GetButtonDownById(eId);
                     }
                 }
             }
-            return false;
+
+            if (!isMainDown) return false;
+
+            for (int i = 1; i < parts.Length; i++)
+            {
+                if (parts[i].StartsWith("Mod:"))
+                {
+                    if (Enum.TryParse<KeyCode>(parts[i].Substring(4), out var modCode))
+                    {
+                        if (!UnityEngine.Input.GetKey(modCode)) return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 
@@ -143,12 +171,16 @@ namespace ModSettingsCore
     public class CKeybindOptionView : CBaseOptionView
     {
         private CGUI_SettingsMenuOptionDescr _descr;
+        private ConfigEntry<string> _configEntry;
         private LocTextMeshPro _labelText;
         private RectTransform _valuesContainer;
         private RectTransform _valueTemplate;
+
+        private GameObject _secondRowObj;
         
         private CValueView _valueView;
-        private ConfigEntry<string> _configEntry;
+        private CValueView _addView;
+        private CValueView _clearView;
 
         private class CValueView : CGUIElement
         {
@@ -156,13 +188,17 @@ namespace ModSettingsCore
             private LocTextMeshPro _buttonText;
             private RectTransform _select;
             private CKeybindOptionView _parent;
+            
+            public enum ButtonType { Main, Add, Clear }
+            private ButtonType _type;
 
             public MenuButton MenuButton => _button;
 
-            public CValueView(CKeybindOptionView parent, RectTransform inContainer, RectTransform inTemplate, CLogContext inLogContext)
+            public CValueView(CKeybindOptionView parent, RectTransform inContainer, RectTransform inTemplate, CLogContext inLogContext, ButtonType type)
                 : base(inContainer, inTemplate)
             {
                 _parent = parent;
+                _type = type;
                 _button = base.Element.GetComponent<MenuButton>();
                 _button.OnClickEvent += OnClickEvent;
                 _buttonText = base.Element.FindChildByName<LocTextMeshPro>("$Text");
@@ -172,7 +208,10 @@ namespace ModSettingsCore
 
             private void OnClickEvent(object sender, SelectableEventArgs e)
             {
-                _parent.StartKeybindPolling();
+                if (_type == ButtonType.Clear)
+                    _parent.ClearBinding();
+                else
+                    _parent.StartKeybindPolling(_type == ButtonType.Add);
             }
 
             public void SetText(string text, bool isLoc)
@@ -216,22 +255,49 @@ namespace ModSettingsCore
             _valueTemplate.gameObject.SetActiveCheck(value: false);
             
             _labelText.SetLocKey(_descr.Label);
-            _labelText.gameObject.SetActiveCheck(!string.IsNullOrEmpty(_descr.Label));
+            _valueView = new CValueView(this, _valuesContainer, _valueTemplate, inLogContext, CValueView.ButtonType.Main);
+            
+            // Create a second native row for the Add and Clear buttons
+            _secondRowObj = UnityEngine.Object.Instantiate(inTemplate.gameObject, inContainer);
+            _secondRowObj.name = "Keybind_AddClearRow";
+            _secondRowObj.transform.SetSiblingIndex(base.Element.GetSiblingIndex() + 1);
+            _secondRowObj.SetActive(true);
 
-            _valueView = new CValueView(this, _valuesContainer, _valueTemplate, inLogContext);
+            var secondLabel = _secondRowObj.transform.FindChildByName<LocTextMeshPro>("$LabelText");
+            if (secondLabel != null) secondLabel.SetText("");
+
+            var secondValues = _secondRowObj.transform.FindChildByName<RectTransform>("$ValuesContainer");
+            var secondTemplate = _secondRowObj.transform.FindChildByName<RectTransform>("$ValueTemplate");
+            secondTemplate.gameObject.SetActiveCheck(value: false);
+
+            _addView = new CValueView(this, secondValues, secondTemplate, inLogContext, CValueView.ButtonType.Add);
+            _addView.SetText("GUI_Mods_AddBinding", true);
+            var layoutAdd = _addView.MenuButton.gameObject.AddComponent<UnityEngine.UI.LayoutElement>();
+            layoutAdd.minWidth = 120;
+            layoutAdd.preferredWidth = 120;
+            layoutAdd.flexibleWidth = 0;
+
+            _clearView = new CValueView(this, secondValues, secondTemplate, inLogContext, CValueView.ButtonType.Clear);
+            _clearView.SetText("GUI_Mods_ClearBinding", true);
+            var layoutClear = _clearView.MenuButton.gameObject.AddComponent<UnityEngine.UI.LayoutElement>();
+            layoutClear.minWidth = 120;
+            layoutClear.preferredWidth = 120;
+            layoutClear.flexibleWidth = 0;
+
             RedrawValue();
             
             base.Element.gameObject.SetActiveCheck(value: true);
         }
 
         private bool _isPolling = false;
+        private bool _isPollingForAdd = false;
         private PollerHelper _pollerHelper;
 
-        public void StartKeybindPolling()
+        public void StartKeybindPolling(bool isAdd = false)
         {
             if (_isPolling) return;
             _isPolling = true;
-            _valueView.SetText("Press any key\n(Esc=Cancel, Del=Clear)", false);
+            _isPollingForAdd = isAdd;
 
             if (_pollerHelper == null)
             {
@@ -240,22 +306,53 @@ namespace ModSettingsCore
             _pollerHelper.StartPolling(this);
         }
 
+        public void UpdateToModifierHoldText()
+        {
+            // Popup handles this internally via reading the held modifier
+        }
+
         public void EndKeybindPolling(ControllerPollingInfo info)
         {
             _isPolling = false;
             if (info.elementType != ControllerElementType.Axis || info.axisPole != Pole.Positive)
             {
+                string newVal = "";
                 if (info.controllerType == ControllerType.Keyboard)
                 {
-                    string val = $"{info.controllerType}:{info.controllerId}:{(int)info.keyboardKey}";
-                    _configEntry.Value = val;
+                    newVal = $"{info.controllerType}:{info.controllerId}:{(int)info.keyboardKey}";
                 }
                 else
                 {
-                    string val = $"{info.controllerType}:{info.controllerId}:{info.elementIdentifierId}";
-                    _configEntry.Value = val;
+                    newVal = $"{info.controllerType}:{info.controllerId}:{info.elementIdentifierId}";
                 }
+
+                if (UnityEngine.Input.GetKey(KeyCode.LeftShift)) newVal += "+Mod:LeftShift";
+                else if (UnityEngine.Input.GetKey(KeyCode.RightShift)) newVal += "+Mod:RightShift";
+
+                if (UnityEngine.Input.GetKey(KeyCode.LeftControl)) newVal += "+Mod:LeftControl";
+                else if (UnityEngine.Input.GetKey(KeyCode.RightControl)) newVal += "+Mod:RightControl";
+
+                if (UnityEngine.Input.GetKey(KeyCode.LeftAlt)) newVal += "+Mod:LeftAlt";
+                else if (UnityEngine.Input.GetKey(KeyCode.RightAlt)) newVal += "+Mod:RightAlt";
+
+                if (_isPollingForAdd && !string.IsNullOrEmpty(_configEntry.Value) && _configEntry.Value != "None")
+                    _configEntry.Value = _configEntry.Value + " | " + newVal;
+                else
+                    _configEntry.Value = newVal;
             }
+            RedrawValue();
+        }
+
+        public void EndKeybindPollingWithModifier(KeyCode modifierKey)
+        {
+            _isPolling = false;
+            string newVal = $"Keyboard:0:{(int)modifierKey}";
+            
+            if (_isPollingForAdd && !string.IsNullOrEmpty(_configEntry.Value) && _configEntry.Value != "None")
+                _configEntry.Value = _configEntry.Value + " | " + newVal;
+            else
+                _configEntry.Value = newVal;
+
             RedrawValue();
         }
 
@@ -265,7 +362,7 @@ namespace ModSettingsCore
             RedrawValue();
         }
 
-        public void ClearKeybind()
+        public void ClearBinding()
         {
             _isPolling = false;
             _configEntry.Value = "None";
@@ -275,44 +372,66 @@ namespace ModSettingsCore
         private void RedrawValue()
         {
             string val = _configEntry.Value;
-            if (string.IsNullOrEmpty(val))
+            if (string.IsNullOrEmpty(val) || val == "None")
             {
                 _valueView.SetText("None", false);
                 return;
             }
 
-            string[] parts = val.Split(':');
-            if (parts.Length == 3 && Enum.TryParse<ControllerType>(parts[0], out var cType) && int.TryParse(parts[1], out var cId) && int.TryParse(parts[2], out var eId))
+            string[] bindings = val.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            for (int i = 0; i < bindings.Length; i++)
             {
-                // Try to get a friendly name from Rewired
-                if (cType == ControllerType.Keyboard)
+                if (i > 0) sb.Append(" | ");
+                string[] parts = bindings[i].Trim().Split('+');
+                string mainKey = parts[0];
+                string[] kParts = mainKey.Split(':');
+                if (kParts.Length == 3 && Enum.TryParse<ControllerType>(kParts[0], out var cType) && int.TryParse(kParts[1], out var cId) && int.TryParse(kParts[2], out var eId))
                 {
-                    _valueView.SetText(((KeyCode)eId).ToString(), false);
-                }
-                else
-                {
-                    // For Joystick/Mouse
-                    Controller c = ReInput.controllers.GetController(cType, cId);
-                    if (c != null && c.GetElementIdentifierById(eId) != null)
+                    for (int m = 1; m < parts.Length; m++)
                     {
-                        _valueView.SetText($"{c.name} {c.GetElementIdentifierById(eId).name}", false);
+                        if (parts[m].StartsWith("Mod:"))
+                        {
+                            sb.Append(parts[m].Substring(4).Replace("Left", "").Replace("Right", "")).Append("+");
+                        }
+                    }
+
+                    if (cType == ControllerType.Keyboard)
+                    {
+                        sb.Append(((KeyCode)eId).ToString());
                     }
                     else
                     {
-                        _valueView.SetText(val, false);
+                        Controller c = ReInput.controllers.GetController(cType, cId);
+                        if (c != null && c.GetElementIdentifierById(eId) != null)
+                        {
+                            sb.Append($"{c.name} {c.GetElementIdentifierById(eId).name}");
+                        }
+                        else
+                        {
+                            sb.Append($"Joy {eId}");
+                        }
                     }
                 }
+                else
+                {
+                    sb.Append("Unknown");
+                }
             }
-            else
-            {
-                _valueView.SetText(val, false);
-            }
+            _valueView.SetText(sb.ToString(), false);
         }
 
         public override void Dispose()
         {
             base.Dispose();
             if (_pollerHelper != null) UnityEngine.Object.Destroy(_pollerHelper);
+            
+            // Clean up the second row
+            if (_secondRowObj != null)
+            {
+                UnityEngine.Object.Destroy(_secondRowObj);
+                _secondRowObj = null;
+            }
         }
     }
 
@@ -320,11 +439,43 @@ namespace ModSettingsCore
     {
         private CKeybindOptionView _view;
         private int _frameWait = 0;
+        private float _modifierHoldTimer = 0f;
+        private KeyCode _currentHeldModifier = KeyCode.None;
+        private Texture2D _bgTexture;
+
+        public KeyCode CurrentHeldModifier => _currentHeldModifier;
 
         public void StartPolling(CKeybindOptionView view)
         {
             _view = view;
             _frameWait = 5;
+            _modifierHoldTimer = 0f;
+            _currentHeldModifier = KeyCode.None;
+        }
+
+        private void OnGUI()
+        {
+            if (_view == null) return;
+            
+            if (_bgTexture == null)
+            {
+                _bgTexture = new Texture2D(1, 1);
+                _bgTexture.SetPixel(0, 0, new Color(0, 0, 0, 0.85f));
+                _bgTexture.Apply();
+            }
+
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _bgTexture);
+
+            GUIStyle style = new GUIStyle(GUI.skin.label);
+            style.fontSize = Screen.height / 20; // responsive font size
+            style.alignment = TextAnchor.MiddleCenter;
+            style.normal.textColor = Color.white;
+            style.wordWrap = true;
+
+            string textKey = (_currentHeldModifier != KeyCode.None) ? "GUI_Mods_HoldModifier" : "GUI_Mods_PressAnyKey";
+            string text = CLocalization.Instance.GetString(textKey, null);
+            
+            GUI.Label(new Rect(0, 0, Screen.width, Screen.height), text, style);
         }
 
         void Update()
@@ -346,7 +497,7 @@ namespace ModSettingsCore
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Delete) || UnityEngine.Input.GetKeyDown(KeyCode.Backspace))
             {
-                _view.ClearKeybind();
+                _view.ClearBinding();
                 _view = null;
                 return;
             }
@@ -354,8 +505,44 @@ namespace ModSettingsCore
             ControllerPollingInfo info = ReInput.controllers.polling.PollAllControllersForFirstElementDown();
             if (info.success)
             {
+                if (info.controllerType == ControllerType.Keyboard)
+                {
+                    KeyCode k = info.keyboardKey;
+                    if (k == KeyCode.LeftShift || k == KeyCode.RightShift ||
+                        k == KeyCode.LeftControl || k == KeyCode.RightControl ||
+                        k == KeyCode.LeftAlt || k == KeyCode.RightAlt)
+                    {
+                        if (_currentHeldModifier != k)
+                        {
+                            _currentHeldModifier = k;
+                            _modifierHoldTimer = 0f;
+                            _view.UpdateToModifierHoldText();
+                        }
+                        return;
+                    }
+                }
+
                 _view.EndKeybindPolling(info);
                 _view = null;
+                return;
+            }
+
+            if (_currentHeldModifier != KeyCode.None)
+            {
+                if (UnityEngine.Input.GetKey(_currentHeldModifier))
+                {
+                    _modifierHoldTimer += Time.deltaTime;
+                    if (_modifierHoldTimer >= 1.5f)
+                    {
+                        _view.EndKeybindPollingWithModifier(_currentHeldModifier);
+                        _view = null;
+                    }
+                }
+                else
+                {
+                    _currentHeldModifier = KeyCode.None;
+                    _modifierHoldTimer = 0f;
+                }
             }
         }
     }

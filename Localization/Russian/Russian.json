@@ -3681,11 +3681,8 @@
   "Coating_DevTest_Scarab": "DEV TEST: Полная защита",
   "Coating_DevTest_Scarab_Descr": "[DEV ONLY] Применяет 999 ед. сопротивления брони ко ВСЕМ узлам корабля и типам урона. Для проверки влияния сопротивления на получаемый урон.",
   "GUI_HUD_Controls_ShipHeadingNumber": "Курс корабля (числом)",
-  "GUI_HUD_Controls_ToggleShipHeadingNumber": "Переключить ",
   "GUI_HUD_Controls_VelocityHeadingNumber": "Вектор скорости (числом)",
-  "GUI_HUD_Controls_ToggleVelocityHeadingNumber": "Переключить ",
   "GUI_HUD_Controls_CompassMarks": "Доп. метки компаса (45°, 135°)",
-  "GUI_HUD_Controls_ToggleCompassMarks": "Переключить ",
   "Headlights_Auto": "Фары: АВТО",
   "Headlights_On": "Фары: ВКЛ",
   "Headlights_Off": "Фары: ВЫКЛ",
@@ -3706,5 +3703,14 @@
   "GUI_STOLMode_Header": "Режим STOL (КВП)",
   "GUI_STOLMode_Key": "Кнопка переключения STOL",
   "GUI_STOLMode_Angle": "Угол вектора тяги STOL (град.)",
-  "GUI_STOLMode_VtolStab": "Использовать стабилизацию ВВП в самолетном режиме"
+  "GUI_STOLMode_VtolStab": "Использовать стабилизацию ВВП в самолетном режиме",
+  "GUI_ModsSettingsMenu_Button": "Моды",
+  "GUI_ModsSettingsMenu_HeaderText": "Настройки модов",
+  "GUI_Mods_PressAnyKey": "Нажмите любую кнопку...\n(Esc=Отмена, Del=Очистить)",
+  "GUI_Mods_Toggle_On": "ВКЛ",
+  "GUI_Mods_Toggle_Off": "ВЫКЛ",
+  "GUI_Mods_HoldModifier": "Удерживайте модификатор, чтобы привязать только его\n(Esc=Отмена, Del=Очистить)",
+  "GUI_HUD_Controls_Toggle": "Переключить",
+  "GUI_Mods_AddBinding": "Добавить",
+  "GUI_Mods_ClearBinding": "Очистить"
 }

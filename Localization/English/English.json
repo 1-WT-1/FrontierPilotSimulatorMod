@@ -8,7 +8,7 @@
   "GUI_MainMenu_SettingsButton": "Settings",
   "GUI_ModsSettingsMenu_HeaderText": "Mods",
   "GUI_ModsSettingsMenu_Button": "Mods",
-  "GUI_Mods_PressAnyKey": "[Press Any Key/Button...]",
+  "GUI_Mods_PressAnyKey": "Press any key/button...\n(Esc=Cancel, Del=Clear)",
   "GUI_Mods_Toggle_On": "On",
   "GUI_Mods_Toggle_Off": "Off",
   "GUI_MainMenu_ProfileButton": "Profiles",
@@ -3563,11 +3563,8 @@
   "Coating_DevTest_Scarab": "DEV TEST: Full Resist Coating",
   "Coating_DevTest_Scarab_Descr": "[DEV ONLY] Applies 999 armor resistance to ALL aggregates and types. Used to verify if resistance mechanics affect damage taken.",
   "GUI_HUD_Controls_ShipHeadingNumber": "Ship Heading Number",
-  "GUI_HUD_Controls_ToggleShipHeadingNumber": "Toggle",
   "GUI_HUD_Controls_VelocityHeadingNumber": "Velocity Heading Number",
-  "GUI_HUD_Controls_ToggleVelocityHeadingNumber": "Toggle",
   "GUI_HUD_Controls_CompassMarks": "Compass Marks (45, 135)",
-  "GUI_HUD_Controls_ToggleCompassMarks": "Toggle",
   "Headlights_Auto": "Headlights: Auto",
   "Headlights_On": "Headlights: ON",
   "Headlights_Off": "Headlights: OFF",
@@ -3588,5 +3585,9 @@
   "GUI_STOLMode_Header": "STOL Mode",
   "GUI_STOLMode_Key": "Toggle STOL Mode Key",
   "GUI_STOLMode_Angle": "Downward STOL Vector Angle (deg)",
-  "GUI_STOLMode_VtolStab": "Use VTOL Stabilization in Plane Mode"
+  "GUI_STOLMode_VtolStab": "Use VTOL Stabilization in Plane Mode",
+  "GUI_Mods_HoldModifier": "Hold modifier to bind it alone\n(Esc=Cancel, Del=Clear)",
+  "GUI_HUD_Controls_Toggle": "Toggle",
+  "GUI_Mods_AddBinding": "Add",
+  "GUI_Mods_ClearBinding": "Clear"
 }

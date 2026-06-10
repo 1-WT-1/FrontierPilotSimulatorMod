@@ -445,11 +445,11 @@ namespace FPS.Compass
                     
                     if (isSelected)
                     {
-                        viewType.GetMethod("SetLocKeyInput", new Type[] { typeof(string), typeof(EInputValueType) }).Invoke(view, new object[] { descr.Text, descr.Input });
+                        viewType.GetMethod("SetLocKeyInput", new Type[] { typeof(string), typeof(EInputValueType) }).Invoke(view, new object[] { "GUI_HUD_Controls_Toggle", descr.Input });
                     }
                     else
                     {
-                        viewType.GetMethod("SetLocKey", new Type[] { typeof(string) }).Invoke(view, new object[] { descr.Text });
+                        viewType.GetMethod("SetLocKey", new Type[] { typeof(string) }).Invoke(view, new object[] { "GUI_HUD_Controls_Toggle" });
                     }
                     
                     return false; // Skip original
